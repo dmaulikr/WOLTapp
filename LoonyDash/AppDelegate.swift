@@ -14,11 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let currAccount = Account()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let setVC = storyboard.instantiateViewControllerWithIdentifier("SetViewController") as! SetViewController
+        let setVC = storyboard.instantiateViewControllerWithIdentifier("RoutinesViewController") as! RoutinesViewController
         setVC.currAccount = currAccount
         window?.rootViewController = setVC
         window?.makeKeyAndVisible()

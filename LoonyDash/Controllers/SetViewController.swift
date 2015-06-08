@@ -14,7 +14,6 @@ class SetViewController: UIViewController {
     var weightSelection: Float!
     var setIndex = 0
 
-
     @IBOutlet weak var exerciseTitle: UILabel!
     @IBOutlet weak var numReps: UILabel!
     @IBOutlet weak var weight: UILabel!

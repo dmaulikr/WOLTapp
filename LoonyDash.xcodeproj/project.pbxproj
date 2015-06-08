@@ -12,12 +12,20 @@
 		1D322ED71B252E48009F51C8 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D322ED61B252E48009F51C8 /* Account.swift */; };
 		1DA003EB1B23F2D4000B88BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA003EA1B23F2D4000B88BD /* AppDelegate.swift */; };
 		1DA003EE1B23F2D4000B88BD /* LoonyDash.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DA003EC1B23F2D4000B88BD /* LoonyDash.xcdatamodeld */; };
-		1DA003F01B23F2D4000B88BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA003EF1B23F2D4000B88BD /* ViewController.swift */; };
 		1DA003F31B23F2D4000B88BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA003F11B23F2D4000B88BD /* Main.storyboard */; };
 		1DA003F51B23F2D4000B88BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DA003F41B23F2D4000B88BD /* Images.xcassets */; };
 		1DA003F81B23F2D4000B88BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA003F61B23F2D4000B88BD /* LaunchScreen.xib */; };
 		1DA004041B23F2D4000B88BD /* LoonyDashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA004031B23F2D4000B88BD /* LoonyDashTests.swift */; };
 		1DA0040E1B23F308000B88BD /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA0040D1B23F308000B88BD /* SetViewController.swift */; };
+		6D71978B1B25F2B5007E7F4D /* RoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71978A1B25F2B5007E7F4D /* RoutineViewController.swift */; };
+		6D71978D1B25FDE1007E7F4D /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71978C1B25FDE1007E7F4D /* WorkoutCell.swift */; };
+		6D71978F1B25FE0A007E7F4D /* RoutineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71978E1B25FE0A007E7F4D /* RoutineCell.swift */; };
+		6D7197911B25FE22007E7F4D /* RoutineDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7197901B25FE22007E7F4D /* RoutineDescriptionCell.swift */; };
+		6D7197931B260400007E7F4D /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7197921B260400007E7F4D /* Workout.swift */; };
+		6D7197971B260B44007E7F4D /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7197961B260B44007E7F4D /* Routine.swift */; };
+		6D7197991B260FDD007E7F4D /* RoutinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7197981B260FDD007E7F4D /* RoutinesViewController.swift */; };
+		6D71979B1B260FF6007E7F4D /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71979A1B260FF6007E7F4D /* WorkoutViewController.swift */; };
+		6D7197A11B26149A007E7F4D /* WorkoutSetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7197A01B26149A007E7F4D /* WorkoutSetCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +46,6 @@
 		1DA003E91B23F2D4000B88BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DA003EA1B23F2D4000B88BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DA003ED1B23F2D4000B88BD /* LoonyDash.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LoonyDash.xcdatamodel; sourceTree = "<group>"; };
-		1DA003EF1B23F2D4000B88BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1DA003F21B23F2D4000B88BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1DA003F41B23F2D4000B88BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1DA003F71B23F2D4000B88BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -46,6 +53,15 @@
 		1DA004021B23F2D4000B88BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DA004031B23F2D4000B88BD /* LoonyDashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoonyDashTests.swift; sourceTree = "<group>"; };
 		1DA0040D1B23F308000B88BD /* SetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetViewController.swift; path = Controllers/SetViewController.swift; sourceTree = "<group>"; };
+		6D71978A1B25F2B5007E7F4D /* RoutineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoutineViewController.swift; path = Controllers/RoutineViewController.swift; sourceTree = "<group>"; };
+		6D71978C1B25FDE1007E7F4D /* WorkoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
+		6D71978E1B25FE0A007E7F4D /* RoutineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineCell.swift; sourceTree = "<group>"; };
+		6D7197901B25FE22007E7F4D /* RoutineDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineDescriptionCell.swift; sourceTree = "<group>"; };
+		6D7197921B260400007E7F4D /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Workout.swift; path = Models/Workout.swift; sourceTree = "<group>"; };
+		6D7197961B260B44007E7F4D /* Routine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Routine.swift; path = Models/Routine.swift; sourceTree = "<group>"; };
+		6D7197981B260FDD007E7F4D /* RoutinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoutinesViewController.swift; path = Controllers/RoutinesViewController.swift; sourceTree = "<group>"; };
+		6D71979A1B260FF6007E7F4D /* WorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkoutViewController.swift; path = Controllers/WorkoutViewController.swift; sourceTree = "<group>"; };
+		6D7197A01B26149A007E7F4D /* WorkoutSetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkoutSetCell.swift; path = ../WorkoutSetCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,13 +103,14 @@
 		1DA003E71B23F2D4000B88BD /* LoonyDash */ = {
 			isa = PBXGroup;
 			children = (
+				6D71979C1B26100D007E7F4D /* Controllers */,
+				6D71979D1B261042007E7F4D /* Models */,
 				1DA003EA1B23F2D4000B88BD /* AppDelegate.swift */,
-				1DA003EF1B23F2D4000B88BD /* ViewController.swift */,
-				1DA0040D1B23F308000B88BD /* SetViewController.swift */,
-				1D322ED61B252E48009F51C8 /* Account.swift */,
-				1D009DAB1B23F4D6002D5DBA /* WorkoutSet.swift */,
-				1D009DAD1B23F51D002D5DBA /* Exercise.swift */,
 				1DA003F11B23F2D4000B88BD /* Main.storyboard */,
+				6D71978C1B25FDE1007E7F4D /* WorkoutCell.swift */,
+				6D7197A01B26149A007E7F4D /* WorkoutSetCell.swift */,
+				6D71978E1B25FE0A007E7F4D /* RoutineCell.swift */,
+				6D7197901B25FE22007E7F4D /* RoutineDescriptionCell.swift */,
 				1DA003F41B23F2D4000B88BD /* Images.xcassets */,
 				1DA003F61B23F2D4000B88BD /* LaunchScreen.xib */,
 				1DA003EC1B23F2D4000B88BD /* LoonyDash.xcdatamodeld */,
@@ -125,6 +142,29 @@
 				1DA004021B23F2D4000B88BD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6D71979C1B26100D007E7F4D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6D71978A1B25F2B5007E7F4D /* RoutineViewController.swift */,
+				6D7197981B260FDD007E7F4D /* RoutinesViewController.swift */,
+				1DA0040D1B23F308000B88BD /* SetViewController.swift */,
+				6D71979A1B260FF6007E7F4D /* WorkoutViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		6D71979D1B261042007E7F4D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6D7197961B260B44007E7F4D /* Routine.swift */,
+				1D322ED61B252E48009F51C8 /* Account.swift */,
+				1D009DAB1B23F4D6002D5DBA /* WorkoutSet.swift */,
+				6D7197921B260400007E7F4D /* Workout.swift */,
+				1D009DAD1B23F51D002D5DBA /* Exercise.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,12 +267,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D71978D1B25FDE1007E7F4D /* WorkoutCell.swift in Sources */,
 				1D009DAC1B23F4D6002D5DBA /* WorkoutSet.swift in Sources */,
-				1DA003F01B23F2D4000B88BD /* ViewController.swift in Sources */,
+				6D71979B1B260FF6007E7F4D /* WorkoutViewController.swift in Sources */,
+				6D7197971B260B44007E7F4D /* Routine.swift in Sources */,
+				6D7197911B25FE22007E7F4D /* RoutineDescriptionCell.swift in Sources */,
 				1DA0040E1B23F308000B88BD /* SetViewController.swift in Sources */,
+				6D71978F1B25FE0A007E7F4D /* RoutineCell.swift in Sources */,
+				6D71978B1B25F2B5007E7F4D /* RoutineViewController.swift in Sources */,
+				6D7197991B260FDD007E7F4D /* RoutinesViewController.swift in Sources */,
+				6D7197931B260400007E7F4D /* Workout.swift in Sources */,
 				1DA003EB1B23F2D4000B88BD /* AppDelegate.swift in Sources */,
 				1DA003EE1B23F2D4000B88BD /* LoonyDash.xcdatamodeld in Sources */,
 				1D009DAE1B23F51D002D5DBA /* Exercise.swift in Sources */,
+				6D7197A11B26149A007E7F4D /* WorkoutSetCell.swift in Sources */,
 				1D322ED71B252E48009F51C8 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
