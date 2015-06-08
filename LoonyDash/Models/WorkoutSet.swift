@@ -13,10 +13,12 @@ class WorkoutSet: NSObject {
     var numReps: Int
     var weight: Float // in pounds
 
-    init(dict: NSDictionary) {
-        exercise = dict["exercise"] as! Exercise
-        numReps = dict["num_reps"] as! Int
-        weight = dict["weight"] as! Float
+    convenience init(dict: NSDictionary) {
+        self.init(
+            exercise: dict["exercise"] as! Exercise,
+            reps: dict["num_reps"] as! Int,
+            weight: dict["weight"] as! Float
+        )
     }
 
     class func s1() -> WorkoutSet {
@@ -24,5 +26,11 @@ class WorkoutSet: NSObject {
                     "num_reps": 8,
                     "weight": 35] as NSDictionary
         return WorkoutSet(dict: dict)
+    }
+
+    init(exercise: Exercise, reps: Int, weight: Float) {
+        self.exercise = exercise
+        self.numReps = reps
+        self.weight = weight
     }
 }

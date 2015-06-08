@@ -16,7 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        let currAccount = Account()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let setVC = storyboard.instantiateViewControllerWithIdentifier("SetViewController") as! SetViewController
+        setVC.currAccount = currAccount
+        window?.rootViewController = setVC
+        window?.makeKeyAndVisible()
         return true
     }
 

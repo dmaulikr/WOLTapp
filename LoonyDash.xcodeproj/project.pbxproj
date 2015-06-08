@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1D009DAC1B23F4D6002D5DBA /* WorkoutSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D009DAB1B23F4D6002D5DBA /* WorkoutSet.swift */; };
 		1D009DAE1B23F51D002D5DBA /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D009DAD1B23F51D002D5DBA /* Exercise.swift */; };
+		1D322ED71B252E48009F51C8 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D322ED61B252E48009F51C8 /* Account.swift */; };
 		1DA003EB1B23F2D4000B88BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA003EA1B23F2D4000B88BD /* AppDelegate.swift */; };
 		1DA003EE1B23F2D4000B88BD /* LoonyDash.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DA003EC1B23F2D4000B88BD /* LoonyDash.xcdatamodeld */; };
 		1DA003F01B23F2D4000B88BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA003EF1B23F2D4000B88BD /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		1D009DAB1B23F4D6002D5DBA /* WorkoutSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkoutSet.swift; path = Models/WorkoutSet.swift; sourceTree = "<group>"; };
 		1D009DAD1B23F51D002D5DBA /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Exercise.swift; path = Models/Exercise.swift; sourceTree = "<group>"; };
+		1D322ED61B252E48009F51C8 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = Models/Account.swift; sourceTree = "<group>"; };
 		1DA003E51B23F2D4000B88BD /* LoonyDash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoonyDash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DA003E91B23F2D4000B88BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DA003EA1B23F2D4000B88BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				1DA003EA1B23F2D4000B88BD /* AppDelegate.swift */,
 				1DA003EF1B23F2D4000B88BD /* ViewController.swift */,
 				1DA0040D1B23F308000B88BD /* SetViewController.swift */,
+				1D322ED61B252E48009F51C8 /* Account.swift */,
 				1D009DAB1B23F4D6002D5DBA /* WorkoutSet.swift */,
 				1D009DAD1B23F51D002D5DBA /* Exercise.swift */,
 				1DA003F11B23F2D4000B88BD /* Main.storyboard */,
@@ -230,6 +233,7 @@
 				1DA003EB1B23F2D4000B88BD /* AppDelegate.swift in Sources */,
 				1DA003EE1B23F2D4000B88BD /* LoonyDash.xcdatamodeld in Sources */,
 				1D009DAE1B23F51D002D5DBA /* Exercise.swift in Sources */,
+				1D322ED71B252E48009F51C8 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
