@@ -142,7 +142,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="475"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkoutSetCell" rowHeight="90" id="s7i-U0-z9l" customClass="WorkoutSetCell" customModule="LoonyDash" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="WorkoutSetCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkoutSetCell" rowHeight="90" id="s7i-U0-z9l" customClass="WorkoutSetCell" customModule="LoonyDash" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s7i-U0-z9l" id="cFj-17-aZi">

@@ -25,7 +25,7 @@
 		6D7197971B260B44007E7F4D /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7197961B260B44007E7F4D /* Routine.swift */; };
 		6D7197991B260FDD007E7F4D /* RoutinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7197981B260FDD007E7F4D /* RoutinesViewController.swift */; };
 		6D71979B1B260FF6007E7F4D /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71979A1B260FF6007E7F4D /* WorkoutViewController.swift */; };
-		6D7197A11B26149A007E7F4D /* WorkoutSetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7197A01B26149A007E7F4D /* WorkoutSetCell.swift */; };
+		6D7197A31B2824A0007E7F4D /* WorkoutSetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7197A21B2824A0007E7F4D /* WorkoutSetCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +61,7 @@
 		6D7197961B260B44007E7F4D /* Routine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Routine.swift; path = Models/Routine.swift; sourceTree = "<group>"; };
 		6D7197981B260FDD007E7F4D /* RoutinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoutinesViewController.swift; path = Controllers/RoutinesViewController.swift; sourceTree = "<group>"; };
 		6D71979A1B260FF6007E7F4D /* WorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkoutViewController.swift; path = Controllers/WorkoutViewController.swift; sourceTree = "<group>"; };
-		6D7197A01B26149A007E7F4D /* WorkoutSetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkoutSetCell.swift; path = ../WorkoutSetCell.swift; sourceTree = "<group>"; };
+		6D7197A21B2824A0007E7F4D /* WorkoutSetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutSetCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +108,8 @@
 				1DA003EA1B23F2D4000B88BD /* AppDelegate.swift */,
 				1DA003F11B23F2D4000B88BD /* Main.storyboard */,
 				6D71978C1B25FDE1007E7F4D /* WorkoutCell.swift */,
-				6D7197A01B26149A007E7F4D /* WorkoutSetCell.swift */,
 				6D71978E1B25FE0A007E7F4D /* RoutineCell.swift */,
+				6D7197A21B2824A0007E7F4D /* WorkoutSetCell.swift */,
 				6D7197901B25FE22007E7F4D /* RoutineDescriptionCell.swift */,
 				1DA003F41B23F2D4000B88BD /* Images.xcassets */,
 				1DA003F61B23F2D4000B88BD /* LaunchScreen.xib */,
@@ -280,7 +280,7 @@
 				1DA003EB1B23F2D4000B88BD /* AppDelegate.swift in Sources */,
 				1DA003EE1B23F2D4000B88BD /* LoonyDash.xcdatamodeld in Sources */,
 				1D009DAE1B23F51D002D5DBA /* Exercise.swift in Sources */,
-				6D7197A11B26149A007E7F4D /* WorkoutSetCell.swift in Sources */,
+				6D7197A31B2824A0007E7F4D /* WorkoutSetCell.swift in Sources */,
 				1D322ED71B252E48009F51C8 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
