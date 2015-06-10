@@ -24,7 +24,8 @@ class SetViewController: UIViewController {
     }
 
     func updateIvars() {
-        var set = currAccount.plannedSets[setIndex]
+        println(currAccount.plannedSets)
+        var set = currAccount.plannedSets![setIndex]
         exerciseTitle.text = set.exercise.name
         repsSelection = set.numReps
         weightSelection = set.weight
@@ -38,8 +39,8 @@ class SetViewController: UIViewController {
 
 
     @IBAction func onCompleted() {
-        currAccount.completedSets.append(currAccount.plannedSets[setIndex])
-        if setIndex + 1 < currAccount.plannedSets.count {
+        currAccount.completedSets.append(currAccount.plannedSets![setIndex])
+        if setIndex + 1 < currAccount.plannedSets!.count {
             setIndex += 1
             updateIvars()
         }

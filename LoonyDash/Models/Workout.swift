@@ -25,4 +25,14 @@ class Workout: NSObject {
     let dict = ["title": "Workout B"]
     return Workout(dict: dict)
   }
+  
+  class func workoutsWithArray(array: [NSDictionary]) -> [Workout] {
+    var workouts = [Workout]()
+    
+    for dictionary in array {
+      workouts.append(Workout(dict: dictionary))
+    }
+    
+    return workouts
+  }
 }

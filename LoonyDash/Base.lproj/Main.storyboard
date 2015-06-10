@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8ZD-E4-9yP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oar-Uj-BU4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -37,7 +37,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="routineTitleLabel" destination="G19-c7-XfH" id="dpA-Zh-00z"/>
-                                            <segue destination="RTA-JY-dlx" kind="show" id="Ih4-tq-hdB"/>
+                                            <segue destination="RTA-JY-dlx" kind="show" identifier="routineSegue" id="Ih4-tq-hdB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -45,13 +45,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="P9E-VL-d0w"/>
                     <connections>
                         <outlet property="tableView" destination="XQt-CQ-dY0" id="E6l-cH-nml"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ScW-Bg-OBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-737" y="323"/>
+            <point key="canvasLocation" x="75" y="323"/>
         </scene>
         <!--RoutineViewController-->
         <scene sceneID="o1M-6v-P9r">
@@ -110,7 +111,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="workoutTitleLabel" destination="81i-0G-FSf" id="b1h-F4-oZi"/>
-                                            <segue destination="dau-G8-fLO" kind="show" id="Qgo-hC-S3o"/>
+                                            <segue destination="dau-G8-fLO" kind="show" identifier="workoutSegue" id="Qgo-hC-S3o"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -124,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hi3-Kq-5iN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-71" y="323"/>
+            <point key="canvasLocation" x="741" y="323"/>
         </scene>
         <!--WorkoutViewController-->
         <scene sceneID="xjF-wR-bVc">
@@ -154,25 +155,33 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wd0-Fd-Ow5">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wd0-Fd-Ow5">
                                                     <rect key="frame" x="417" y="34" width="10" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxB-0y-kPG">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxB-0y-kPG">
                                                     <rect key="frame" x="459" y="34" width="10" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="135" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzp-uk-DTl">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="135" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzp-uk-DTl">
                                                     <rect key="frame" x="499" y="34" width="29" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wd0-Fd-Ow5" firstAttribute="top" secondItem="cFj-17-aZi" secondAttribute="top" constant="34" id="EUb-ab-a14"/>
+                                                <constraint firstItem="hxB-0y-kPG" firstAttribute="leading" secondItem="wd0-Fd-Ow5" secondAttribute="trailing" constant="32" id="FEG-yi-aWw"/>
+                                                <constraint firstItem="hzp-uk-DTl" firstAttribute="leading" secondItem="hxB-0y-kPG" secondAttribute="trailing" constant="30" id="Glm-V5-olB"/>
+                                                <constraint firstItem="hxB-0y-kPG" firstAttribute="top" secondItem="cFj-17-aZi" secondAttribute="top" constant="34" id="O2N-m8-sUQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="hzp-uk-DTl" secondAttribute="trailing" constant="72" id="fS0-LG-U7p"/>
+                                                <constraint firstItem="hzp-uk-DTl" firstAttribute="top" secondItem="cFj-17-aZi" secondAttribute="top" constant="34" id="nwN-dR-85a"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="exerciseNameLabel" destination="JFT-bW-1me" id="Xkw-Sz-2f1"/>
@@ -189,7 +198,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="VKk-gf-iZo"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="setSegue" id="VKk-gf-iZo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -201,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yJj-d2-9QZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="592" y="323"/>
+            <point key="canvasLocation" x="1404" y="323"/>
         </scene>
         <!--SetViewController-->
         <scene sceneID="tne-QT-ifu">
@@ -280,7 +289,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1266" y="323"/>
+            <point key="canvasLocation" x="2078" y="323"/>
+        </scene>
+        <!--RoutinesNavigationController-->
+        <scene sceneID="wNQ-zs-hHU">
+            <objects>
+                <navigationController restorationIdentifier="RoutinesNavigationController" storyboardIdentifier="RoutinesNavigationController" title="RoutinesNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="oar-Uj-BU4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gew-Xi-Udq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8ZD-E4-9yP" kind="relationship" relationship="rootViewController" id="EH0-0N-z2J"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pcq-Yp-S2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-592" y="323"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.054901960784313725" green="0.43137254901960786" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>

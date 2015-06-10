@@ -16,11 +16,16 @@ class RoutinesViewController: UIViewController, UITableViewDataSource, UITableVi
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    tableView.dataSource = self
+    tableView.delegate = self
+    
     updateIvars()
   }
   
   func updateIvars() {
-    var routine = currAccount.routine
+    routines = [Routine.stronglifts()]
+    tableView.reloadData()
   }
   
   override func didReceiveMemoryWarning() {
@@ -34,18 +39,23 @@ class RoutinesViewController: UIViewController, UITableViewDataSource, UITableVi
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = self.tableView.dequeueReusableCellWithIdentifier("RoutineCell") as! RoutineCell
+    cell.routine = self.routines?[indexPath.row]
     
     return cell
   }
   
-  /*
   // MARK: - Navigation
   
   // In a storyboard-based application, you will often want to do a little preparation before navigation
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-  // Get the new view controller using segue.destinationViewController.
-  // Pass the selected object to the new view controller.
+    if segue.identifier == "routineSegue" {
+      let cell = sender as! RoutineCell
+      let routine = cell.routine
+      
+      var vc = segue.destinationViewController as! RoutineViewController
+      vc.currAccount = self.currAccount
+      vc.routine = routine
+      //      vc.delegate = self
+    }
   }
-  */
-  
 }
