@@ -7,32 +7,54 @@
 //
 
 import UIKit
+import Foundation
+import Parse
 
-class Workout: NSObject {
-  var title: String
-  var workoutSets: [WorkoutSet]?
-  
-  init(dict: NSDictionary) {
-    title = dict["title"] as! String
-  }
-  
-  class func workoutA() -> Workout {
-    let dict = ["title": "Workout A"]
-    return Workout(dict: dict)
-  }
-  
-  class func workoutB() -> Workout {
-    let dict = ["title": "Workout B"]
-    return Workout(dict: dict)
-  }
-  
-  class func workoutsWithArray(array: [NSDictionary]) -> [Workout] {
-    var workouts = [Workout]()
+class Workout: PFObject, PFSubclassing {
+    @NSManaged var title: String
+    @NSManaged var workoutSets: [WorkoutSet]?
     
-    for dictionary in array {
-      workouts.append(Workout(dict: dictionary))
+    override class func initialize() {
+        struct Static {
+            static var onceToken : dispatch_once_t = 0;
+        }
+        dispatch_once(&Static.onceToken) {
+            self.registerSubclass()
+        }
     }
     
-    return workouts
-  }
+    init(title: String) {
+        super.init()
+        self.title = title
+    }
+    
+    convenience init(dict: NSDictionary) {
+        self.init(
+            title: dict["title"] as! String
+        )
+    }
+    
+    static func parseClassName() -> String {
+        return "Workout"
+    }
+    
+    class func workoutA() -> Workout {
+        let dict = ["title": "Workout A"]
+        return Workout(dict: dict)
+    }
+    
+    class func workoutB() -> Workout {
+        let dict = ["title": "Workout B"]
+        return Workout(dict: dict)
+    }
+    
+    class func workoutsWithArray(array: [NSDictionary]) -> [Workout] {
+        var workouts = [Workout]()
+        
+        for dictionary in array {
+            workouts.append(Workout(dict: dictionary))
+        }
+        
+        return workouts
+    }
 }
