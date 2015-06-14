@@ -9,41 +9,60 @@
 import UIKit
 
 class SetViewController: UIViewController {
+    let embedSwipable = "embedSwipable"
+
     var currAccount: Account!
     var repsSelection: Int!
     var weightSelection: Float!
     var setIndex = 0
+    var set: WorkoutSet  {
+        return self.currAccount.plannedSets![setIndex]
+    }
+    var exercise: Exercise {
+        return set.exercise
+    }
+
+    var embededPVVC: PageViewViewController!
+
 
     @IBOutlet weak var exerciseTitle: UILabel!
-    @IBOutlet weak var numReps: UILabel!
-    @IBOutlet weak var weight: UILabel!
+    @IBOutlet weak var containerView: UIView!
+
+    // reps and weight, pr, tips, video
 
     override func viewDidLoad() {
-        updateIvars()
+        updateTitle()
         super.viewDidLoad()
+        let oldFrame = containerView.frame
+        containerView.frame = CGRectMake(oldFrame.origin.x, oldFrame.origin.y, oldFrame.size.width, oldFrame.size.height - 30)
+
     }
 
-    func updateIvars() {
-        println(currAccount.plannedSets)
-        var set = currAccount.plannedSets![setIndex]
-        exerciseTitle.text = set.exercise.name
-        repsSelection = set.numReps
-        weightSelection = set.weight
-        updateUI()
+    func updateTitle() {
+        exerciseTitle.text = exercise.name
     }
 
-    func updateUI() {
-        numReps.text = "\(repsSelection)"
-        weight.text = "\(weightSelection)"
-    }
 
 
     @IBAction func onCompleted() {
         currAccount.completedSets.append(currAccount.plannedSets![setIndex])
         if setIndex + 1 < currAccount.plannedSets!.count {
             setIndex += 1
-            updateIvars()
+            updateTitle()
+            embededPVVC.showNewSet(set)
         }
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        switch segue.identifier! {
+        case embedSwipable:
+            let destVC = segue.destinationViewController as! PageViewViewController
+            embededPVVC = destVC
+            destVC.set = set
+
+        default:
+            break
+        }
+    }
+    
 }

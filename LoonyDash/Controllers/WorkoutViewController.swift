@@ -38,6 +38,14 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
     
     return cell
   }
+
+    @IBAction func onBeginWorkout(sender: AnyObject) {
+        let story = UIStoryboard(name: "Sets", bundle: nil)
+        let setsVC = story.instantiateViewControllerWithIdentifier("SetViewController") as! SetViewController
+        setsVC.currAccount = currAccount
+        self.navigationController!.pushViewController(setsVC, animated: true)
+    }
+
   
   // MARK: - Navigation
   
