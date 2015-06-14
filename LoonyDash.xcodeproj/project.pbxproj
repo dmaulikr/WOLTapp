@@ -26,7 +26,6 @@
 		6D7197991B260FDD007E7F4D /* RoutinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7197981B260FDD007E7F4D /* RoutinesViewController.swift */; };
 		6D71979B1B260FF6007E7F4D /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71979A1B260FF6007E7F4D /* WorkoutViewController.swift */; };
 		6D7197A31B2824A0007E7F4D /* WorkoutSetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7197A21B2824A0007E7F4D /* WorkoutSetCell.swift */; };
-		801D71C09F96E40A415686BC /* libPods-LoonyDash.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7E64D7B7550E875F0A6EAB /* libPods-LoonyDash.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +53,6 @@
 		1DA004021B23F2D4000B88BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DA004031B23F2D4000B88BD /* LoonyDashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoonyDashTests.swift; sourceTree = "<group>"; };
 		1DA0040D1B23F308000B88BD /* SetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetViewController.swift; path = Controllers/SetViewController.swift; sourceTree = "<group>"; };
-		30383E336D8369C1036E618C /* Pods-LoonyDash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoonyDash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoonyDash/Pods-LoonyDash.debug.xcconfig"; sourceTree = "<group>"; };
-		34EA00BD20EFF598B2A1C795 /* Pods-LoonyDash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoonyDash.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoonyDash/Pods-LoonyDash.release.xcconfig"; sourceTree = "<group>"; };
 		6D71978A1B25F2B5007E7F4D /* RoutineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoutineViewController.swift; path = Controllers/RoutineViewController.swift; sourceTree = "<group>"; };
 		6D71978C1B25FDE1007E7F4D /* WorkoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
 		6D71978E1B25FE0A007E7F4D /* RoutineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineCell.swift; sourceTree = "<group>"; };
@@ -65,7 +62,6 @@
 		6D7197981B260FDD007E7F4D /* RoutinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoutinesViewController.swift; path = Controllers/RoutinesViewController.swift; sourceTree = "<group>"; };
 		6D71979A1B260FF6007E7F4D /* WorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkoutViewController.swift; path = Controllers/WorkoutViewController.swift; sourceTree = "<group>"; };
 		6D7197A21B2824A0007E7F4D /* WorkoutSetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutSetCell.swift; sourceTree = "<group>"; };
-		EA7E64D7B7550E875F0A6EAB /* libPods-LoonyDash.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LoonyDash.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +69,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				801D71C09F96E40A415686BC /* libPods-LoonyDash.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,8 +88,6 @@
 				1DA003E71B23F2D4000B88BD /* LoonyDash */,
 				1DA004001B23F2D4000B88BD /* LoonyDashTests */,
 				1DA003E61B23F2D4000B88BD /* Products */,
-				80CFE129D2147BE0397821E9 /* Pods */,
-				DF80364DB1F0D57F4E952AFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,23 +167,6 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		80CFE129D2147BE0397821E9 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				30383E336D8369C1036E618C /* Pods-LoonyDash.debug.xcconfig */,
-				34EA00BD20EFF598B2A1C795 /* Pods-LoonyDash.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		DF80364DB1F0D57F4E952AFE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EA7E64D7B7550E875F0A6EAB /* libPods-LoonyDash.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -198,11 +174,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DA004071B23F2D4000B88BD /* Build configuration list for PBXNativeTarget "LoonyDash" */;
 			buildPhases = (
-				4C4270652FD87117276AAA28 /* Check Pods Manifest.lock */,
 				1DA003E11B23F2D4000B88BD /* Sources */,
 				1DA003E21B23F2D4000B88BD /* Frameworks */,
 				1DA003E31B23F2D4000B88BD /* Resources */,
-				0577D0536EE40CCABB395619 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -287,39 +261,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		0577D0536EE40CCABB395619 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoonyDash/Pods-LoonyDash-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4C4270652FD87117276AAA28 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1DA003E11B23F2D4000B88BD /* Sources */ = {
@@ -467,7 +408,6 @@
 		};
 		1DA004081B23F2D4000B88BD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30383E336D8369C1036E618C /* Pods-LoonyDash.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LoonyDash/Info.plist;
@@ -478,7 +418,6 @@
 		};
 		1DA004091B23F2D4000B88BD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34EA00BD20EFF598B2A1C795 /* Pods-LoonyDash.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LoonyDash/Info.plist;
