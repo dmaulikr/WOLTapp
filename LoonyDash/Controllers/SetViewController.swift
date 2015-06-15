@@ -24,7 +24,7 @@ class SetViewController: UIViewController {
         return set.exercise
     }
 
-    var embededPVVC: PageViewViewController!
+    var embeddedPVVC: PageViewViewController!
 
 
     @IBOutlet weak var exerciseTitle: UILabel!
@@ -51,7 +51,7 @@ class SetViewController: UIViewController {
         if setIndex + 1 < self.workoutSets!.count {
             setIndex += 1
             updateTitle()
-            embededPVVC.showNewSet(set)
+            embeddedPVVC.showNewSet(set)
         }
     }
 
@@ -59,7 +59,7 @@ class SetViewController: UIViewController {
         switch segue.identifier! {
         case embedSwipable:
             let destVC = segue.destinationViewController as! PageViewViewController
-            embededPVVC = destVC
+            embeddedPVVC = destVC
             destVC.set = set
 
         default:
