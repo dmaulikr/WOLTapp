@@ -19,7 +19,7 @@ class PageViewViewController: UIPageViewController, UIPageViewControllerDataSour
         super.viewDidLoad()
 
         page1 = UIStoryboard(name: "Sets", bundle: nil).instantiateViewControllerWithIdentifier("RepsAndWeightVC") as! RepsAndWeightVC
-        let page2 = UIStoryboard(name: "Sets", bundle: nil).instantiateViewControllerWithIdentifier("RepsAndWeightVC") as! UIViewController
+        let page2 = UIStoryboard(name: "Sets", bundle: nil).instantiateViewControllerWithIdentifier("VideoVC") as! VideoVC
         pages = [page1, page2]
         dataSource = self
         setViewControllers([page1], direction: .Forward, animated: true, completion: nil)
