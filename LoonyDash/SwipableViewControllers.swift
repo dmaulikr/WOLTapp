@@ -39,6 +39,26 @@ class TipsVC: UIViewController {
 }
 
 
-class VideoVC: UIViewController {
+class VideoVC: UIViewController, YTPlayerViewDelegate {
+
+
+    @IBOutlet weak var videoPlayer: YTPlayerView!
+
+    var set: WorkoutSet {
+        return (self.parentViewController as! PageViewViewController).set
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        videoPlayer.delegate = self
+        videoPlayer.loadWithVideoId(set.exercise.videoUrl)
+    }
+
+    func playerView(playerView: YTPlayerView!, didChangeToState state: YTPlayerState) {
+        if state == YTPlayerState(rawValue: 1)! {
+            videoPlayer.cueVideoById(set.exercise.videoUrl, startSeconds: 0, suggestedQuality: YTPlaybackQuality(rawValue: 2)!)
+        }
+    }
+
     
 }

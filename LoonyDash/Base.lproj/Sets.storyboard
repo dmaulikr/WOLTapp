@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Front DB Squat with lemongrass filling" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCz-1o-qYF">
-                                <rect key="frame" x="153" y="80" width="293.5" height="20.5"/>
+                                <rect key="frame" x="153" y="60" width="293.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -47,7 +47,7 @@
                             <constraint firstItem="W2b-mn-apG" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="84c-Hk-gbz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="M00-ec-KC7" secondAttribute="bottom" constant="150" id="C1l-tL-w4W"/>
                             <constraint firstAttribute="centerX" secondItem="M00-ec-KC7" secondAttribute="centerX" id="KUQ-tY-wwt"/>
-                            <constraint firstItem="FCz-1o-qYF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="Nm3-Do-JJm"/>
+                            <constraint firstItem="FCz-1o-qYF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="Nm3-Do-JJm"/>
                             <constraint firstItem="W2b-mn-apG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Opj-iB-6wW"/>
                             <constraint firstAttribute="centerY" secondItem="W2b-mn-apG" secondAttribute="centerY" constant="32" id="VvC-bo-1Rb"/>
                             <constraint firstItem="W2b-mn-apG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="t5c-EN-tYq"/>
@@ -184,7 +184,7 @@
         <!--VideoVC-->
         <scene sceneID="aQb-ii-VGc">
             <objects>
-                <viewController id="xDZ-rs-i2D" customClass="VideoVC" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VideoVC" id="xDZ-rs-i2D" customClass="VideoVC" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hhu-dG-a0F"/>
                         <viewControllerLayoutGuide type="bottom" id="XVg-aJ-0bx"/>
@@ -192,12 +192,37 @@
                     <view key="view" contentMode="scaleToFill" id="T2k-CO-01V">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rK3-dz-gZ2" customClass="YTPlayerView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rK3-dz-gZ2" firstAttribute="top" secondItem="T2k-CO-01V" secondAttribute="topMargin" id="1aA-No-i89"/>
+                            <constraint firstItem="rK3-dz-gZ2" firstAttribute="leading" secondItem="T2k-CO-01V" secondAttribute="leading" id="1n2-PN-vyg"/>
+                            <constraint firstAttribute="trailing" secondItem="rK3-dz-gZ2" secondAttribute="trailing" id="RwF-lf-aNK"/>
+                            <constraint firstItem="XVg-aJ-0bx" firstAttribute="top" secondItem="rK3-dz-gZ2" secondAttribute="bottom" id="UnH-sW-O4c"/>
+                            <constraint firstItem="rK3-dz-gZ2" firstAttribute="trailing" secondItem="T2k-CO-01V" secondAttribute="trailing" id="WIm-JY-smL"/>
+                            <constraint firstItem="rK3-dz-gZ2" firstAttribute="leading" secondItem="T2k-CO-01V" secondAttribute="leading" id="aTS-aH-6e4"/>
+                            <constraint firstItem="XVg-aJ-0bx" firstAttribute="top" secondItem="rK3-dz-gZ2" secondAttribute="bottom" id="kbN-yq-prd"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1n2-PN-vyg"/>
+                                <exclude reference="RwF-lf-aNK"/>
+                                <exclude reference="UnH-sW-O4c"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="videoPlayer" destination="rK3-dz-gZ2" id="JBJ-Hj-ESE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qZd-B6-JLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="676" y="769"/>
+            <point key="canvasLocation" x="695" y="198"/>
         </scene>
     </scenes>
 </document>
