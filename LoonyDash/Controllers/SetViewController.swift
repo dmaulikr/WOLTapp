@@ -16,6 +16,8 @@ class SetViewController: UIViewController {
     var weightSelection: Float!
     var setIndex = 0
     var workoutSets: [WorkoutSet]!
+    var workout: Workout!
+    var completedSets: [WorkoutSet] = []
     
     var set: WorkoutSet {
         return self.workoutSets[setIndex]
@@ -47,11 +49,24 @@ class SetViewController: UIViewController {
 
 
     @IBAction func onCompleted() {
-        currAccount.completedSets.append(self.workoutSets![setIndex])
+        // make new set with user inputed reps and weights
+        completedSets.append(self.workoutSets![setIndex])
         if setIndex + 1 < self.workoutSets!.count {
             setIndex += 1
             updateTitle()
             embeddedPVVC.showNewSet(set)
+        } else {
+            workout.complete(completedSets, completionHandler: { (success: Bool, err: NSError?) -> Void in
+                if let error = err {
+                    NSLog("error")
+                } else {
+                    self.completedSets = []
+                    self.navigationController?.popViewControllerAnimated(true)
+
+                }
+                // stop spinner (happens second)
+            })
+            // show spinner (happens first b/c workout.complete returns immediately
         }
     }
 

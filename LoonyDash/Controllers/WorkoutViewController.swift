@@ -56,6 +56,7 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
         let setsVC = story.instantiateViewControllerWithIdentifier("SetViewController") as! SetViewController
         setsVC.currAccount = currAccount
         setsVC.workoutSets = self.workoutSets
+        setsVC.workout = self.workout
         self.navigationController!.pushViewController(setsVC, animated: true)
     }
     

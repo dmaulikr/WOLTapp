@@ -37,6 +37,20 @@ class Workout: PFObject, PFSubclassing {
             title: dict["title"] as! String
         )
     }
+
+    func complete(setArray: [WorkoutSet], completionHandler: ((Bool, NSError?) -> Void)) {
+        var thingsToSave = [PFObject]()
+        let workout = Workout(title: self.title)
+        workout.routine = self.routine
+        for set in setArray {
+            set.workout = workout
+            thingsToSave.append(set)
+        }
+        // workout.user = PFCurrentUser
+        thingsToSave.append(workout)
+        PFObject.saveAllInBackground(thingsToSave, block: completionHandler)
+
+    }
     
     static func parseClassName() -> String {
         return "Workout"
