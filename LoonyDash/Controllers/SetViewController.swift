@@ -15,8 +15,10 @@ class SetViewController: UIViewController {
     var repsSelection: Int!
     var weightSelection: Float!
     var setIndex = 0
-    var set: WorkoutSet  {
-        return self.currAccount.plannedSets![setIndex]
+    var workoutSets: [WorkoutSet]!
+    
+    var set: WorkoutSet {
+        return self.workoutSets[setIndex]
     }
     var exercise: Exercise {
         return set.exercise
@@ -45,8 +47,8 @@ class SetViewController: UIViewController {
 
 
     @IBAction func onCompleted() {
-        currAccount.completedSets.append(currAccount.plannedSets![setIndex])
-        if setIndex + 1 < currAccount.plannedSets!.count {
+        currAccount.completedSets.append(self.workoutSets![setIndex])
+        if setIndex + 1 < self.workoutSets!.count {
             setIndex += 1
             updateTitle()
             embededPVVC.showNewSet(set)

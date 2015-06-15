@@ -21,7 +21,18 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.dataSource = self
         tableView.delegate = self
         
-        tableView.reloadData()
+        refreshData()
+    }
+    
+    func refreshData() {
+        DashClient.sharedInstance.fetchWorkoutSetsForWorkout (workout) { (workoutSets, error) -> Void in
+            if (error != nil) {
+                println(error)
+            } else {
+                self.workoutSets = workoutSets
+                self.tableView.reloadData()
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -44,20 +55,14 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
         let story = UIStoryboard(name: "Sets", bundle: nil)
         let setsVC = story.instantiateViewControllerWithIdentifier("SetViewController") as! SetViewController
         setsVC.currAccount = currAccount
+        setsVC.workoutSets = self.workoutSets
         self.navigationController!.pushViewController(setsVC, animated: true)
     }
-    
     
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "setSegue" {
-            
-            var vc = segue.destinationViewController as! SetViewController
-            vc.currAccount = self.currAccount
-            //      vc.delegate = self
-        }
     }
     
 }

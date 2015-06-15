@@ -21,7 +21,18 @@ class RoutineViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.dataSource = self
         tableView.delegate = self
         
-        tableView.reloadData()
+        refreshData()
+    }
+    
+    func refreshData() {
+        DashClient.sharedInstance.fetchWorkoutsForRoutine(routine) { (workouts, error) -> Void in
+            if (error != nil) {
+                println(error)
+            } else {
+                self.workouts = workouts
+                self.tableView.reloadData()
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {

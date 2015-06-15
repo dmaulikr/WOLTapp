@@ -25,6 +25,10 @@ class WorkoutSet: PFObject, PFSubclassing {
         }
     }
     
+    override init() {
+        super.init()
+    }
+    
     init(workout: Workout, exercise: Exercise, reps: Int, weight: Float) {
         super.init()
         self.workout = workout

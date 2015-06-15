@@ -23,6 +23,10 @@ class Workout: PFObject, PFSubclassing {
         }
     }
     
+    override init() {
+        super.init()
+    }
+    
     init(title: String) {
         super.init()
         self.title = title

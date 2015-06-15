@@ -25,8 +25,6 @@ class DashClient {
         return Static.instance!
     }
     
-    // nothing for now
-    
     func fetchRoutines(completion: ([Routine]?, NSError?) -> Void) {
         var query = PFQuery(className: "Routine")
         var routines: [Routine]!
@@ -53,38 +51,31 @@ class DashClient {
                 completion(nil, error)
             } else {
                 workouts = objects as! [Workout]
-                for w in workouts {
-                    w.routine = w["routine"] as! Routine!
-                }
                 completion(workouts, error)
             }
         }
     }
     
-    //  Return pfobjects casted as exercises for a given workout
-    func fetchExercisesForWorkout(workout: Workout!, completion: ([WorkoutSet]!, NSError!) -> Void) {
+    func fetchWorkoutSetsForWorkout(workout: Workout!, completion: ([WorkoutSet]!, NSError!) -> Void) {
         var query = PFQuery(className:"WorkoutSet")
         query.includeKey("workout")
+        query.includeKey("exercise")
         query.whereKey("workout", equalTo: workout)
         
-        var sets: [WorkoutSet]!
+        var workoutSets: [WorkoutSet]!
         query.findObjectsInBackgroundWithBlock {
             (objects: [AnyObject]?, error: NSError?) -> Void in
             if error != nil {
                 completion(nil, error)
             } else {
-                sets = objects as! [WorkoutSet]
-                for s in sets {
-                    s.workout = s["workout"] as! Workout!
-                    s.exercise = s["exercise"] as! Exercise!
-                }
-                completion(sets, error)
+                workoutSets = objects as! [WorkoutSet]
+                completion(workoutSets, error)
             }
         }
     }
     
     // Return the sets for the given exercise for the logged-in user
-    func fetchSetsForExercise(exercise:Exercise, completion: ([WorkoutSet]!, NSError!) -> Void) {
+    func fetchSetsForExercise(exercise: Exercise, completion: ([WorkoutSet]!, NSError!) -> Void) {
         // TODO: SHOULD BE USING CURRENT USER
         
         var query = PFQuery(className:"Set")

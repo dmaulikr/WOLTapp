@@ -14,6 +14,10 @@ class Exercise: PFObject, PFSubclassing {
     @NSManaged var name: String
     @NSManaged var tips: [String]
     @NSManaged var videoUrl: String
+    
+    override init() {
+        super.init()
+    }
 
     init(name: String, tips: [String], videoUrl: String) {
         super.init()

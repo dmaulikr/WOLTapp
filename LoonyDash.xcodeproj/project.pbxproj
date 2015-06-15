@@ -182,7 +182,6 @@
 				6D7197A21B2824A0007E7F4D /* WorkoutSetCell.swift */,
 				6D7197901B25FE22007E7F4D /* RoutineDescriptionCell.swift */,
 				1D5D997B1B2E2B9C005B1558 /* Main.storyboard */,
-				1DA0040D1B23F308000B88BD /* SetViewController.swift */,
 				1D0D8B5B1B2DF92900D89F6C /* SwipableViewControllers.swift */,
 				1DA003F11B23F2D4000B88BD /* Sets.storyboard */,
 				1D0D8B591B2DE10700D89F6C /* PageViewViewController.swift */,
@@ -225,6 +224,7 @@
 			children = (
 				6D71978A1B25F2B5007E7F4D /* RoutineViewController.swift */,
 				6D7197981B260FDD007E7F4D /* RoutinesViewController.swift */,
+				1DA0040D1B23F308000B88BD /* SetViewController.swift */,
 				6D71979A1B260FF6007E7F4D /* WorkoutViewController.swift */,
 				6D71981B1B2E0DC2007E7F4D /* LoonyDash-Bridging-Header.h */,
 			);

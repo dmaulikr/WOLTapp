@@ -25,15 +25,13 @@ class RoutinesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func refreshData() {
         DashClient.sharedInstance.fetchRoutines { (routines, error) -> Void in
-            if (error != nil ) {
+            if (error != nil) {
                 println(error)
-            }
-            else {
+            } else {
                 self.routines = routines
                 self.tableView.reloadData()
             }
         }
-        
     }
     
     override func didReceiveMemoryWarning() {
