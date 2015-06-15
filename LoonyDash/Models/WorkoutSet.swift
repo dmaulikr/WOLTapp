@@ -11,6 +11,7 @@ import Foundation
 import Parse
 
 class WorkoutSet: PFObject, PFSubclassing {
+    @NSManaged var workout: Workout!
     @NSManaged var exercise: Exercise
     @NSManaged var numReps: Int
     @NSManaged var weight: Float // in pounds
@@ -24,8 +25,9 @@ class WorkoutSet: PFObject, PFSubclassing {
         }
     }
     
-    init(exercise: Exercise, reps: Int, weight: Float) {
+    init(workout: Workout, exercise: Exercise, reps: Int, weight: Float) {
         super.init()
+        self.workout = workout
         self.exercise = exercise
         self.numReps = reps
         self.weight = weight
@@ -33,6 +35,7 @@ class WorkoutSet: PFObject, PFSubclassing {
     
     convenience init(dict: NSDictionary) {
         self.init(
+            workout: dict["workout"] as! Workout,
             exercise: dict["exercise"] as! Exercise,
             reps: dict["num_reps"] as! Int,
             weight: dict["weight"] as! Float

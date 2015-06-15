@@ -13,7 +13,6 @@ import Parse
 class Routine: PFObject, PFSubclassing {
     @NSManaged var title: String
     @NSManaged var descriptionText: String
-    @NSManaged var workouts: [Workout]?
     
     override class func initialize() {
         struct Static {
@@ -24,18 +23,20 @@ class Routine: PFObject, PFSubclassing {
         }
     }
     
-    init(title: String, descriptionText: String, workouts: [Workout]) {
+    override init() {
+        super.init()
+    }
+    
+    init(title: String, descriptionText: String) {
         super.init()
         self.title = title
         self.descriptionText = descriptionText
-        self.workouts = workouts
     }
     
     convenience init(dict: NSDictionary) {
         self.init(
             title: dict["title"] as! String,
-            descriptionText: dict["description_text"] as! String,
-            workouts: Workout.workoutsWithArray(dict["workouts"] as! [NSDictionary])
+            descriptionText: dict["description_text"] as! String
         )
     }
     

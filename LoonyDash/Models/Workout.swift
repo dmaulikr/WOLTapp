@@ -11,8 +11,8 @@ import Foundation
 import Parse
 
 class Workout: PFObject, PFSubclassing {
+    @NSManaged var routine: Routine!
     @NSManaged var title: String
-    @NSManaged var workoutSets: [WorkoutSet]?
     
     override class func initialize() {
         struct Static {
@@ -36,16 +36,6 @@ class Workout: PFObject, PFSubclassing {
     
     static func parseClassName() -> String {
         return "Workout"
-    }
-    
-    class func workoutA() -> Workout {
-        let dict = ["title": "Workout A"]
-        return Workout(dict: dict)
-    }
-    
-    class func workoutB() -> Workout {
-        let dict = ["title": "Workout B"]
-        return Workout(dict: dict)
     }
     
     class func workoutsWithArray(array: [NSDictionary]) -> [Workout] {
