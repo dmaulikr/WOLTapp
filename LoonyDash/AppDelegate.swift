@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let nav = storyboard.instantiateViewControllerWithIdentifier("NavigationController") as! UINavigationController
+        let nav = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
         configurePageIndicator()
