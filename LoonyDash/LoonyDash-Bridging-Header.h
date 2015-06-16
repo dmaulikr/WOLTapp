@@ -4,4 +4,5 @@
 
 
 #import "YTPlayerView.h"
+#import <Parse/Parse.h>
 #import <Parse/PFObject+Subclass.h>

@@ -11,7 +11,6 @@ import UIKit
 class SetViewController: UIViewController {
     let embedSwipable = "embedSwipable"
 
-    var currAccount: Account!
     var repsSelection: Int!
     var weightSelection: Float!
     var setIndex = 0

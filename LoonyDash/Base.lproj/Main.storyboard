@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oar-Uj-BU4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pcu-iL-1vh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--RoutinesViewController-->
+        <!--Routines-->
         <scene sceneID="yfP-Lx-fhI">
             <objects>
-                <viewController storyboardIdentifier="RoutinesViewController" title="RoutinesViewController" id="8ZD-E4-9yP" customClass="RoutinesViewController" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RoutinesViewController" title="Routines" id="8ZD-E4-9yP" customClass="RoutinesViewController" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MGg-sm-yRS"/>
                         <viewControllerLayoutGuide type="bottom" id="X1r-hx-ghb"/>
@@ -51,12 +51,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ScW-Bg-OBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="323"/>
+            <point key="canvasLocation" x="887" y="323"/>
         </scene>
-        <!--RoutineViewController-->
+        <!--Routine-->
         <scene sceneID="o1M-6v-P9r">
             <objects>
-                <viewController storyboardIdentifier="RoutineViewController" title="RoutineViewController" id="RTA-JY-dlx" customClass="RoutineViewController" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RoutineViewController" title="Routine" id="RTA-JY-dlx" customClass="RoutineViewController" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IDj-rF-x3n"/>
                         <viewControllerLayoutGuide type="bottom" id="kZp-7Y-dew"/>
@@ -124,12 +124,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hi3-Kq-5iN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="741" y="323"/>
+            <point key="canvasLocation" x="1553" y="323"/>
         </scene>
-        <!--WorkoutViewController-->
+        <!--Workout-->
         <scene sceneID="xjF-wR-bVc">
             <objects>
-                <viewController storyboardIdentifier="WorkoutViewController" title="WorkoutViewController" id="dau-G8-fLO" customClass="WorkoutViewController" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WorkoutViewController" title="Workout" id="dau-G8-fLO" customClass="WorkoutViewController" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wEa-pE-P5b"/>
                         <viewControllerLayoutGuide type="bottom" id="dnD-Cy-9Fj"/>
@@ -209,25 +209,81 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yJj-d2-9QZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1404" y="323"/>
+            <point key="canvasLocation" x="2216" y="323"/>
         </scene>
-        <!--RoutinesNavigationController-->
-        <scene sceneID="wNQ-zs-hHU">
+        <!--Login-->
+        <scene sceneID="tvq-tS-9Ng">
             <objects>
-                <navigationController restorationIdentifier="RoutinesNavigationController" storyboardIdentifier="RoutinesNavigationController" title="RoutinesNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="oar-Uj-BU4" sceneMemberID="viewController">
+                <viewController restorationIdentifier="LoginViewController" storyboardIdentifier="LoginViewController" title="Login" id="WLB-0t-QO8" customClass="LoginViewController" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pJl-AI-eQx"/>
+                        <viewControllerLayoutGuide type="bottom" id="sir-k6-V2k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SO3-Sa-NJU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3jt-pP-Mvc">
+                                <rect key="frame" x="204" y="181" width="192" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZRp-dt-fij">
+                                <rect key="frame" x="204" y="237" width="192" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdo-pP-Skf">
+                                <rect key="frame" x="341" y="286" width="55" height="30"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSignupButton:" destination="WLB-0t-QO8" eventType="touchUpInside" id="fxK-mG-NIW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dII-Xb-Ue8">
+                                <rect key="frame" x="204" y="286" width="48" height="30"/>
+                                <state key="normal" title="Log In ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onLoginButton:" destination="WLB-0t-QO8" eventType="touchUpInside" id="fen-MU-zQx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2e7-RB-AWQ"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="3jt-pP-Mvc" id="kRD-wM-QvT"/>
+                        <outlet property="loginButton" destination="dII-Xb-Ue8" id="8CH-hT-7jZ"/>
+                        <outlet property="passwordTextField" destination="ZRp-dt-fij" id="bYW-r9-8MS"/>
+                        <outlet property="signupButton" destination="Cdo-pP-Skf" id="uur-an-mQl"/>
+                        <segue destination="8ZD-E4-9yP" kind="show" identifier="loginSegue" id="xau-RY-D5r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xTn-4i-QUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="217" y="323"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LYr-ni-Sz1">
+            <objects>
+                <navigationController restorationIdentifier="NavigationController" storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="pcu-iL-1vh" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gew-Xi-Udq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fe1-EI-9cM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="8ZD-E4-9yP" kind="relationship" relationship="rootViewController" id="EH0-0N-z2J"/>
+                        <segue destination="WLB-0t-QO8" kind="relationship" relationship="rootViewController" id="Twm-fp-RNb"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pcq-Yp-S2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i2x-nx-MaJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-592" y="323"/>
+            <point key="canvasLocation" x="-451" y="323"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.054901960784313725" green="0.43137254901960786" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
