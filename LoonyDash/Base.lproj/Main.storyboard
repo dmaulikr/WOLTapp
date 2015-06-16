@@ -283,10 +283,10 @@
             </objects>
             <point key="canvasLocation" x="-695" y="323"/>
         </scene>
-        <!--Item-->
+        <!--Routines-->
         <scene sceneID="LYr-ni-Sz1">
             <objects>
-                <navigationController restorationIdentifier="NavigationController" storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="pcu-iL-1vh" sceneMemberID="viewController">
+                <navigationController restorationIdentifier="NavigationController" storyboardIdentifier="NavigationController" title="Routines" automaticallyAdjustsScrollViewInsets="NO" id="pcu-iL-1vh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="vMQ-Tl-qaQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fe1-EI-9cM">
@@ -302,10 +302,10 @@
             </objects>
             <point key="canvasLocation" x="963" y="323"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="g0m-wI-mk0">
             <objects>
-                <viewController id="ebh-fF-HMc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserProfileViewController" title="Profile" id="ebh-fF-HMc" customClass="UserProfileViewController" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6R8-Ok-MBR"/>
                         <viewControllerLayoutGuide type="bottom" id="Xyq-YA-9N6"/>

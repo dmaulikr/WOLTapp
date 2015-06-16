@@ -21,6 +21,7 @@
 		1DA003F81B23F2D4000B88BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA003F61B23F2D4000B88BD /* LaunchScreen.xib */; };
 		1DA004041B23F2D4000B88BD /* LoonyDashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA004031B23F2D4000B88BD /* LoonyDashTests.swift */; };
 		1DA0040E1B23F308000B88BD /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA0040D1B23F308000B88BD /* SetViewController.swift */; };
+		4DF2859C1B307E1300BC742C /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2859B1B307E1300BC742C /* UserProfileViewController.swift */; };
 		6D71978B1B25F2B5007E7F4D /* RoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71978A1B25F2B5007E7F4D /* RoutineViewController.swift */; };
 		6D71978D1B25FDE1007E7F4D /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71978C1B25FDE1007E7F4D /* WorkoutCell.swift */; };
 		6D71978F1B25FE0A007E7F4D /* RoutineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71978E1B25FE0A007E7F4D /* RoutineCell.swift */; };
@@ -79,6 +80,7 @@
 		1DA004021B23F2D4000B88BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DA004031B23F2D4000B88BD /* LoonyDashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoonyDashTests.swift; sourceTree = "<group>"; };
 		1DA0040D1B23F308000B88BD /* SetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetViewController.swift; path = Controllers/SetViewController.swift; sourceTree = "<group>"; };
+		4DF2859B1B307E1300BC742C /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfileViewController.swift; path = ../UserProfileViewController.swift; sourceTree = "<group>"; };
 		6D71978A1B25F2B5007E7F4D /* RoutineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoutineViewController.swift; path = Controllers/RoutineViewController.swift; sourceTree = "<group>"; };
 		6D71978C1B25FDE1007E7F4D /* WorkoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
 		6D71978E1B25FE0A007E7F4D /* RoutineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineCell.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 		6D71979C1B26100D007E7F4D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4DF2859B1B307E1300BC742C /* UserProfileViewController.swift */,
 				6D71978A1B25F2B5007E7F4D /* RoutineViewController.swift */,
 				6D7197981B260FDD007E7F4D /* RoutinesViewController.swift */,
 				1DA0040D1B23F308000B88BD /* SetViewController.swift */,
@@ -368,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D71978D1B25FDE1007E7F4D /* WorkoutCell.swift in Sources */,
+				4DF2859C1B307E1300BC742C /* UserProfileViewController.swift in Sources */,
 				1D009DAC1B23F4D6002D5DBA /* WorkoutSet.swift in Sources */,
 				1D5D99811B2E426D005B1558 /* YTPlayerView.m in Sources */,
 				6D71979B1B260FF6007E7F4D /* WorkoutViewController.swift in Sources */,
