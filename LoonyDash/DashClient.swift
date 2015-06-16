@@ -44,6 +44,7 @@ class DashClient {
         query.includeKey("routine")
         query.whereKey("routine", equalTo: routine)
         query.whereKeyDoesNotExist("user")
+        query.orderByAscending ("sequence")
         
         var workouts: [Workout]!
         query.findObjectsInBackgroundWithBlock {
@@ -62,6 +63,7 @@ class DashClient {
         query.includeKey("workout")
         query.includeKey("exercise")
         query.whereKey("workout", equalTo: workout)
+        query.orderByAscending ("sequence")
         
         var workoutSets: [WorkoutSet]!
         query.findObjectsInBackgroundWithBlock {
