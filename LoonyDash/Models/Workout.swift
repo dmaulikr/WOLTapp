@@ -13,6 +13,7 @@ import Parse
 class Workout: PFObject, PFSubclassing {
     @NSManaged var routine: Routine!
     @NSManaged var title: String
+    @NSManaged var user: PFUser?
     
     override class func initialize() {
         struct Static {
@@ -27,42 +28,15 @@ class Workout: PFObject, PFSubclassing {
         super.init()
     }
     
-    init(title: String) {
+    init(title: String, user: PFUser?) {
         super.init()
         self.title = title
-    }
-    
-    convenience init(dict: NSDictionary) {
-        self.init(
-            title: dict["title"] as! String
-        )
-    }
-
-    func complete(setArray: [WorkoutSet], completionHandler: ((Bool, NSError?) -> Void)) {
-        var thingsToSave = [PFObject]()
-        let workout = Workout(title: self.title)
-        workout.routine = self.routine
-        for set in setArray {
-            set.workout = workout
-            thingsToSave.append(set)
+        if user != nil {
+            self.user = user!
         }
-        // workout.user = PFCurrentUser
-        thingsToSave.append(workout)
-        PFObject.saveAllInBackground(thingsToSave, block: completionHandler)
-
     }
     
     static func parseClassName() -> String {
         return "Workout"
-    }
-    
-    class func workoutsWithArray(array: [NSDictionary]) -> [Workout] {
-        var workouts = [Workout]()
-        
-        for dictionary in array {
-            workouts.append(Workout(dict: dictionary))
-        }
-        
-        return workouts
     }
 }
