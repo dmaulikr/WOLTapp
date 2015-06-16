@@ -51,7 +51,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ScW-Bg-OBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887" y="323"/>
+            <point key="canvasLocation" x="1699" y="323"/>
         </scene>
         <!--Routine-->
         <scene sceneID="o1M-6v-P9r">
@@ -124,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hi3-Kq-5iN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1553" y="323"/>
+            <point key="canvasLocation" x="2365" y="323"/>
         </scene>
         <!--Workout-->
         <scene sceneID="xjF-wR-bVc">
@@ -209,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yJj-d2-9QZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2216" y="323"/>
+            <point key="canvasLocation" x="3028" y="323"/>
         </scene>
         <!--Login-->
         <scene sceneID="tvq-tS-9Ng">
@@ -276,17 +276,18 @@
                         <outlet property="loginButton" destination="dII-Xb-Ue8" id="8CH-hT-7jZ"/>
                         <outlet property="passwordTextField" destination="ZRp-dt-fij" id="bYW-r9-8MS"/>
                         <outlet property="signupButton" destination="Cdo-pP-Skf" id="uur-an-mQl"/>
-                        <segue destination="pcu-iL-1vh" kind="show" identifier="loginSegue" id="LWX-iz-BaM"/>
+                        <segue destination="pJU-5j-qPC" kind="show" identifier="loginSegue" id="LWX-iz-BaM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xTn-4i-QUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-695" y="323"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="LYr-ni-Sz1">
             <objects>
                 <navigationController restorationIdentifier="NavigationController" storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="pcu-iL-1vh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="vMQ-Tl-qaQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fe1-EI-9cM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -298,6 +299,24 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2x-nx-MaJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="963" y="323"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="W3b-Oo-zlH">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="pJU-5j-qPC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="3Pn-Ql-WtR">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="pcu-iL-1vh" kind="relationship" relationship="viewControllers" id="HId-hE-jBz"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EUH-fa-PHE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="151" y="323"/>
         </scene>
