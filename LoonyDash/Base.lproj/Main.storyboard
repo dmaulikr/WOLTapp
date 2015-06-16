@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pcu-iL-1vh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WLB-0t-QO8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -51,7 +51,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ScW-Bg-OBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887" y="323"/>
+            <point key="canvasLocation" x="1699" y="323"/>
         </scene>
         <!--Routine-->
         <scene sceneID="o1M-6v-P9r">
@@ -124,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hi3-Kq-5iN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1553" y="323"/>
+            <point key="canvasLocation" x="2365" y="323"/>
         </scene>
         <!--Workout-->
         <scene sceneID="xjF-wR-bVc">
@@ -209,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yJj-d2-9QZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2216" y="323"/>
+            <point key="canvasLocation" x="3028" y="323"/>
         </scene>
         <!--Login-->
         <scene sceneID="tvq-tS-9Ng">
@@ -276,17 +276,18 @@
                         <outlet property="loginButton" destination="dII-Xb-Ue8" id="8CH-hT-7jZ"/>
                         <outlet property="passwordTextField" destination="ZRp-dt-fij" id="bYW-r9-8MS"/>
                         <outlet property="signupButton" destination="Cdo-pP-Skf" id="uur-an-mQl"/>
-                        <segue destination="8ZD-E4-9yP" kind="show" identifier="loginSegue" id="xau-RY-D5r"/>
+                        <segue destination="pJU-5j-qPC" kind="show" identifier="loginSegue" id="LWX-iz-BaM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xTn-4i-QUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="217" y="323"/>
+            <point key="canvasLocation" x="-695" y="323"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Routines-->
         <scene sceneID="LYr-ni-Sz1">
             <objects>
-                <navigationController restorationIdentifier="NavigationController" storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="pcu-iL-1vh" sceneMemberID="viewController">
+                <navigationController restorationIdentifier="NavigationController" storyboardIdentifier="NavigationController" title="Routines" automaticallyAdjustsScrollViewInsets="NO" id="pcu-iL-1vh" customClass="RoutinesNavigationController" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="vMQ-Tl-qaQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fe1-EI-9cM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -294,12 +295,58 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="WLB-0t-QO8" kind="relationship" relationship="rootViewController" id="Twm-fp-RNb"/>
+                        <segue destination="8ZD-E4-9yP" kind="relationship" relationship="rootViewController" id="lae-Tx-T9q"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2x-nx-MaJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-451" y="323"/>
+            <point key="canvasLocation" x="963" y="323"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="g0m-wI-mk0">
+            <objects>
+                <viewController storyboardIdentifier="UserProfileViewController" title="Profile" id="ebh-fF-HMc" customClass="UserProfileViewController" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6R8-Ok-MBR"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xyq-YA-9N6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QZN-gH-V0j">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0Q-ub-i2G">
+                                <rect key="frame" x="279" y="20" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="J0B-1j-ISU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2oP-bk-tCz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="945" y="1085"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="W3b-Oo-zlH">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="pJU-5j-qPC" customClass="LDTabBarController" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="3Pn-Ql-WtR">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="pcu-iL-1vh" kind="relationship" relationship="viewControllers" id="HId-hE-jBz"/>
+                        <segue destination="ebh-fF-HMc" kind="relationship" relationship="viewControllers" id="4Vg-65-JL9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EUH-fa-PHE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="151" y="323"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.054901960784313725" green="0.43137254901960786" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>

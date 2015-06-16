@@ -76,7 +76,26 @@ class DashClient {
             }
         }
     }
+
     
+    func fetchWorkoutSetsForUser(completion: ([WorkoutSet]!, NSError!) -> Void) {
+        var query = PFQuery(className:"WorkoutSet")
+        query.includeKey("workout")
+        query.includeKey("exercise")
+        query.whereKey("user", equalTo: PFUser.currentUser()!)
+        
+        var workoutSets: [WorkoutSet]!
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]?, error: NSError?) -> Void in
+            if error != nil {
+                completion(nil, error)
+            } else {
+                workoutSets = objects as! [WorkoutSet]
+                completion(workoutSets, error)
+            }
+        }
+    }
+
 //    // Return the sets for the given exercise for the logged-in user
 //    func fetchSetsForExercise(exercise: Exercise, completion: ([WorkoutSet]!, NSError!) -> Void) {
 //        // TODO: SHOULD BE USING CURRENT USER
