@@ -286,7 +286,7 @@
         <!--Routines-->
         <scene sceneID="LYr-ni-Sz1">
             <objects>
-                <navigationController restorationIdentifier="NavigationController" storyboardIdentifier="NavigationController" title="Routines" automaticallyAdjustsScrollViewInsets="NO" id="pcu-iL-1vh" sceneMemberID="viewController">
+                <navigationController restorationIdentifier="NavigationController" storyboardIdentifier="NavigationController" title="Routines" automaticallyAdjustsScrollViewInsets="NO" id="pcu-iL-1vh" customClass="RoutinesNavigationController" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="vMQ-Tl-qaQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fe1-EI-9cM">
@@ -324,7 +324,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="W3b-Oo-zlH">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="pJU-5j-qPC" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="pJU-5j-qPC" customClass="LDTabBarController" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="3Pn-Ql-WtR">
