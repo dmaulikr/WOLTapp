@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8121.17" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8066.14"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="LooneyDashWatch" customModuleProvider="target">
+                    <items>
+                        <label width="136" alignment="left" text="Some text" id="2iR-4k-yUG"/>
+                        <button width="1" alignment="left" title="Button" id="lQa-Y9-DSt">
+                            <connections>
+                                <action selector="myButton" destination="AgC-eL-Hgc" id="hOm-CM-wxD"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="myLabel" destination="2iR-4k-yUG" id="cMM-R8-MBH"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="155" y="362"/>
+        </scene>
+    </scenes>
+</document>

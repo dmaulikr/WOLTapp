@@ -95,7 +95,7 @@ class DashClient {
         }
     }
     
-    func completeSet(#exercise: Exercise!, workout: Workout!, weight: Float!, reps: Int!, completion: (WorkoutSet?, NSError!) -> Void) {
+    func completeSet(exercise exercise: Exercise!, workout: Workout!, weight: Float!, reps: Int!, completion: (WorkoutSet?, NSError!) -> Void) {
         var set = WorkoutSet(workout: workout, exercise: exercise, reps: reps, weight: weight)
         
         // assigns to set

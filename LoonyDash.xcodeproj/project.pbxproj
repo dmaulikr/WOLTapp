@@ -22,6 +22,13 @@
 		1DA003F81B23F2D4000B88BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA003F61B23F2D4000B88BD /* LaunchScreen.xib */; };
 		1DA004041B23F2D4000B88BD /* LoonyDashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA004031B23F2D4000B88BD /* LoonyDashTests.swift */; };
 		1DA0040E1B23F308000B88BD /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA0040D1B23F308000B88BD /* SetViewController.swift */; };
+		1DCB62F21B2F222A00F901B9 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DCB62F01B2F222A00F901B9 /* Interface.storyboard */; };
+		1DCB62F41B2F222A00F901B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DCB62F31B2F222A00F901B9 /* Assets.xcassets */; };
+		1DCB62FB1B2F222A00F901B9 /* LooneyDashWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1DCB62FA1B2F222A00F901B9 /* LooneyDashWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1DCB63001B2F222A00F901B9 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB62FF1B2F222A00F901B9 /* InterfaceController.swift */; };
+		1DCB63021B2F222A00F901B9 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB63011B2F222A00F901B9 /* ExtensionDelegate.swift */; };
+		1DCB63041B2F222A00F901B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DCB63031B2F222A00F901B9 /* Assets.xcassets */; };
+		1DCB63081B2F222A00F901B9 /* LooneyDashWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1DCB62EE1B2F222A00F901B9 /* LooneyDashWatch.app */; };
 		6D71978B1B25F2B5007E7F4D /* RoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71978A1B25F2B5007E7F4D /* RoutineViewController.swift */; };
 		6D71978D1B25FDE1007E7F4D /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71978C1B25FDE1007E7F4D /* WorkoutCell.swift */; };
 		6D71978F1B25FE0A007E7F4D /* RoutineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71978E1B25FE0A007E7F4D /* RoutineCell.swift */; };
@@ -57,7 +64,46 @@
 			remoteGlobalIDString = 1DA003E41B23F2D4000B88BD;
 			remoteInfo = LoonyDash;
 		};
+		1DCB62FC1B2F222A00F901B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DA003DD1B23F2D4000B88BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DCB62F91B2F222A00F901B9;
+			remoteInfo = "LooneyDashWatch Extension";
+		};
+		1DCB63061B2F222A00F901B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DA003DD1B23F2D4000B88BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DCB62ED1B2F222A00F901B9;
+			remoteInfo = LooneyDashWatch;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1DCB630C1B2F222A00F901B9 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1DCB62FB1B2F222A00F901B9 /* LooneyDashWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DCB63101B2F222A00F901B9 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				1DCB63081B2F222A00F901B9 /* LooneyDashWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1D009DAB1B23F4D6002D5DBA /* WorkoutSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkoutSet.swift; path = Models/WorkoutSet.swift; sourceTree = "<group>"; };
@@ -80,6 +126,15 @@
 		1DA004021B23F2D4000B88BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DA004031B23F2D4000B88BD /* LoonyDashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoonyDashTests.swift; sourceTree = "<group>"; };
 		1DA0040D1B23F308000B88BD /* SetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetViewController.swift; path = Controllers/SetViewController.swift; sourceTree = "<group>"; };
+		1DCB62EE1B2F222A00F901B9 /* LooneyDashWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LooneyDashWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DCB62F11B2F222A00F901B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		1DCB62F31B2F222A00F901B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DCB62F51B2F222A00F901B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DCB62FA1B2F222A00F901B9 /* LooneyDashWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LooneyDashWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DCB62FF1B2F222A00F901B9 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		1DCB63011B2F222A00F901B9 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		1DCB63031B2F222A00F901B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DCB63051B2F222A00F901B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D71978A1B25F2B5007E7F4D /* RoutineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoutineViewController.swift; path = Controllers/RoutineViewController.swift; sourceTree = "<group>"; };
 		6D71978C1B25FDE1007E7F4D /* WorkoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
 		6D71978E1B25FE0A007E7F4D /* RoutineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineCell.swift; sourceTree = "<group>"; };
@@ -138,6 +193,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1DCB62F71B2F222A00F901B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -154,6 +216,8 @@
 		1DA003DC1B23F2D4000B88BD = {
 			isa = PBXGroup;
 			children = (
+				1DCB62EF1B2F222A00F901B9 /* LooneyDashWatch */,
+				1DCB62FE1B2F222A00F901B9 /* LooneyDashWatch Extension */,
 				6D7198091B2E0C20007E7F4D /* Frameworks */,
 				1DA003E71B23F2D4000B88BD /* LoonyDash */,
 				1DA004001B23F2D4000B88BD /* LoonyDashTests */,
@@ -166,6 +230,8 @@
 			children = (
 				1DA003E51B23F2D4000B88BD /* LoonyDash.app */,
 				1DA003FD1B23F2D4000B88BD /* LoonyDashTests.xctest */,
+				1DCB62EE1B2F222A00F901B9 /* LooneyDashWatch.app */,
+				1DCB62FA1B2F222A00F901B9 /* LooneyDashWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,6 +283,27 @@
 				1DA004021B23F2D4000B88BD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1DCB62EF1B2F222A00F901B9 /* LooneyDashWatch */ = {
+			isa = PBXGroup;
+			children = (
+				1DCB62F01B2F222A00F901B9 /* Interface.storyboard */,
+				1DCB62F31B2F222A00F901B9 /* Assets.xcassets */,
+				1DCB62F51B2F222A00F901B9 /* Info.plist */,
+			);
+			path = LooneyDashWatch;
+			sourceTree = "<group>";
+		};
+		1DCB62FE1B2F222A00F901B9 /* LooneyDashWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1DCB62FF1B2F222A00F901B9 /* InterfaceController.swift */,
+				1DCB63011B2F222A00F901B9 /* ExtensionDelegate.swift */,
+				1DCB63031B2F222A00F901B9 /* Assets.xcassets */,
+				1DCB63051B2F222A00F901B9 /* Info.plist */,
+			);
+			path = "LooneyDashWatch Extension";
 			sourceTree = "<group>";
 		};
 		6D71979C1B26100D007E7F4D /* Controllers */ = {
@@ -275,10 +362,12 @@
 				1DA003E11B23F2D4000B88BD /* Sources */,
 				1DA003E21B23F2D4000B88BD /* Frameworks */,
 				1DA003E31B23F2D4000B88BD /* Resources */,
+				1DCB63101B2F222A00F901B9 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1DCB63071B2F222A00F901B9 /* PBXTargetDependency */,
 			);
 			name = LoonyDash;
 			productName = LoonyDash;
@@ -303,13 +392,48 @@
 			productReference = 1DA003FD1B23F2D4000B88BD /* LoonyDashTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		1DCB62ED1B2F222A00F901B9 /* LooneyDashWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DCB630D1B2F222A00F901B9 /* Build configuration list for PBXNativeTarget "LooneyDashWatch" */;
+			buildPhases = (
+				1DCB62EC1B2F222A00F901B9 /* Resources */,
+				1DCB630C1B2F222A00F901B9 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DCB62FD1B2F222A00F901B9 /* PBXTargetDependency */,
+			);
+			name = LooneyDashWatch;
+			productName = LooneyDashWatch;
+			productReference = 1DCB62EE1B2F222A00F901B9 /* LooneyDashWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		1DCB62F91B2F222A00F901B9 /* LooneyDashWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DCB63091B2F222A00F901B9 /* Build configuration list for PBXNativeTarget "LooneyDashWatch Extension" */;
+			buildPhases = (
+				1DCB62F61B2F222A00F901B9 /* Sources */,
+				1DCB62F71B2F222A00F901B9 /* Frameworks */,
+				1DCB62F81B2F222A00F901B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LooneyDashWatch Extension";
+			productName = "LooneyDashWatch Extension";
+			productReference = 1DCB62FA1B2F222A00F901B9 /* LooneyDashWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		1DA003DD1B23F2D4000B88BD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = LooneyDash;
 				TargetAttributes = {
 					1DA003E41B23F2D4000B88BD = {
@@ -318,6 +442,12 @@
 					1DA003FC1B23F2D4000B88BD = {
 						CreatedOnToolsVersion = 6.3.2;
 						TestTargetID = 1DA003E41B23F2D4000B88BD;
+					};
+					1DCB62ED1B2F222A00F901B9 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					1DCB62F91B2F222A00F901B9 = {
+						CreatedOnToolsVersion = 7.0;
 					};
 				};
 			};
@@ -336,6 +466,8 @@
 			targets = (
 				1DA003E41B23F2D4000B88BD /* LoonyDash */,
 				1DA003FC1B23F2D4000B88BD /* LoonyDashTests */,
+				1DCB62ED1B2F222A00F901B9 /* LooneyDashWatch */,
+				1DCB62F91B2F222A00F901B9 /* LooneyDashWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -357,6 +489,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DCB62EC1B2F222A00F901B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DCB62F41B2F222A00F901B9 /* Assets.xcassets in Resources */,
+				1DCB62F21B2F222A00F901B9 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DCB62F81B2F222A00F901B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DCB63041B2F222A00F901B9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +546,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1DCB62F61B2F222A00F901B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DCB63021B2F222A00F901B9 /* ExtensionDelegate.swift in Sources */,
+				1DCB63001B2F222A00F901B9 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -404,6 +562,16 @@
 			isa = PBXTargetDependency;
 			target = 1DA003E41B23F2D4000B88BD /* LoonyDash */;
 			targetProxy = 1DA003FE1B23F2D4000B88BD /* PBXContainerItemProxy */;
+		};
+		1DCB62FD1B2F222A00F901B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DCB62F91B2F222A00F901B9 /* LooneyDashWatch Extension */;
+			targetProxy = 1DCB62FC1B2F222A00F901B9 /* PBXContainerItemProxy */;
+		};
+		1DCB63071B2F222A00F901B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DCB62ED1B2F222A00F901B9 /* LooneyDashWatch */;
+			targetProxy = 1DCB63061B2F222A00F901B9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -432,6 +600,14 @@
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
+		1DCB62F01B2F222A00F901B9 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DCB62F11B2F222A00F901B9 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -456,6 +632,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -530,6 +707,7 @@
 				);
 				INFOPLIST_FILE = LoonyDash/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "raspberry.peach.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LoonyDash/LoonyDash-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -548,6 +726,7 @@
 				);
 				INFOPLIST_FILE = LoonyDash/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "raspberry.peach.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LoonyDash/LoonyDash-Bridging-Header.h";
 			};
@@ -567,6 +746,7 @@
 				);
 				INFOPLIST_FILE = LoonyDashTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "raspberry.peach.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoonyDash.app/LoonyDash";
 			};
@@ -582,8 +762,77 @@
 				);
 				INFOPLIST_FILE = LoonyDashTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "raspberry.peach.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoonyDash.app/LoonyDash";
+			};
+			name = Release;
+		};
+		1DCB630A1B2F222A00F901B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = "LooneyDashWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = raspberry.peach.LoonyDash.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		1DCB630B1B2F222A00F901B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "LooneyDashWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = raspberry.peach.LoonyDash.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		1DCB630E1B2F222A00F901B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_TESTABILITY = YES;
+				IBSC_MODULE = LooneyDashWatch_Extension;
+				INFOPLIST_FILE = LooneyDashWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = raspberry.peach.LoonyDash.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		1DCB630F1B2F222A00F901B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = LooneyDashWatch_Extension;
+				INFOPLIST_FILE = LooneyDashWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = raspberry.peach.LoonyDash.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -616,6 +865,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		1DCB63091B2F222A00F901B9 /* Build configuration list for PBXNativeTarget "LooneyDashWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DCB630A1B2F222A00F901B9 /* Debug */,
+				1DCB630B1B2F222A00F901B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1DCB630D1B2F222A00F901B9 /* Build configuration list for PBXNativeTarget "LooneyDashWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DCB630E1B2F222A00F901B9 /* Debug */,
+				1DCB630F1B2F222A00F901B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 

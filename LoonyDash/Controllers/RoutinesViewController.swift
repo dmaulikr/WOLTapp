@@ -26,7 +26,7 @@ class RoutinesViewController: UIViewController, UITableViewDataSource, UITableVi
     func refreshData() {
         DashClient.sharedInstance.fetchRoutines { (routines, error) -> Void in
             if (error != nil) {
-                println(error)
+                print(error)
             } else {
                 self.routines = routines
                 self.tableView.reloadData()
