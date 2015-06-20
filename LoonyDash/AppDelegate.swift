@@ -32,11 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
-        let currAccount = Account()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let nav = storyboard.instantiateViewControllerWithIdentifier("RoutinesNavigationController") as! UINavigationController
-        let vc = nav.topViewController as! RoutinesViewController
-        vc.currAccount = currAccount
+        let nav = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
         configurePageIndicator()

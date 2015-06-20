@@ -9,7 +9,6 @@
 import UIKit
 
 class WorkoutViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    var currAccount: Account!
     var workout: Workout!
     var workoutSets: [WorkoutSet]!
     
@@ -54,7 +53,6 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBAction func onBeginWorkout(sender: AnyObject) {
         let story = UIStoryboard(name: "Sets", bundle: nil)
         let setsVC = story.instantiateViewControllerWithIdentifier("SetViewController") as! SetViewController
-        setsVC.currAccount = currAccount
         setsVC.workoutSets = self.workoutSets
         setsVC.workout = self.workout
         self.navigationController!.pushViewController(setsVC, animated: true)

@@ -12,7 +12,6 @@ import WatchConnectivity
 class SetViewController: UIViewController, WCSessionDelegate {
     let embedSwipable = "embedSwipable"
 
-    var currAccount: Account!
     var repsSelection: Int!
     var weightSelection: Float!
     var setIndex = 0
@@ -52,17 +51,17 @@ class SetViewController: UIViewController, WCSessionDelegate {
         exerciseTitle.text = exercise.name
     }
 
-
-
     @IBAction func onCompleted() {
         // make new set with user inputed reps and weights
-        completedSets.append(self.workoutSets![setIndex])
+        let completedSet = WorkoutSet(set: self.workoutSets![setIndex])
+        completedSet.user = PFUser.currentUser()
+        completedSets.append(completedSet)
         if setIndex + 1 < self.workoutSets!.count {
             setIndex += 1
             updateTitle()
             embeddedPVVC.showNewSet(set)
         } else {
-            workout.complete(completedSets, completionHandler: { (success: Bool, err: NSError?) -> Void in
+            DashClient.sharedInstance.completeWorkout(workout, completedSets: completedSets, completion: { (success: Bool, err: NSError?) -> Void in
                 if let _ = err {
                     NSLog("error")
                 } else {

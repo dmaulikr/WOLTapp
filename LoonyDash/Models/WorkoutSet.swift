@@ -15,6 +15,7 @@ class WorkoutSet: PFObject, PFSubclassing {
     @NSManaged var exercise: Exercise
     @NSManaged var numReps: Int
     @NSManaged var weight: Float // in pounds
+    @NSManaged var user: PFUser?
     
     override class func initialize() {
         struct Static {
@@ -29,31 +30,29 @@ class WorkoutSet: PFObject, PFSubclassing {
         super.init()
     }
     
-    init(workout: Workout, exercise: Exercise, reps: Int, weight: Float) {
+    init(workout: Workout, exercise: Exercise, reps: Int, weight: Float, user: PFUser?) {
         super.init()
         self.workout = workout
         self.exercise = exercise
         self.numReps = reps
         self.weight = weight
+        if user != nil {
+            self.user = user!
+        }
     }
     
-    convenience init(dict: NSDictionary) {
-        self.init(
-            workout: dict["workout"] as! Workout,
-            exercise: dict["exercise"] as! Exercise,
-            reps: dict["num_reps"] as! Int,
-            weight: dict["weight"] as! Float
-        )
+    init(set: WorkoutSet) {
+        super.init()
+        self.workout = set.workout
+        self.exercise = set.exercise
+        self.numReps = set.numReps
+        self.weight = set.weight
+        if user != nil {
+            self.user = user!
+        }
     }
     
     static func parseClassName() -> String {
         return "WorkoutSet"
-    }
-    
-    class func s1() -> WorkoutSet {
-        let dict = ["exercise": Exercise.dbSquat(),
-            "num_reps": 8,
-            "weight": 35] as NSDictionary
-        return WorkoutSet(dict: dict)
     }
 }

@@ -11,7 +11,7 @@ import Parse
 
 class DashClient {
     
-    var tmpSet: WorkoutSet?
+//    var tmpSet: WorkoutSet?
     
     class var sharedInstance: DashClient {
         struct Static {
@@ -43,6 +43,8 @@ class DashClient {
         var query = PFQuery(className: "Workout")
         query.includeKey("routine")
         query.whereKey("routine", equalTo: routine)
+        query.whereKeyDoesNotExist("user")
+        query.orderByAscending ("sequence")
         
         var workouts: [Workout]!
         query.findObjectsInBackgroundWithBlock {
@@ -61,6 +63,7 @@ class DashClient {
         query.includeKey("workout")
         query.includeKey("exercise")
         query.whereKey("workout", equalTo: workout)
+        query.orderByAscending ("sequence")
         
         var workoutSets: [WorkoutSet]!
         query.findObjectsInBackgroundWithBlock {
@@ -73,45 +76,56 @@ class DashClient {
             }
         }
     }
+
     
-    // Return the sets for the given exercise for the logged-in user
-    func fetchSetsForExercise(exercise: Exercise, completion: ([WorkoutSet]!, NSError!) -> Void) {
-        // TODO: SHOULD BE USING CURRENT USER
-        
-        var query = PFQuery(className:"Set")
+    func fetchWorkoutSetsForUser(completion: ([WorkoutSet]!, NSError!) -> Void) {
+        var query = PFQuery(className:"WorkoutSet")
+        query.includeKey("workout")
+        query.includeKey("exercise")
         query.whereKey("user", equalTo: PFUser.currentUser()!)
-        query.whereKey("exercise", equalTo: exercise)
-        query.orderByDescending ("weight")
         
-        var sets: [WorkoutSet]!
+        var workoutSets: [WorkoutSet]!
         query.findObjectsInBackgroundWithBlock {
             (objects: [AnyObject]?, error: NSError?) -> Void in
-            sets = objects as! [WorkoutSet]
-            for s in sets {
-                s.workout = s["workout"] as! Workout!
-                s.exercise = s["exercise"] as! Exercise!
-            }
-            completion(sets, error)
-        }
-    }
-    
-    func completeSet(exercise exercise: Exercise!, workout: Workout!, weight: Float!, reps: Int!, completion: (WorkoutSet?, NSError!) -> Void) {
-        var set = WorkoutSet(workout: workout, exercise: exercise, reps: reps, weight: weight)
-        
-        // assigns to set
-        self.tmpSet = set
-        
-        set.saveInBackgroundWithBlock {
-            (success: Bool, error: NSError?) -> Void in
-            if (success) {
-                // The object has been saved.
-                completion(self.tmpSet!, nil)
-            } else {
-                // There was a problem, check error.description
+            if error != nil {
                 completion(nil, error)
+            } else {
+                workoutSets = objects as! [WorkoutSet]
+                completion(workoutSets, error)
             }
         }
-        
     }
+
+//    // Return the sets for the given exercise for the logged-in user
+//    func fetchSetsForExercise(exercise: Exercise, completion: ([WorkoutSet]!, NSError!) -> Void) {
+//        // TODO: SHOULD BE USING CURRENT USER
+//        
+//        var query = PFQuery(className:"Set")
+//        query.whereKey("user", equalTo: PFUser.currentUser()!)
+//        query.whereKey("exercise", equalTo: exercise)
+//        query.orderByDescending ("weight")
+//        
+//        var sets: [WorkoutSet]!
+//        query.findObjectsInBackgroundWithBlock {
+//            (objects: [AnyObject]?, error: NSError?) -> Void in
+//            sets = objects as! [WorkoutSet]
+//            for s in sets {
+//                s.workout = s["workout"] as! Workout!
+//                s.exercise = s["exercise"] as! Exercise!
+//            }
+//            completion(sets, error)
+//        }
+//    }
     
+    func completeWorkout(workout: Workout, completedSets: [WorkoutSet], completion: (Bool,NSError?) -> Void) {
+        var thingsToSave = [PFObject]()
+        let completedWorkout = Workout(title: workout.title, user: PFUser.currentUser()!)
+        completedWorkout.routine = workout.routine
+        for set in completedSets {
+            set.workout = completedWorkout
+            thingsToSave.append(set)
+        }
+        thingsToSave.append(completedWorkout)
+        PFObject.saveAllInBackground(thingsToSave, block: completion)
+    }
 }

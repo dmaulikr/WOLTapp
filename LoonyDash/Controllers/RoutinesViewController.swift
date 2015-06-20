@@ -9,7 +9,6 @@
 import UIKit
 
 class RoutinesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    var currAccount: Account!
     var routines: [Routine]?
     
     @IBOutlet weak var tableView: UITableView!
@@ -59,7 +58,6 @@ class RoutinesViewController: UIViewController, UITableViewDataSource, UITableVi
             let routine = cell.routine
             
             var vc = segue.destinationViewController as! RoutineViewController
-            vc.currAccount = self.currAccount
             vc.routine = routine
             //      vc.delegate = self
         }

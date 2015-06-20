@@ -9,7 +9,6 @@
 import UIKit
 
 class RoutineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    var currAccount: Account!
     var routine: Routine!
     var workouts: [Workout]!
     
@@ -68,7 +67,6 @@ class RoutineViewController: UIViewController, UITableViewDataSource, UITableVie
             let workout = cell.workout
             
             var vc = segue.destinationViewController as! WorkoutViewController
-            vc.currAccount = self.currAccount
             vc.workout = workout
             //      vc.delegate = self
         }
