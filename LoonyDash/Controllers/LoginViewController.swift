@@ -35,13 +35,13 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onLoginButton(sender: AnyObject) {
-        PFUser.logInWithUsernameInBackground(emailTextField.text, password: passwordTextField.text) {
+        PFUser.logInWithUsernameInBackground(emailTextField.text!, password: passwordTextField.text!) {
             (user: PFUser?, error: NSError?) -> Void in
             if user != nil {
                 self.performSegueWithIdentifier("loginSegue", sender: self)
             } else {
-                let errorString = error?.userInfo?["error"] as? NSString
-                println(errorString)
+                let errorString = error!.userInfo["error"] as? NSString
+                print(errorString)
             }
         }
     }
@@ -56,8 +56,8 @@ class LoginViewController: UIViewController {
         user.signUpInBackgroundWithBlock {
             (succeeded: Bool, error: NSError?) -> Void in
             if let error = error {
-                let errorString = error.userInfo?["error"] as? NSString
-                println(errorString)
+                let errorString = error.userInfo["error"] as? NSString
+                print(errorString)
             } else {
                 self.performSegueWithIdentifier("loginSegue", sender: self)
             }

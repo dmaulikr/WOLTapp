@@ -26,7 +26,7 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
     func refreshData() {
         DashClient.sharedInstance.fetchWorkoutSetsForWorkout (workout) { (workoutSets, error) -> Void in
             if (error != nil) {
-                println(error)
+                print(error)
             } else {
                 self.workoutSets = workoutSets
                 self.tableView.reloadData()

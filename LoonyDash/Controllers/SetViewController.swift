@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import WatchConnectivity
 
-class SetViewController: UIViewController {
+class SetViewController: UIViewController, WCSessionDelegate {
     let embedSwipable = "embedSwipable"
 
     var repsSelection: Int!
@@ -38,6 +39,11 @@ class SetViewController: UIViewController {
         super.viewDidLoad()
         let oldFrame = containerView.frame
         containerView.frame = CGRectMake(oldFrame.origin.x, oldFrame.origin.y, oldFrame.size.width, oldFrame.size.height - 30)
+        if (WCSession.isSupported()) {
+            let session = WCSession.defaultSession()
+            session.delegate = self
+            session.activateSession()
+        }
 
     }
 
@@ -47,7 +53,7 @@ class SetViewController: UIViewController {
 
     @IBAction func onCompleted() {
         // make new set with user inputed reps and weights
-        var completedSet = WorkoutSet(set: self.workoutSets![setIndex])
+        let completedSet = WorkoutSet(set: self.workoutSets![setIndex])
         completedSet.user = PFUser.currentUser()
         completedSets.append(completedSet)
         if setIndex + 1 < self.workoutSets!.count {
@@ -56,7 +62,7 @@ class SetViewController: UIViewController {
             embeddedPVVC.showNewSet(set)
         } else {
             DashClient.sharedInstance.completeWorkout(workout, completedSets: completedSets, completion: { (success: Bool, err: NSError?) -> Void in
-                if let error = err {
+                if let _ = err {
                     NSLog("error")
                 } else {
                     self.completedSets = []
@@ -79,6 +85,12 @@ class SetViewController: UIViewController {
         default:
             break
         }
+    }
+
+    func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
+        let me = message["abc"] as! String
+        NSLog("msg of abc: \(me)")
+        NSLog("heree")
     }
     
 }

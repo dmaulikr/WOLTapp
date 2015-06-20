@@ -14,7 +14,7 @@ class UserProfileViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Profile"
         DashClient.sharedInstance.fetchWorkoutSetsForUser { (workouts: [WorkoutSet]!, error: NSError!) -> Void in
-            println(workouts)
+            print(workouts)
         }
     }
 
