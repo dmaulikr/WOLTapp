@@ -12,13 +12,15 @@ class UserProfileViewController: UIViewController {
     
     var profileContainerController: ProfileContainerViewController!
     
+    @IBOutlet weak var placeHolderView: UIView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.profileContainerController = UIStoryboard.profileContainerViewController()
-        
-        self.profileContainerController.view.frame = self.view.bounds
+        self.profileContainerController.view.frame = self.view.frame
         self.addChildViewController(self.profileContainerController)
         self.view.addSubview(self.profileContainerController.view)
+
         self.profileContainerController.didMoveToParentViewController(self)
     }
     
