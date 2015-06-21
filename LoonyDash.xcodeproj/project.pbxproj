@@ -29,6 +29,9 @@
 		1DCB63041B2F222A00F901B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DCB63031B2F222A00F901B9 /* Assets.xcassets */; };
 		1DCB63081B2F222A00F901B9 /* LooneyDashWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1DCB62EE1B2F222A00F901B9 /* LooneyDashWatch.app */; };
 		4D7B4FA31B36C9FC00824B90 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7B4FA21B36C9FC00824B90 /* UIStoryboard.swift */; };
+		4D7B4FA51B36D38C00824B90 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D7B4FA41B36D38C00824B90 /* Profile.storyboard */; };
+		4D7B4FA71B36D65000824B90 /* PersonalRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7B4FA61B36D65000824B90 /* PersonalRecordsViewController.swift */; };
+		4D7B4FA91B36D66500824B90 /* SetsCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7B4FA81B36D66500824B90 /* SetsCompletedViewController.swift */; };
 		4DF2859C1B307E1300BC742C /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2859B1B307E1300BC742C /* UserProfileViewController.swift */; };
 		4DF285A01B307F5500BC742C /* LDTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2859F1B307F5500BC742C /* LDTabBarController.swift */; };
 		4DF285A21B30820C00BC742C /* RoutinesNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF285A11B30820C00BC742C /* RoutinesNavigationController.swift */; };
@@ -139,6 +142,9 @@
 		1DCB63031B2F222A00F901B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DCB63051B2F222A00F901B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D7B4FA21B36C9FC00824B90 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
+		4D7B4FA41B36D38C00824B90 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = ../Profile.storyboard; sourceTree = "<group>"; };
+		4D7B4FA61B36D65000824B90 /* PersonalRecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonalRecordsViewController.swift; path = Controllers/PersonalRecordsViewController.swift; sourceTree = "<group>"; };
+		4D7B4FA81B36D66500824B90 /* SetsCompletedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetsCompletedViewController.swift; path = Controllers/SetsCompletedViewController.swift; sourceTree = "<group>"; };
 		4DF2859B1B307E1300BC742C /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfileViewController.swift; path = ../UserProfileViewController.swift; sourceTree = "<group>"; };
 		4DF2859F1B307F5500BC742C /* LDTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LDTabBarController.swift; sourceTree = "<group>"; };
 		4DF285A11B30820C00BC742C /* RoutinesNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutinesNavigationController.swift; sourceTree = "<group>"; };
@@ -257,8 +263,7 @@
 				6D7197A21B2824A0007E7F4D /* WorkoutSetCell.swift */,
 				6D7197901B25FE22007E7F4D /* RoutineDescriptionCell.swift */,
 				6D71981B1B2E0DC2007E7F4D /* LoonyDash-Bridging-Header.h */,
-				1D5D997B1B2E2B9C005B1558 /* Main.storyboard */,
-				1DA003F11B23F2D4000B88BD /* Sets.storyboard */,
+				4D7B4FAA1B36D68C00824B90 /* Storyboards */,
 				1DA003F41B23F2D4000B88BD /* Images.xcassets */,
 				1DA003F61B23F2D4000B88BD /* LaunchScreen.xib */,
 				1DA003EC1B23F2D4000B88BD /* LoonyDash.xcdatamodeld */,
@@ -314,10 +319,22 @@
 			path = "LooneyDashWatch Extension";
 			sourceTree = "<group>";
 		};
+		4D7B4FAA1B36D68C00824B90 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4D7B4FA41B36D38C00824B90 /* Profile.storyboard */,
+				1D5D997B1B2E2B9C005B1558 /* Main.storyboard */,
+				1DA003F11B23F2D4000B88BD /* Sets.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		6D71979C1B26100D007E7F4D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				4DF285A11B30820C00BC742C /* RoutinesNavigationController.swift */,
+				4D7B4FA61B36D65000824B90 /* PersonalRecordsViewController.swift */,
+				4D7B4FA81B36D66500824B90 /* SetsCompletedViewController.swift */,
 				4DF2859F1B307F5500BC742C /* LDTabBarController.swift */,
 				4DF2859B1B307E1300BC742C /* UserProfileViewController.swift */,
 				6D71978A1B25F2B5007E7F4D /* RoutineViewController.swift */,
@@ -489,6 +506,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D7B4FA51B36D38C00824B90 /* Profile.storyboard in Resources */,
 				1D5D99831B2E4279005B1558 /* Assets in Resources */,
 				1DA003F31B23F2D4000B88BD /* Sets.storyboard in Resources */,
 				1DA003F81B23F2D4000B88BD /* LaunchScreen.xib in Resources */,
@@ -529,6 +547,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D71978D1B25FDE1007E7F4D /* WorkoutCell.swift in Sources */,
+				4D7B4FA91B36D66500824B90 /* SetsCompletedViewController.swift in Sources */,
 				4DF2859C1B307E1300BC742C /* UserProfileViewController.swift in Sources */,
 				1D009DAC1B23F4D6002D5DBA /* WorkoutSet.swift in Sources */,
 				4D7B4FA31B36C9FC00824B90 /* UIStoryboard.swift in Sources */,
@@ -539,6 +558,7 @@
 				1DA0040E1B23F308000B88BD /* SetViewController.swift in Sources */,
 				6D71978F1B25FE0A007E7F4D /* RoutineCell.swift in Sources */,
 				6D71982E1B301DF2007E7F4D /* LoginViewController.swift in Sources */,
+				4D7B4FA71B36D65000824B90 /* PersonalRecordsViewController.swift in Sources */,
 				4DF285A01B307F5500BC742C /* LDTabBarController.swift in Sources */,
 				6D71978B1B25F2B5007E7F4D /* RoutineViewController.swift in Sources */,
 				4DF285A21B30820C00BC742C /* RoutinesNavigationController.swift in Sources */,
