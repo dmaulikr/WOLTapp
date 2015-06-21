@@ -39,12 +39,13 @@ class DashClient {
         }
     }
     
-    func fetchWorkoutsForRoutine(routine: Routine!, completion: ([Workout]!, NSError!) -> Void) {
+    func fetchWorkoutsForRoutine(routine: Routine!, completion: ([Workout]!, NSError?) -> Void) {
         let query = PFQuery(className: "Workout")
         query.includeKey("routine")
         query.whereKey("routine", equalTo: routine)
         query.whereKeyDoesNotExist("user")
-        query.orderByAscending ("sequence")
+        query.whereKeyExists("sequence")
+        query.orderByAscending("sequence")
         
         var workouts: [Workout]!
         query.findObjectsInBackgroundWithBlock {
@@ -58,12 +59,12 @@ class DashClient {
         }
     }
     
-    func fetchWorkoutSetsForWorkout(workout: Workout!, completion: ([WorkoutSet]!, NSError!) -> Void) {
-        let query = PFQuery(className:"WorkoutSet")
+    func fetchWorkoutSetsForWorkout(workout: Workout!, completion: ([WorkoutSet]!, NSError?) -> Void) {
+        let query = PFQuery(className: "WorkoutSet")
         query.includeKey("workout")
         query.includeKey("exercise")
         query.whereKey("workout", equalTo: workout)
-        query.orderByAscending ("sequence")
+        query.orderByAscending("sequence")
         
         var workoutSets: [WorkoutSet]!
         query.findObjectsInBackgroundWithBlock {
@@ -77,9 +78,8 @@ class DashClient {
         }
     }
 
-    
-    func fetchWorkoutSetsForUser(completion: ([WorkoutSet]!, NSError!) -> Void) {
-        let query = PFQuery(className:"WorkoutSet")
+    func fetchWorkoutSetsForUser(completion: ([WorkoutSet]!, NSError?) -> Void) {
+        let query = PFQuery(className: "WorkoutSet")
         query.includeKey("workout")
         query.includeKey("exercise")
         query.whereKey("user", equalTo: PFUser.currentUser()!)
@@ -94,6 +94,18 @@ class DashClient {
                 completion(workoutSets, error)
             }
         }
+    }
+    
+    func fetchLastWorkoutOfWorkoutTypeForUser(workout: Workout!, completion: (Workout!) -> Void) {
+        let query = PFQuery(className: "Workout")
+        query.includeKey("workout")
+        query.whereKey("workoutId", equalTo: workout.workoutId)
+        query.whereKey("user", equalTo: PFUser.currentUser()!)
+        
+        var lastWorkout: Workout!
+        let object = query.getFirstObject()
+        lastWorkout = object as? Workout
+        completion(lastWorkout)
     }
 
 //    // Return the sets for the given exercise for the logged-in user
@@ -117,9 +129,9 @@ class DashClient {
 //        }
 //    }
     
-    func completeWorkout(workout: Workout, completedSets: [WorkoutSet], completion: (Bool,NSError?) -> Void) {
+    func completeWorkout(workout: Workout, completedSets: [WorkoutSet], completion: (Bool, NSError?) -> Void) {
         var thingsToSave = [PFObject]()
-        let completedWorkout = Workout(title: workout.title, user: PFUser.currentUser()!)
+        let completedWorkout = Workout(title: workout.title, workoutId: workout.workoutId, user: PFUser.currentUser()!)
         completedWorkout.routine = workout.routine
         for set in completedSets {
             set.workout = completedWorkout

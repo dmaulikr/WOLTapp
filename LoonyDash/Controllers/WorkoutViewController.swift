@@ -53,8 +53,8 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBAction func onBeginWorkout(sender: AnyObject) {
         let story = UIStoryboard(name: "Sets", bundle: nil)
         let setsVC = story.instantiateViewControllerWithIdentifier("SetViewController") as! SetViewController
-        setsVC.workoutSets = self.workoutSets
         setsVC.workout = self.workout
+        setsVC.workoutSets = self.workoutSets
         self.navigationController!.pushViewController(setsVC, animated: true)
     }
     
