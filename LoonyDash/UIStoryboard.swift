@@ -18,6 +18,15 @@ extension UIStoryboard {
         return mainStoryboard().instantiateViewControllerWithIdentifier("LoginViewController") as? LoginViewController
     }
 
+    class func userProfileViewController() -> UserProfileViewController? {
+        return profileStoryboard().instantiateViewControllerWithIdentifier("UserProfileViewController") as? UserProfileViewController
+    }
+
+    
+    class func profileContainerViewController() -> ProfileContainerViewController? {
+        return profileStoryboard().instantiateViewControllerWithIdentifier("ProfileContainerViewController") as? ProfileContainerViewController
+    }
+
     class func personalRecordsViewController() -> PersonalRecordsViewController? {
         return profileStoryboard().instantiateViewControllerWithIdentifier("PersonalRecordsViewController") as? PersonalRecordsViewController
     }

@@ -298,16 +298,6 @@
             </objects>
             <point key="canvasLocation" x="963" y="323"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="wbG-V3-Ep7">
-            <objects>
-                <pageViewController storyboardIdentifier="UserProfileViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="qke-Ys-z9N" customClass="UserProfileViewController" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="m4c-Eq-hIf"/>
-                </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3yB-4e-EKW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="970" y="1066"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="W3b-Oo-zlH">
             <objects>
@@ -320,7 +310,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="pcu-iL-1vh" kind="relationship" relationship="viewControllers" id="HId-hE-jBz"/>
-                        <segue destination="qke-Ys-z9N" kind="relationship" relationship="viewControllers" id="GCa-NI-yzu"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EUH-fa-PHE" userLabel="First Responder" sceneMemberID="firstResponder"/>
