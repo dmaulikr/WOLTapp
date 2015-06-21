@@ -16,7 +16,7 @@ class ProfileContainerViewController: UIPageViewController, UIPageViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Profile"
+
         setupPageControl()
         
         setCompletedVc = UIStoryboard.setsCompletedViewController()

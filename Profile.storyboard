@@ -5,13 +5,31 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
     </dependencies>
     <scenes>
+        <!--User Profile View Controller-->
+        <scene sceneID="ZqS-Ao-3LG">
+            <objects>
+                <viewController storyboardIdentifier="UserProfileViewController" id="oXK-VS-7su" customClass="UserProfileViewController" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SM4-HG-f2b"/>
+                        <viewControllerLayoutGuide type="bottom" id="BTc-WU-WRf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rgb-DI-gVt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ub-yq-3yr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="341" y="-313"/>
+        </scene>
         <!--Profile Container View Controller-->
         <scene sceneID="rJz-h4-ldd">
             <objects>
                 <pageViewController storyboardIdentifier="ProfileContainerViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="SeB-95-n1w" customClass="ProfileContainerViewController" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADw-Ca-hiw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="697" y="-329"/>
+            <point key="canvasLocation" x="986" y="-313"/>
         </scene>
         <!--Sets Completed View Controller-->
         <scene sceneID="G3u-HA-FIK">

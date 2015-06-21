@@ -13,6 +13,7 @@ class LDTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.addChildViewController(UIStoryboard.userProfileViewController()!)
     }
 
     override func didReceiveMemoryWarning() {
