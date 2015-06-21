@@ -40,7 +40,7 @@ class RoutineViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var numberOfRowsInSection = self.workouts?.count ?? 0
+        let numberOfRowsInSection = self.workouts?.count ?? 0
         return numberOfRowsInSection + 1
     }
     
@@ -66,7 +66,7 @@ class RoutineViewController: UIViewController, UITableViewDataSource, UITableVie
             let cell = sender as! WorkoutCell
             let workout = cell.workout
             
-            var vc = segue.destinationViewController as! WorkoutViewController
+            let vc = segue.destinationViewController as! WorkoutViewController
             vc.workout = workout
             //      vc.delegate = self
         }

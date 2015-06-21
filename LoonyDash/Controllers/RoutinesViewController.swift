@@ -57,7 +57,7 @@ class RoutinesViewController: UIViewController, UITableViewDataSource, UITableVi
             let cell = sender as! RoutineCell
             let routine = cell.routine
             
-            var vc = segue.destinationViewController as! RoutineViewController
+            let vc = segue.destinationViewController as! RoutineViewController
             vc.routine = routine
             //      vc.delegate = self
         }

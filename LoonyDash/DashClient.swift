@@ -26,7 +26,7 @@ class DashClient {
     }
     
     func fetchRoutines(completion: ([Routine]?, NSError?) -> Void) {
-        var query = PFQuery(className: "Routine")
+        let query = PFQuery(className: "Routine")
         var routines: [Routine]!
         query.findObjectsInBackgroundWithBlock {
             (objects: [AnyObject]?, error: NSError?) -> Void in
@@ -40,7 +40,7 @@ class DashClient {
     }
     
     func fetchWorkoutsForRoutine(routine: Routine!, completion: ([Workout]!, NSError!) -> Void) {
-        var query = PFQuery(className: "Workout")
+        let query = PFQuery(className: "Workout")
         query.includeKey("routine")
         query.whereKey("routine", equalTo: routine)
         query.whereKeyDoesNotExist("user")
@@ -59,7 +59,7 @@ class DashClient {
     }
     
     func fetchWorkoutSetsForWorkout(workout: Workout!, completion: ([WorkoutSet]!, NSError!) -> Void) {
-        var query = PFQuery(className:"WorkoutSet")
+        let query = PFQuery(className:"WorkoutSet")
         query.includeKey("workout")
         query.includeKey("exercise")
         query.whereKey("workout", equalTo: workout)
@@ -79,7 +79,7 @@ class DashClient {
 
     
     func fetchWorkoutSetsForUser(completion: ([WorkoutSet]!, NSError!) -> Void) {
-        var query = PFQuery(className:"WorkoutSet")
+        let query = PFQuery(className:"WorkoutSet")
         query.includeKey("workout")
         query.includeKey("exercise")
         query.whereKey("user", equalTo: PFUser.currentUser()!)

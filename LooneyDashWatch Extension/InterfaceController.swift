@@ -69,7 +69,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
 
         NSLog("\(a.count) transfers outstanding B")
         */
-        let attStr = NSAttributedString(string: str)
+        // let attStr = NSAttributedString(string: str)
         //myLabel.setAttributedText(attStr)
 
     }
