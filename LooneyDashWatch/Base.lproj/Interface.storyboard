@@ -11,7 +11,7 @@
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="LooneyDashWatch" customModuleProvider="target">
                     <items>
                         <label width="136" alignment="left" text="Some text" id="2iR-4k-yUG"/>
-                        <button width="1" alignment="left" title="Button" id="lQa-Y9-DSt">
+                        <button width="1" alignment="left" title="Bunnot" id="lQa-Y9-DSt">
                             <connections>
                                 <action selector="myButton" destination="AgC-eL-Hgc" id="hOm-CM-wxD"/>
                             </connections>
