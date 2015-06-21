@@ -310,7 +310,7 @@
         <!--Item-->
         <scene sceneID="5rk-M4-YGB">
             <objects>
-                <viewController storyboardIdentifier="UserProfileContainerViewController" id="v2J-1h-Nj4" customClass="UserProfileContainerViewController" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserProfileViewController" id="v2J-1h-Nj4" customClass="UserProfileViewController" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ur9-xi-Hdb"/>
                         <viewControllerLayoutGuide type="bottom" id="sWG-zK-eta"/>

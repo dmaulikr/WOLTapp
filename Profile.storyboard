@@ -5,23 +5,13 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
     </dependencies>
     <scenes>
-        <!--User Profile View Controller-->
-        <scene sceneID="B6B-ZG-2lW">
+        <!--Profile Container View Controller-->
+        <scene sceneID="rJz-h4-ldd">
             <objects>
-                <viewController storyboardIdentifier="UserProfileViewController" id="Rng-x0-8bG" customClass="UserProfileViewController" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ke2-KF-kzF"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZUV-Ae-xJQ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="wT6-7E-WHU">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FIS-BM-vVl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pageViewController storyboardIdentifier="ProfileContainerViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="SeB-95-n1w" customClass="ProfileContainerViewController" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ADw-Ca-hiw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="651" y="-308"/>
+            <point key="canvasLocation" x="697" y="-329"/>
         </scene>
         <!--Sets Completed View Controller-->
         <scene sceneID="G3u-HA-FIK">
