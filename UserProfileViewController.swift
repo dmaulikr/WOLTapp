@@ -13,12 +13,12 @@ class UserProfileViewController: UIPageViewController, UIPageViewControllerDataS
     var pages: [UIViewController] = []
     var setCompletedVc: SetsCompletedViewController!
     var personalRecordsVc: PersonalRecordsViewController!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Profile"
-
+        setupPageControl()
+        
         setCompletedVc = UIStoryboard.setsCompletedViewController()
         personalRecordsVc = UIStoryboard.personalRecordsViewController()
 
@@ -63,6 +63,12 @@ class UserProfileViewController: UIPageViewController, UIPageViewControllerDataS
     }
 
     
+    private func setupPageControl() {
+        let appearance = UIPageControl.appearance()
+        appearance.pageIndicatorTintColor = UIColor.lightGrayColor()
+        appearance.currentPageIndicatorTintColor = UIColor.grayColor()
+//        appearance.backgroundColor = UIColor.darkGrayColor()
+    }
     
     /*
     // MARK: - Navigation
