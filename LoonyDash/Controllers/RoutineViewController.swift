@@ -64,11 +64,15 @@ class RoutineViewController: UIViewController, UITableViewDataSource, UITableVie
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "workoutSegue" {
             let cell = sender as! WorkoutCell
-            let workout = cell.workout
-            
             let vc = segue.destinationViewController as! WorkoutViewController
-            vc.workout = workout
-            //      vc.delegate = self
+//            vc.workout = cell.workout
+            DashClient.sharedInstance.fetchLastWorkoutOfWorkoutTypeForUser(cell.workout) { (lastWorkout) -> Void in
+                if lastWorkout != nil {
+                    vc.workout = lastWorkout
+                } else {
+                    vc.workout = cell.workout
+                }
+            }
         }
     }
     

@@ -14,6 +14,7 @@ class Workout: PFObject, PFSubclassing {
     @NSManaged var routine: Routine!
     @NSManaged var title: String
     @NSManaged var user: PFUser?
+    @NSManaged var workoutId: Int
     
     override class func initialize() {
         struct Static {
@@ -28,9 +29,10 @@ class Workout: PFObject, PFSubclassing {
         super.init()
     }
     
-    init(title: String, user: PFUser?) {
+    init(title: String, workoutId: Int, user: PFUser?) {
         super.init()
         self.title = title
+        self.workoutId = workoutId
         if user != nil {
             self.user = user!
         }
