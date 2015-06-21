@@ -8,16 +8,50 @@
 
 import UIKit
 
-class UserProfileViewController: UIViewController {
-//class UserProfileViewController: UIPageViewController, UIPageViewControllerDataSource  {
+class UserProfileViewController: UIPageViewController, UIPageViewControllerDataSource  {
+
+    var pages: [UIViewController] = []
+    var setCompletedVc: SetsCompletedViewController!
+    var personalRecordsVc: PersonalRecordsViewController!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Profile"
-        DashClient.sharedInstance.fetchWorkoutSetsForUser { (workouts: [WorkoutSet]!, error: NSError!) -> Void in
-            print(workouts)
-        }
+
+        setCompletedVc = UIStoryboard.setsCompletedViewController()
+        personalRecordsVc = UIStoryboard.personalRecordsViewController()
+
+        pages = [setCompletedVc, personalRecordsVc]
+        dataSource = self
+        setViewControllers([setCompletedVc], direction: .Forward, animated: false, completion: nil)
     }
 
+    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+        if viewController == pages[0] {
+            return pages[1]
+        } else {
+            return nil
+        }
+    }
+    
+    
+    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+        if viewController == pages[1] {
+            return pages[0]
+        } else {
+            return nil
+        }
+    }
+    
+    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return 2
+    }
+    
+    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return 0
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -27,6 +61,8 @@ class UserProfileViewController: UIViewController {
         super.awakeFromNib()
         self.title = "Profile"
     }
+
+    
     
     /*
     // MARK: - Navigation
