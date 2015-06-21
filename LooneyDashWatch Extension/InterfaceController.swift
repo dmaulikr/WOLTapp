@@ -12,70 +12,95 @@ import WatchConnectivity
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
 
-    @IBOutlet var myLabel: WKInterfaceLabel!
+    var session: WCSession!
+
+    @IBOutlet var exerciseName: WKInterfaceLabel!
+
+    @IBOutlet var repsPicker: WKInterfacePicker!
+    @IBOutlet var weightPicker: WKInterfacePicker!
+    var repsChoice = 0 // index of WKPickerItems list
+    var weightsChoice = 0 // index of WKPickerItems list
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        WCSession.defaultSession().delegate = self
-        WCSession.defaultSession().activateSession()
-        // Configure interface objects here.
+        session = WCSession.defaultSession()
+        session.delegate = self
+        session.activateSession()
+
+        var reps: [WKPickerItem] = []
+        for i in 0...100 {
+            let item = WKPickerItem()
+            item.title = "\(i)"
+            reps.append(item)
+        }
+        repsPicker.setItems(reps)
+
+        var weights: [WKPickerItem] = []
+        var i: Int
+        for i = 0; i<=1000; i+=5 {
+            let item = WKPickerItem()
+            item.title = "\(i)"
+            weights.append(item)
+        }
+        weightPicker.setItems(weights)
+    }
+
+    @IBAction func repsAction(value: Int) {
+        repsChoice = value
+    }
+    
+    @IBAction func weightsAction(value: Int) {
+        weightsChoice = value
+    }
+
+    func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            self.updateUIWithWatchDict(message)
+            replyHandler([:])
+        }
+    }
+
+    func updateUIWithWatchDict(dict: [String:AnyObject]) {
+        let titleStr = dict["exerciseTitle"] as! String
+        self.exerciseName.setAttributedText(NSAttributedString(string: titleStr))
+        self.changeRepsPicker(dict["numReps"] as! Int)
+        self.changeWeightPicker(dict["weight"] as! Int)
+    }
+
+
+    func changeRepsPicker(repsValue: Int) {
+        repsChoice = repsValue
+        repsPicker.setSelectedItemIndex(repsChoice)
+    }
+
+    func changeWeightPicker(weightValue: Int) {
+        weightsChoice = weightValue / 5
+        weightPicker.setSelectedItemIndex(weightsChoice)
     }
 
 
     @IBAction func myButton() {
-        NSLog("my button pressed")
-
-        //let myDict = ["msg":"hellothere"]
-        let session = WCSession.defaultSession()
-        var olds = ""
-        var str = ""
+        let numReps = repsChoice
+        let weight = Float(5*weightsChoice)
+        let dict = ["numReps": numReps, "weight": weight] as [String:AnyObject]
         if session.reachable {
-            NSLog("is rechable")
-            for a in session.outstandingUserInfoTransfers {
-                olds += "O"
-                str += "P"
-                a.cancel()
-            }
-            session.sendMessage(["olds":olds], replyHandler: { (mee: [String:AnyObject]) -> Void in
-                let msgg = "msgg"
-                NSLog("reply value is \(mee[msgg])")
-                }, errorHandler: { (err: NSError) -> Void in
-                    NSLog("errrrrrr")
-            })
-            str = "is reachable"
-        } else {
-            NSLog("is not reachable")
-            let randInt = random()%1000
-            str = "J\(randInt)"
-            WCSession.defaultSession().transferUserInfo(["curr":"C"])
-            str = "is not reachable"
-        }
-        str = "wahhhh"
-        /*if WCSession.defaultSession().reachable {
-            WCSession.defaultSession().sendMessage(myDict, replyHandler: { (mee: [String:AnyObject]) -> Void in
-                let msgg = "msgg"
-                NSLog("it is \(mee[msgg])")
+            session.sendMessage(dict, replyHandler: { (replyDict: [String:AnyObject]) -> Void in
+                dispatch_async(dispatch_get_main_queue()) { () -> Void in
+                    self.updateUIWithWatchDict(replyDict)
+                }
             }, errorHandler: { (err: NSError) -> Void in
-                NSLog("errrrr")
+                NSLog("thur was an error")
             })
-            NSLog("tapped rrbutton")
-            //
         } else {
             NSLog("not reachable")
         }
-        let a = WCSession.defaultSession().outstandingUserInfoTransfers
+        return
 
-        let str = "M"
-
-        NSLog("\(a.count) transfers outstanding B")
-        */
-        // let attStr = NSAttributedString(string: str)
-        //myLabel.setAttributedText(attStr)
 
     }
 }
 
-
+// todo: communicate via transfer user info, not messages, ie:
 // when you complete a set, it tries to send it,
 // if phone is reachable, it send a message with this and all outstanding transfers as completed sets
 // otherwise, it sends a user info dict as a completed set

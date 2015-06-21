@@ -9,7 +9,7 @@
 import UIKit
 import WatchConnectivity
 
-class SetViewController: UIViewController, WCSessionDelegate {
+class SetViewController: UIViewController, WCSessionDelegate, WatchMessages {
     let embedSwipable = "embedSwipable"
 
     var repsSelection: Int!
@@ -27,6 +27,7 @@ class SetViewController: UIViewController, WCSessionDelegate {
     }
 
     var embeddedPVVC: PageViewViewController!
+    var session: WCSession!
 
 
     @IBOutlet weak var exerciseTitle: UILabel!
@@ -39,12 +40,21 @@ class SetViewController: UIViewController, WCSessionDelegate {
         super.viewDidLoad()
         let oldFrame = containerView.frame
         containerView.frame = CGRectMake(oldFrame.origin.x, oldFrame.origin.y, oldFrame.size.width, oldFrame.size.height - 30)
-        if (WCSession.isSupported()) {
-            let session = WCSession.defaultSession()
-            session.delegate = self
-            session.activateSession()
-        }
 
+        (UIApplication.sharedApplication().delegate as! AppDelegate).watchMessageDelegate = self
+        session = WCSession.defaultSession()
+        if workoutSets.count > 0 && session.reachable {
+            sendSetToWatch(0)
+        }
+    }
+
+    func sendSetToWatch(indexOfSet: Int) {
+        session.sendMessage(workoutSets[indexOfSet].watchDict(),
+            replyHandler: { (replyDict: [String:AnyObject]) -> Void in
+                NSLog("message recieved by watch, reply handler")
+            }) { (err: NSError) -> Void in
+                NSLog("error sending message")
+        }
     }
 
     func updateTitle() {
@@ -52,14 +62,21 @@ class SetViewController: UIViewController, WCSessionDelegate {
     }
 
     @IBAction func onCompleted() {
+
+        recordCompletionOfSet(set.numReps, weight: set.weight) // query mutable vars backing labels
         // make new set with user inputed reps and weights
-        let completedSet = WorkoutSet(set: self.workoutSets![setIndex])
-        completedSet.user = PFUser.currentUser()
-        completedSets.append(completedSet)
+        showNextSetOnPhoneOrFinish(alsoSendSetToWatch: true)
+
+    }
+
+    func showNextSetOnPhoneOrFinish(alsoSendSetToWatch send: Bool) {
         if setIndex + 1 < self.workoutSets!.count {
             setIndex += 1
             updateTitle()
             embeddedPVVC.showNewSet(set)
+            if send {
+                sendSetToWatch(setIndex)
+            }
         } else {
             DashClient.sharedInstance.completeWorkout(workout, completedSets: completedSets, completion: { (success: Bool, err: NSError?) -> Void in
                 if let _ = err {
@@ -72,8 +89,26 @@ class SetViewController: UIViewController, WCSessionDelegate {
                 // stop spinner (happens second)
             })
             // show spinner (happens first b/c workout.complete returns immediately
+            // send watch to home / waiting screen
         }
     }
+
+    func recordCompletionOfSet(numReps: Int, weight: Float) {
+        let completedSet = WorkoutSet(workout: workout, exercise: exercise, reps: numReps, weight: weight, user: PFUser.currentUser())
+        completedSets.append(completedSet)
+    }
+
+    // watch sending in a numReps and weight that was completed
+    // expecting back a watchDict to show
+    func receiveMessage(dict: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
+        dispatch_async(dispatch_get_main_queue()) {
+            self.recordCompletionOfSet(dict["numReps"] as! Int, weight: dict["weight"] as! Float)
+            self.showNextSetOnPhoneOrFinish(alsoSendSetToWatch: false)
+            replyHandler(self.set.watchDict())
+
+        }
+    }
+
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.identifier! {
@@ -86,11 +121,8 @@ class SetViewController: UIViewController, WCSessionDelegate {
             break
         }
     }
+    
 
-    func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
-        let me = message["abc"] as! String
-        NSLog("msg of abc: \(me)")
-        NSLog("heree")
-    }
+
     
 }

@@ -10,19 +10,41 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="LooneyDashWatch" customModuleProvider="target">
                     <items>
-                        <label width="136" alignment="left" text="Some text" id="2iR-4k-yUG"/>
-                        <button width="1" alignment="left" title="Bunnot" id="lQa-Y9-DSt">
+                        <label width="136" alignment="left" text="Start workout on phone" textAlignment="center" minimumScaleFactor="0.69999999999999996" id="2iR-4k-yUG"/>
+                        <group width="1" alignment="center" id="tsD-MV-uTG">
+                            <items>
+                                <label width="0.5" alignment="left" text="Reps" textAlignment="center" id="WKg-xV-uRD"/>
+                                <label width="0.5" alignment="left" text="Weight" textAlignment="center" id="YId-PD-DpC"/>
+                            </items>
+                        </group>
+                        <group width="1" height="45" alignment="left" id="935-f5-1bg">
+                            <items>
+                                <picker width="0.5" height="48" alignment="left" focusStyle="stack" id="i7W-Lx-Jmt">
+                                    <connections>
+                                        <action selector="repsAction:" destination="AgC-eL-Hgc" id="JIP-LU-HiV"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.5" height="100" alignment="left" focusStyle="stack" id="Lm9-cL-nKE">
+                                    <connections>
+                                        <action selector="weightsAction:" destination="AgC-eL-Hgc" id="d99-am-nAd"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Next" id="lQa-Y9-DSt">
                             <connections>
                                 <action selector="myButton" destination="AgC-eL-Hgc" id="hOm-CM-wxD"/>
                             </connections>
                         </button>
                     </items>
                     <connections>
-                        <outlet property="myLabel" destination="2iR-4k-yUG" id="cMM-R8-MBH"/>
+                        <outlet property="exerciseName" destination="2iR-4k-yUG" id="3IN-YF-oRQ"/>
+                        <outlet property="repsPicker" destination="i7W-Lx-Jmt" id="JZ0-6J-d6m"/>
+                        <outlet property="weightPicker" destination="Lm9-cL-nKE" id="7Fk-m6-zfn"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="155" y="362"/>
+            <point key="canvasLocation" x="155" y="344"/>
         </scene>
     </scenes>
 </document>

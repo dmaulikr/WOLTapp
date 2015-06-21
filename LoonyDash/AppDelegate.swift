@@ -10,11 +10,17 @@ import UIKit
 import Bolts
 import Parse
 import CoreData
+import WatchConnectivity
+
+protocol WatchMessages: class {
+    func receiveMessage(dict: [String:AnyObject], replyHandler: ([String: AnyObject]) -> Void)
+}
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     
     var window: UIWindow?
+    weak var watchMessageDelegate: WatchMessages?
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -28,6 +34,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Routine.registerSubclass()
         Exercise.registerSubclass()
         WorkoutSet.registerSubclass()
+
+        if WCSession.isSupported() {
+            WCSession.defaultSession().delegate = self
+            WCSession.defaultSession().activateSession()
+        }
         
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
@@ -126,5 +137,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+
+    func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
+        watchMessageDelegate?.receiveMessage(message, replyHandler: replyHandler)
+    }
     
 }
+
+
+
+
+
+

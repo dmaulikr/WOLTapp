@@ -51,6 +51,14 @@ class WorkoutSet: PFObject, PFSubclassing {
             self.user = user!
         }
     }
+
+    func watchDict() -> [String:AnyObject] {
+        var dict: [String:AnyObject] = [:]
+        dict["exerciseTitle"] = exercise.name
+        dict["numReps"] = numReps
+        dict["weight"] = weight
+        return dict
+    }
     
     static func parseClassName() -> String {
         return "WorkoutSet"
