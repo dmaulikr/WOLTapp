@@ -15,6 +15,7 @@ DerivedData
 *.ipa
 *.xcuserstate
 *.xcbkptlist
+*Podfile.lock
 
 Pods/
 
