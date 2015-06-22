@@ -37,13 +37,13 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="155.5"/>
                                                 </imageView>
                                                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Crn-gr-xz7">
-                                                    <rect key="frame" x="0.0" y="85" width="600" height="70.5"/>
+                                                    <rect key="frame" x="0.0" y="91" width="600" height="64.5"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dBz-br-KIW">
-                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="70.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="64.5"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     </view>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="70.5" id="AbR-ox-Q1d"/>
+                                                        <constraint firstAttribute="height" constant="64.5" id="AbR-ox-Q1d"/>
                                                     </constraints>
                                                     <blurEffect style="extraLight"/>
                                                 </visualEffectView>
