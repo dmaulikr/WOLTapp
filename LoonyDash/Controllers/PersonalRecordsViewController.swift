@@ -13,6 +13,10 @@ class PersonalRecordsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        DashClient.sharedInstance.fetchPersonalRecordsForUser { (personalRecords: [PersonalRecord]!, error: NSError?) -> Void in
+            print (personalRecords)
+        }
+        
         // Do any additional setup after loading the view.
     }
 

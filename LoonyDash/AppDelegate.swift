@@ -34,7 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         Routine.registerSubclass()
         Exercise.registerSubclass()
         WorkoutSet.registerSubclass()
-
+        PersonalRecord.registerSubclass()
+        
         if WCSession.isSupported() {
             WCSession.defaultSession().delegate = self
             WCSession.defaultSession().activateSession()
