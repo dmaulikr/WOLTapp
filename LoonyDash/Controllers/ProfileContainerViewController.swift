@@ -13,6 +13,7 @@ class ProfileContainerViewController: UIPageViewController, UIPageViewController
     var pages: [UIViewController] = []
     var setCompletedVc: UINavigationController!
     var personalRecordsVc: UINavigationController!
+    var pageControl: UIPageControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,17 +27,11 @@ class ProfileContainerViewController: UIPageViewController, UIPageViewController
         dataSource = self
         setViewControllers([setCompletedVc], direction: .Forward, animated: false, completion: nil)
         
-        //set up pageviewcontrol
-        let pageControl = UIPageControl()
-        pageControl.frame = CGRectMake(100, 100, 100, 100)
-        self.view.addSubview(pageControl)
-        pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
-        pageControl.currentPageIndicatorTintColor = UIColor.grayColor()
-        
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         if viewController == pages[0] {
+            pageControl.currentPage = 1
             return pages[1]
         } else {
             return nil
@@ -46,6 +41,7 @@ class ProfileContainerViewController: UIPageViewController, UIPageViewController
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         if viewController == pages[1] {
+            pageControl.currentPage = 0
             return pages[0]
         } else {
             return nil
@@ -65,14 +61,19 @@ class ProfileContainerViewController: UIPageViewController, UIPageViewController
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
-    private func setupPageControl() {
-//        let appearance = UIPageControl.appearance()
-//        appearance.pageIndicatorTintColor = UIColor.lightGrayColor()
-//        appearance.currentPageIndicatorTintColor = UIColor.grayColor()
-//                appearance.backgroundColor = UIColor.darkGrayColor()
+    func setupPageControl() {
+        pageControl = UIPageControl()
+        pageControl.frame = CGRectMake(0, 0, 100, 10)
+        pageControl.numberOfPages = 2;
+        pageControl.currentPage = 0;
+        pageControl.backgroundColor = UIColor.clearColor()
+        
+        self.view.addSubview(pageControl)
+        pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
+        pageControl.currentPageIndicatorTintColor = UIColor.grayColor()        
     }
+    
+    
     
     /*
     // MARK: - Navigation
