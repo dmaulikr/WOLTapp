@@ -25,6 +25,14 @@ class ProfileContainerViewController: UIPageViewController, UIPageViewController
         pages = [setCompletedVc, personalRecordsVc]
         dataSource = self
         setViewControllers([setCompletedVc], direction: .Forward, animated: false, completion: nil)
+        
+        //set up pageviewcontrol
+        let pageControl = UIPageControl()
+        pageControl.frame = CGRectMake(100, 100, 100, 100)
+        self.view.addSubview(pageControl)
+        pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
+        pageControl.currentPageIndicatorTintColor = UIColor.grayColor()
+        
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {

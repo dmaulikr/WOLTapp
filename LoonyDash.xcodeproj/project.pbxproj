@@ -34,6 +34,7 @@
 		4D7B4FA71B36D65000824B90 /* PersonalRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7B4FA61B36D65000824B90 /* PersonalRecordsViewController.swift */; };
 		4D7B4FA91B36D66500824B90 /* SetsCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7B4FA81B36D66500824B90 /* SetsCompletedViewController.swift */; };
 		4D7B4FAC1B375F0E00824B90 /* ProfileContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7B4FAB1B375F0E00824B90 /* ProfileContainerViewController.swift */; };
+		4DA2D4711B37E66B00A16004 /* PersonalRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA2D4701B37E66B00A16004 /* PersonalRecordCell.swift */; };
 		4DDEEFBA1B378A5C00E00DCC /* PersonalRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDEEFB91B378A5C00E00DCC /* PersonalRecord.swift */; };
 		4DF2859C1B307E1300BC742C /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2859B1B307E1300BC742C /* UserProfileViewController.swift */; };
 		4DF285A01B307F5500BC742C /* LDTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2859F1B307F5500BC742C /* LDTabBarController.swift */; };
@@ -150,6 +151,7 @@
 		4D7B4FA61B36D65000824B90 /* PersonalRecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonalRecordsViewController.swift; path = Controllers/PersonalRecordsViewController.swift; sourceTree = "<group>"; };
 		4D7B4FA81B36D66500824B90 /* SetsCompletedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetsCompletedViewController.swift; path = Controllers/SetsCompletedViewController.swift; sourceTree = "<group>"; };
 		4D7B4FAB1B375F0E00824B90 /* ProfileContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileContainerViewController.swift; path = Controllers/ProfileContainerViewController.swift; sourceTree = "<group>"; };
+		4DA2D4701B37E66B00A16004 /* PersonalRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalRecordCell.swift; sourceTree = "<group>"; };
 		4DDEEFB91B378A5C00E00DCC /* PersonalRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonalRecord.swift; path = Models/PersonalRecord.swift; sourceTree = "<group>"; };
 		4DF2859B1B307E1300BC742C /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfileViewController.swift; path = ../UserProfileViewController.swift; sourceTree = "<group>"; };
 		4DF2859F1B307F5500BC742C /* LDTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LDTabBarController.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 		4DDEEFB81B3789B700E00DCC /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				4DA2D4701B37E66B00A16004 /* PersonalRecordCell.swift */,
 				4D365DBE1B37767400F30DAB /* WorkoutSetRecordCell.swift */,
 				6D71978C1B25FDE1007E7F4D /* WorkoutCell.swift */,
 				6D71978E1B25FE0A007E7F4D /* RoutineCell.swift */,
@@ -576,6 +579,7 @@
 				1DA0040E1B23F308000B88BD /* SetViewController.swift in Sources */,
 				4D365DBF1B37767400F30DAB /* WorkoutSetRecordCell.swift in Sources */,
 				6D71978F1B25FE0A007E7F4D /* RoutineCell.swift in Sources */,
+				4DA2D4711B37E66B00A16004 /* PersonalRecordCell.swift in Sources */,
 				6D71982E1B301DF2007E7F4D /* LoginViewController.swift in Sources */,
 				4D7B4FA71B36D65000824B90 /* PersonalRecordsViewController.swift in Sources */,
 				4DF285A01B307F5500BC742C /* LDTabBarController.swift in Sources */,

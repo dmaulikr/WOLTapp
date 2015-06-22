@@ -12,7 +12,7 @@ import Parse
 
 class PersonalRecord: PFObject, PFSubclassing {
     @NSManaged var exercise: Exercise!
-    @NSManaged var record: Float
+    @NSManaged var max_weight: Float
     @NSManaged var user: PFUser!
     
     override class func initialize() {
@@ -28,17 +28,17 @@ class PersonalRecord: PFObject, PFSubclassing {
         super.init()
     }
     
-    init(exercise: Exercise, record: Float, user: PFUser) {
+    init(exercise: Exercise, max_weight: Float, user: PFUser) {
         super.init()
         self.exercise = exercise
-        self.record = record
+        self.max_weight = max_weight
         self.user = user
     }
     
     init(r: PersonalRecord) {
         super.init()
         self.exercise = r.exercise
-        self.record = r.record
+        self.max_weight = r.max_weight
         self.user = r.user
     }
     
