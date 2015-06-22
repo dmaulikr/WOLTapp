@@ -34,7 +34,29 @@ class PersonalBestVC: UIViewController {
 }
 
 
-class TipsVC: UIViewController {
+class TipsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+    @IBOutlet weak var tipsTableView: UITableView!
+
+    var tips: [String] {
+        return ["Do the thing like this", "then do the thing like that", "then do it again like that other way"]
+        //return (self.parentViewController as! PageViewViewController).set.exercise.tips
+    }
+
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel!.text = tips[indexPath.row]
+        return cell
+    }
+
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tips.count
+    }
 
 }
 

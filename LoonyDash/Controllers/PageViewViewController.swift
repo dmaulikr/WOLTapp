@@ -20,7 +20,8 @@ class PageViewViewController: UIPageViewController, UIPageViewControllerDataSour
 
         page1 = UIStoryboard(name: "Sets", bundle: nil).instantiateViewControllerWithIdentifier("RepsAndWeightVC") as! RepsAndWeightVC
         let page2 = UIStoryboard(name: "Sets", bundle: nil).instantiateViewControllerWithIdentifier("VideoVC") as! VideoVC
-        pages = [page1, page2]
+        let page3 = UIStoryboard(name: "Sets", bundle: nil).instantiateViewControllerWithIdentifier("TipsVC") as! TipsVC
+        pages = [page1, page2, page3]
         dataSource = self
         setViewControllers([page1], direction: .Forward, animated: true, completion: nil)
 
@@ -30,6 +31,8 @@ class PageViewViewController: UIPageViewController, UIPageViewControllerDataSour
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         if viewController == pages[0] {
             return pages[1]
+        } else if viewController == pages[1] {
+            return pages[2]
         } else {
             return nil
         }
@@ -37,7 +40,9 @@ class PageViewViewController: UIPageViewController, UIPageViewControllerDataSour
 
 
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        if viewController == pages[1] {
+        if viewController == pages[2] {
+            return pages[1]
+        } else if viewController == pages[1] {
             return pages[0]
         } else {
             return nil
@@ -45,7 +50,7 @@ class PageViewViewController: UIPageViewController, UIPageViewControllerDataSour
     }
 
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return 2
+        return 3
     }
 
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
