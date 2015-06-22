@@ -273,7 +273,6 @@
 				1DA003EA1B23F2D4000B88BD /* AppDelegate.swift */,
 				4D7B4FA21B36C9FC00824B90 /* UIStoryboard.swift */,
 				6D71981E1B2E398E007E7F4D /* DashClient.swift */,
-				6D7197901B25FE22007E7F4D /* RoutineDescriptionCell.swift */,
 				6D71981B1B2E0DC2007E7F4D /* LoonyDash-Bridging-Header.h */,
 				4D7B4FAA1B36D68C00824B90 /* Storyboards */,
 				1DA003F41B23F2D4000B88BD /* Images.xcassets */,
@@ -357,6 +356,7 @@
 				4D365DBE1B37767400F30DAB /* WorkoutSetRecordCell.swift */,
 				6D71978C1B25FDE1007E7F4D /* WorkoutCell.swift */,
 				6D71978E1B25FE0A007E7F4D /* RoutineCell.swift */,
+				6D7197901B25FE22007E7F4D /* RoutineDescriptionCell.swift */,
 				6D7197A21B2824A0007E7F4D /* WorkoutSetCell.swift */,
 			);
 			name = Cells;

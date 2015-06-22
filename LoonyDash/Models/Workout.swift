@@ -13,6 +13,7 @@ import Parse
 class Workout: PFObject, PFSubclassing {
     @NSManaged var routine: Routine!
     @NSManaged var title: String
+    @NSManaged var daysText: String
     @NSManaged var user: PFUser?
     @NSManaged var workoutId: Int
     
@@ -29,9 +30,10 @@ class Workout: PFObject, PFSubclassing {
         super.init()
     }
     
-    init(title: String, workoutId: Int, user: PFUser?) {
+    init(title: String, daysText: String, workoutId: Int, user: PFUser?) {
         super.init()
         self.title = title
+        self.daysText = daysText
         self.workoutId = workoutId
         if user != nil {
             self.user = user!

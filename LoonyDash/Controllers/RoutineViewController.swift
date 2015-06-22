@@ -11,6 +11,7 @@ import UIKit
 class RoutineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var routine: Routine!
     var workouts: [Workout]!
+    var bannerImage: UIImage?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -20,6 +21,8 @@ class RoutineViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = UIColor(white: 0.97, alpha: 1.0)
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 100
         
         refreshData()
     }
@@ -49,6 +52,7 @@ class RoutineViewController: UIViewController, UITableViewDataSource, UITableVie
         if indexPath.row == 0 {
             let cell = self.tableView.dequeueReusableCellWithIdentifier("RoutineDescriptionCell") as! RoutineDescriptionCell
             cell.routine = self.routine
+            cell.bannerImageView.image = self.bannerImage
             
             return cell
         } else {

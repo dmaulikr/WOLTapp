@@ -7,6 +7,7 @@
     <customFonts key="customFonts">
         <mutableArray key="HelveticaNeue.ttc">
             <string>HelveticaNeue</string>
+            <string>HelveticaNeue</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -56,8 +57,8 @@ Follows the principles of progressive overload.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="StrongLifts 5x5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G19-c7-XfH">
-                                                    <rect key="frame" x="8" y="91" width="124.5" height="21.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <rect key="frame" x="8" y="91" width="131" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -122,50 +123,95 @@ Follows the principles of progressive overload.</string>
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="RoutineDescriptionCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="RoutineDescriptionCell" id="QfU-5C-r8Y" customClass="RoutineDescriptionCell" customModule="LoonyDash" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="86" width="600" height="169"/>
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="RoutineDescriptionCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="RoutineDescriptionCell" rowHeight="201" id="QfU-5C-r8Y" customClass="RoutineDescriptionCell" customModule="LoonyDash" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="86" width="600" height="201"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QfU-5C-r8Y" id="rZH-Vx-7JT">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="168.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="200.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="StrongLifts 5x5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2F0-LK-pPX">
-                                                    <rect key="frame" x="8" y="8" width="119" height="21"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JqB-qt-DXT">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="169.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StrongLifts 5×5 is a simple, easy to follow and effective..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4T-9e-rzQ">
+                                                    <rect key="frame" x="8" y="177" width="331" height="15.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="StrongLifts 5×5 is a simple, easy to follow and effective..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4T-9e-rzQ">
-                                                    <rect key="frame" x="8" y="74" width="437" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dyv-Gy-F8q">
+                                                    <rect key="frame" x="0.0" y="115" width="600" height="54.5"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="D5V-Dv-zvU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="54.5"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StrongLifts 5x5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2F0-LK-pPX">
+                                                                <rect key="frame" x="8" y="11" width="131" height="21.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="2F0-LK-pPX" firstAttribute="leading" secondItem="D5V-Dv-zvU" secondAttribute="leading" constant="8" id="ELH-xv-n6V"/>
+                                                            <constraint firstItem="2F0-LK-pPX" firstAttribute="top" secondItem="D5V-Dv-zvU" secondAttribute="top" constant="11" id="Gwu-bb-xyU"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <blurEffect style="extraLight"/>
+                                                </visualEffectView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Dyv-Gy-F8q" firstAttribute="leading" secondItem="rZH-Vx-7JT" secondAttribute="leading" id="0Tp-Mh-aJ2"/>
+                                                <constraint firstAttribute="trailing" secondItem="Dyv-Gy-F8q" secondAttribute="trailing" id="DJc-Di-lWG"/>
+                                                <constraint firstItem="Dyv-Gy-F8q" firstAttribute="top" secondItem="rZH-Vx-7JT" secondAttribute="top" constant="115" id="Dyf-YX-dEA"/>
+                                                <constraint firstItem="J4T-9e-rzQ" firstAttribute="top" secondItem="JqB-qt-DXT" secondAttribute="bottom" constant="7.5" id="J7d-8r-jsJ"/>
+                                                <constraint firstItem="JqB-qt-DXT" firstAttribute="top" secondItem="rZH-Vx-7JT" secondAttribute="top" id="Kzy-PC-h9z"/>
+                                                <constraint firstItem="JqB-qt-DXT" firstAttribute="leading" secondItem="rZH-Vx-7JT" secondAttribute="leading" id="V5d-3J-bwE"/>
+                                                <constraint firstItem="J4T-9e-rzQ" firstAttribute="leading" secondItem="rZH-Vx-7JT" secondAttribute="leading" constant="8" id="gMq-JS-eMa"/>
+                                                <constraint firstAttribute="trailing" secondItem="JqB-qt-DXT" secondAttribute="trailing" id="mGd-AF-0Kx"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="J4T-9e-rzQ" secondAttribute="trailing" constant="8" id="qox-X7-VAc"/>
+                                                <constraint firstItem="Dyv-Gy-F8q" firstAttribute="bottom" secondItem="JqB-qt-DXT" secondAttribute="bottom" id="ug2-Sr-zMw"/>
+                                                <constraint firstAttribute="bottom" secondItem="J4T-9e-rzQ" secondAttribute="bottom" constant="8" id="zEl-oj-2ZZ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="bannerImageView" destination="JqB-qt-DXT" id="ica-Jc-vyZ"/>
                                             <outlet property="routineDescriptionLabel" destination="J4T-9e-rzQ" id="988-Gj-1aw"/>
                                             <outlet property="routineTitleLabel" destination="2F0-LK-pPX" id="Q5I-FL-wK7"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="WorkoutCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkoutCell" rowHeight="169" id="Pbv-65-8cl" customClass="WorkoutCell" customModule="LoonyDash" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="255" width="600" height="169"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="WorkoutCell" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="WorkoutCell" rowHeight="56" id="SVH-R1-Qci" customClass="WorkoutCell" customModule="LoonyDash" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="287" width="600" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pbv-65-8cl" id="zIC-GP-7PG">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="168.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SVH-R1-Qci" id="1Nh-V2-CTJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Full Body Workout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81i-0G-FSf">
-                                                    <rect key="frame" x="93" y="74" width="141" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Workout A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBe-GC-bsp">
+                                                    <rect key="frame" x="8" y="27" width="79.5" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon/Wed/Fri" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Enc-hn-Cbv">
+                                                    <rect key="frame" x="92" y="32" width="67.5" height="13.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xBe-GC-bsp" firstAttribute="leading" secondItem="1Nh-V2-CTJ" secondAttribute="leading" constant="8" id="GdE-Wq-eMP"/>
+                                                <constraint firstItem="Enc-hn-Cbv" firstAttribute="leading" secondItem="xBe-GC-bsp" secondAttribute="trailing" constant="5" id="JMg-1o-vx0"/>
+                                                <constraint firstAttribute="bottom" secondItem="xBe-GC-bsp" secondAttribute="bottom" constant="8" id="SGS-sq-Kt6"/>
+                                                <constraint firstItem="xBe-GC-bsp" firstAttribute="top" secondItem="1Nh-V2-CTJ" secondAttribute="top" constant="8" id="bJD-67-2Fe"/>
+                                                <constraint firstItem="Enc-hn-Cbv" firstAttribute="bottom" secondItem="xBe-GC-bsp" secondAttribute="bottom" constant="-1.5" id="kb1-Xi-e9U"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="workoutTitleLabel" destination="81i-0G-FSf" id="b1h-F4-oZi"/>
-                                            <segue destination="dau-G8-fLO" kind="show" identifier="workoutSegue" id="Qgo-hC-S3o"/>
+                                            <outlet property="workoutDaysLabel" destination="Enc-hn-Cbv" id="ktG-Ul-0lx"/>
+                                            <outlet property="workoutTitleLabel" destination="xBe-GC-bsp" id="diR-AU-N5w"/>
+                                            <segue destination="dau-G8-fLO" kind="show" identifier="workoutSegue" id="Ava-8W-KbB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

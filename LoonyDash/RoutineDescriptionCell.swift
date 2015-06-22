@@ -9,25 +9,27 @@
 import UIKit
 
 class RoutineDescriptionCell: UITableViewCell {
-  
-  @IBOutlet weak var routineTitleLabel: UILabel!
-  @IBOutlet weak var routineDescriptionLabel: UILabel!
-  
-  var routine: Routine! {
-    didSet {
-      routineTitleLabel.text = routine.title
-      routineDescriptionLabel.text = routine.descriptionText
-    }
-  }
-  
-  override func awakeFromNib() {
-    super.awakeFromNib()
-  }
-  
-  override func setSelected(selected: Bool, animated: Bool) {
-    super.setSelected(selected, animated: animated)
     
-    // Configure the view for the selected state
-  }
-  
+    @IBOutlet weak var bannerImageView: UIImageView!
+    @IBOutlet weak var routineTitleLabel: UILabel!
+    @IBOutlet weak var routineDescriptionLabel: UILabel!
+    
+    var routine: Routine! {
+        didSet {
+            routineTitleLabel.text = routine.title
+            routineDescriptionLabel.text = routine.descriptionText
+        }
+    }
+    
+    override func awakeFromNib() {
+        //    routineDescriptionLabel.preferredMaxLayoutWidth = self.frame.size.width
+        super.awakeFromNib()
+    }
+    
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
+    
 }

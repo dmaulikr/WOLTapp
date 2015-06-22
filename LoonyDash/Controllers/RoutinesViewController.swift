@@ -60,9 +60,11 @@ class RoutinesViewController: UIViewController, UITableViewDataSource, UITableVi
         if segue.identifier == "routineSegue" {
             let cell = sender as! RoutineCell
             let routine = cell.routine
+            let bannerImage = cell.bannerImageView.image
             
             let vc = segue.destinationViewController as! RoutineViewController
             vc.routine = routine
+            vc.bannerImage = bannerImage
             //      vc.delegate = self
         }
     }

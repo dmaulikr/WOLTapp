@@ -146,7 +146,7 @@ class DashClient {
     
     func completeWorkout(workout: Workout, completedSets: [WorkoutSet], completion: (Bool, NSError?) -> Void) {
         var thingsToSave = [PFObject]()
-        let completedWorkout = Workout(title: workout.title, workoutId: workout.workoutId, user: PFUser.currentUser()!)
+        let completedWorkout = Workout(title: workout.title, daysText: workout.daysText, workoutId: workout.workoutId, user: PFUser.currentUser()!)
         completedWorkout.routine = workout.routine
         for set in completedSets {
             set.workout = completedWorkout
