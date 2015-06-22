@@ -9,7 +9,7 @@
 import UIKit
 import WatchConnectivity
 
-class SetViewController: UIViewController, WCSessionDelegate, WatchMessages {
+class SetViewController: UIViewController, WCSessionDelegate, WatchMessages, RepsAndWeightDelegate {
     let embedSwipable = "embedSwipable"
 
     var repsSelection: Int!
@@ -18,7 +18,8 @@ class SetViewController: UIViewController, WCSessionDelegate, WatchMessages {
     var workoutSets: [WorkoutSet]!
     var workout: Workout!
     var completedSets: [WorkoutSet] = []
-    
+    var child: PageViewViewController?
+
     var set: WorkoutSet {
         return self.workoutSets[setIndex]
     }
@@ -37,6 +38,8 @@ class SetViewController: UIViewController, WCSessionDelegate, WatchMessages {
 
     override func viewDidLoad() {
         updateTitle()
+        repsSelection = set.numReps
+        weightSelection = set.weight
         super.viewDidLoad()
         let oldFrame = containerView.frame
         containerView.frame = CGRectMake(oldFrame.origin.x, oldFrame.origin.y, oldFrame.size.width, oldFrame.size.height - 30)
@@ -46,6 +49,27 @@ class SetViewController: UIViewController, WCSessionDelegate, WatchMessages {
         if workoutSets.count > 0 && session.reachable {
             sendSetToWatch(0)
         }
+        embeddedPVVC.updateRepsWeightUI()
+
+
+    }
+
+
+    func repsUp() {
+        repsSelection = repsSelection + 1
+    }
+
+    func repsDown() {
+        repsSelection = max(repsSelection - 1, 0)
+
+    }
+
+    func weightUp() {
+        weightSelection = weightSelection + 5
+    }
+
+    func weightDown() {
+        weightSelection = max(weightSelection - 5, 0)
     }
 
     func sendSetToWatch(indexOfSet: Int) {
@@ -63,8 +87,7 @@ class SetViewController: UIViewController, WCSessionDelegate, WatchMessages {
 
     @IBAction func onCompleted() {
 
-        recordCompletionOfSet(set.numReps, numSuggestedReps: set.numSuggestedReps, weight: set.weight) // query mutable vars backing labels
-        // make new set with user inputed reps and weights
+        recordCompletionOfSet(repsSelection, numSuggestedReps: set.numSuggestedReps, weight: weightSelection)
         showNextSetOnPhoneOrFinish(alsoSendSetToWatch: true)
 
     }
@@ -73,6 +96,8 @@ class SetViewController: UIViewController, WCSessionDelegate, WatchMessages {
         if setIndex + 1 < self.workoutSets!.count {
             setIndex += 1
             updateTitle()
+            repsSelection = set.numReps
+            weightSelection = set.weight
             embeddedPVVC.showNewSet(set)
             if send {
                 sendSetToWatch(setIndex)
@@ -115,6 +140,7 @@ class SetViewController: UIViewController, WCSessionDelegate, WatchMessages {
         case embedSwipable:
             let destVC = segue.destinationViewController as! PageViewViewController
             embeddedPVVC = destVC
+            destVC.parent = self
             destVC.set = set
 
         default:

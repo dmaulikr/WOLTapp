@@ -13,6 +13,7 @@ class PageViewViewController: UIPageViewController, UIPageViewControllerDataSour
     var pages: [UIViewController] = []
     var set: WorkoutSet!
     var page1: RepsAndWeightVC!
+    weak var parent: SetViewController!
 
 
     override func viewDidLoad() {
@@ -38,6 +39,9 @@ class PageViewViewController: UIPageViewController, UIPageViewControllerDataSour
         }
     }
 
+    func updateRepsWeightUI() {
+        page1.updateUI()
+    }
 
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         if viewController == pages[2] {

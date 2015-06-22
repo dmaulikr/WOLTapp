@@ -8,22 +8,58 @@
 
 import UIKit
 
+protocol RepsAndWeightDelegate: class {
+    func repsDown()
+    func repsUp()
+    func weightDown()
+    func weightUp()
+}
+
 class RepsAndWeightVC: UIViewController {
-    var set: WorkoutSet {
-        return (self.parentViewController as! PageViewViewController).set
+    var setVC: SetViewController {
+        return (self.parentViewController as! PageViewViewController).parent
     }
+
     @IBOutlet weak var numWeightOutlet: UILabel!
+    weak var delegate: RepsAndWeightDelegate?
 
     @IBOutlet weak var numRepsOutlet: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        numRepsOutlet.text = "\(set.numReps)"
-        numWeightOutlet.text = "\(set.weight)"
+        delegate = setVC
+
     }
 
+
+
     func updateUI() {
-        numRepsOutlet.text = "\(set.numReps)"
-        numWeightOutlet.text = "\(set.weight)"
+        numRepsOutlet.text = "\(setVC.repsSelection)"
+        numWeightOutlet.text = "\(setVC.weightSelection)"
+    }
+
+
+
+    @IBAction func onDownReps(sender: AnyObject) {
+        delegate?.repsDown()
+        updateUI()
+    }
+
+
+    @IBAction func onUpReps(sender: AnyObject) {
+        delegate?.repsUp()
+        updateUI()
+    }
+
+
+    @IBAction func onDownWeight(sender: AnyObject) {
+        delegate?.weightDown()
+        updateUI()
+    }
+
+
+    @IBAction func onUpWeight(sender: AnyObject) {
+        delegate?.weightUp()
+        updateUI()
     }
 }
 
