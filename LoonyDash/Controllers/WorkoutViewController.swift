@@ -28,6 +28,9 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
             if (error != nil) {
                 print(error)
             } else {
+                for workoutSet in workoutSets {
+                    workoutSet.numReps = workoutSet.numSuggestedReps
+                }
                 self.workoutSets = workoutSets
                 self.tableView.reloadData()
             }

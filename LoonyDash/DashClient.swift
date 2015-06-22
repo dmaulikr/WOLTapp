@@ -96,7 +96,7 @@ class DashClient {
         }
     }
     
-    func fetchLastWorkoutOfWorkoutTypeForUser(workout: Workout!, completion: (Workout!) -> Void) {
+    func fetchLastWorkoutOfWorkoutIDForUser(workout: Workout!, completion: (Workout!) -> Void) {
         let query = PFQuery(className: "Workout")
         query.includeKey("workout")
         query.whereKey("workoutId", equalTo: workout.workoutId)

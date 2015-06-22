@@ -63,7 +63,7 @@ class SetViewController: UIViewController, WCSessionDelegate, WatchMessages {
 
     @IBAction func onCompleted() {
 
-        recordCompletionOfSet(set.numReps, weight: set.weight) // query mutable vars backing labels
+        recordCompletionOfSet(set.numReps, numSuggestedReps: set.numSuggestedReps, weight: set.weight) // query mutable vars backing labels
         // make new set with user inputed reps and weights
         showNextSetOnPhoneOrFinish(alsoSendSetToWatch: true)
 
@@ -93,8 +93,8 @@ class SetViewController: UIViewController, WCSessionDelegate, WatchMessages {
         }
     }
 
-    func recordCompletionOfSet(numReps: Int, weight: Float) {
-        let completedSet = WorkoutSet(workout: workout, exercise: exercise, reps: numReps, weight: weight, user: PFUser.currentUser())
+    func recordCompletionOfSet(numReps: Int, numSuggestedReps: Int, weight: Float) {
+        let completedSet = WorkoutSet(workout: workout, exercise: exercise, reps: numReps, suggestedReps: numSuggestedReps, weight: weight, user: PFUser.currentUser())
         completedSets.append(completedSet)
     }
 
@@ -102,7 +102,7 @@ class SetViewController: UIViewController, WCSessionDelegate, WatchMessages {
     // expecting back a watchDict to show
     func receiveMessage(dict: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
         dispatch_async(dispatch_get_main_queue()) {
-            self.recordCompletionOfSet(dict["numReps"] as! Int, weight: dict["weight"] as! Float)
+            self.recordCompletionOfSet(dict["numReps"] as! Int, numSuggestedReps: dict["numSuggestedReps"] as! Int, weight: dict["weight"] as! Float)
             self.showNextSetOnPhoneOrFinish(alsoSendSetToWatch: false)
             replyHandler(self.set.watchDict())
 
