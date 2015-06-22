@@ -9,23 +9,25 @@
 import UIKit
 
 class RoutineCell: UITableViewCell {
-  
-  @IBOutlet weak var routineTitleLabel: UILabel!
-  
-  var routine: Routine! {
-    didSet {
-      routineTitleLabel.text = routine.title
-    }
-  }
-  
-  override func awakeFromNib() {
-    super.awakeFromNib()
-  }
-  
-  override func setSelected(selected: Bool, animated: Bool) {
-    super.setSelected(selected, animated: animated)
     
-    // Configure the view for the selected state
-  }
-  
+    @IBOutlet weak var routineTitleLabel: UILabel!
+    @IBOutlet weak var shortDescriptionLabel: UILabel!
+    
+    var routine: Routine! {
+        didSet {
+            routineTitleLabel.text = routine.title
+            shortDescriptionLabel.text = routine.shortDescription
+        }
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
+    
 }
