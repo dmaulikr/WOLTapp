@@ -84,7 +84,7 @@ class SetViewController: UIViewController, WCSessionDelegate, WatchMessages {
                 } else {
                     self.completedSets = []
                     self.navigationController?.popViewControllerAnimated(true)
-
+                    self.session.sendMessage(["finished":true], replyHandler: nil, errorHandler: nil)
                 }
                 // stop spinner (happens second)
             })

@@ -36,7 +36,7 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W2b-mn-apG">
-                                <rect key="frame" x="20" y="118" width="560" height="300"/>
+                                <rect key="frame" x="20" y="150" width="560" height="300"/>
                                 <connections>
                                     <segue destination="Ovj-NC-17B" kind="embed" identifier="embedSwipable" id="e3q-px-Fta"/>
                                 </connections>
@@ -50,7 +50,7 @@
                             <constraint firstAttribute="centerX" secondItem="M00-ec-KC7" secondAttribute="centerX" id="KUQ-tY-wwt"/>
                             <constraint firstItem="FCz-1o-qYF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="Nm3-Do-JJm"/>
                             <constraint firstItem="W2b-mn-apG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Opj-iB-6wW"/>
-                            <constraint firstAttribute="centerY" secondItem="W2b-mn-apG" secondAttribute="centerY" constant="32" id="VvC-bo-1Rb"/>
+                            <constraint firstAttribute="centerY" secondItem="W2b-mn-apG" secondAttribute="centerY" id="VvC-bo-1Rb"/>
                             <constraint firstItem="W2b-mn-apG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="t5c-EN-tYq"/>
                         </constraints>
                     </view>
@@ -167,7 +167,7 @@
         <!--TipsVC-->
         <scene sceneID="yCA-bI-j37">
             <objects>
-                <viewController id="QKp-8X-2eS" customClass="TipsVC" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TipsVC" id="QKp-8X-2eS" customClass="TipsVC" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="D7m-oY-9Ee"/>
                         <viewControllerLayoutGuide type="bottom" id="plM-a4-Yga"/>
@@ -175,8 +175,35 @@
                     <view key="view" contentMode="scaleToFill" id="3E8-1t-ydU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tips" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKo-Nf-GpI">
+                                <rect key="frame" x="283" y="28" width="33" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BtC-yL-fKg">
+                                <rect key="frame" x="0.0" y="60.5" width="600" height="539.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="QKp-8X-2eS" id="4jb-l3-jAG"/>
+                                    <outlet property="delegate" destination="QKp-8X-2eS" id="gmd-rD-bc5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="plM-a4-Yga" firstAttribute="top" secondItem="BtC-yL-fKg" secondAttribute="bottom" id="BOk-jB-Pgw"/>
+                            <constraint firstAttribute="trailing" secondItem="BtC-yL-fKg" secondAttribute="trailing" id="HTb-tS-A09"/>
+                            <constraint firstItem="NKo-Nf-GpI" firstAttribute="top" secondItem="D7m-oY-9Ee" secondAttribute="bottom" constant="8" id="JYd-sp-jDo"/>
+                            <constraint firstItem="BtC-yL-fKg" firstAttribute="top" secondItem="NKo-Nf-GpI" secondAttribute="bottom" constant="12" id="MRX-za-MHi"/>
+                            <constraint firstItem="NKo-Nf-GpI" firstAttribute="centerX" secondItem="3E8-1t-ydU" secondAttribute="centerX" id="Wod-69-lPO"/>
+                            <constraint firstItem="BtC-yL-fKg" firstAttribute="leading" secondItem="3E8-1t-ydU" secondAttribute="leading" id="la6-9V-8pt"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tipsTableView" destination="BtC-yL-fKg" id="LaY-HC-WCu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U71-yT-Un7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
