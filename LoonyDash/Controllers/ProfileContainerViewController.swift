@@ -11,16 +11,16 @@ import UIKit
 class ProfileContainerViewController: UIPageViewController, UIPageViewControllerDataSource  {
     
     var pages: [UIViewController] = []
-    var setCompletedVc: SetsCompletedViewController!
-    var personalRecordsVc: PersonalRecordsViewController!
+    var setCompletedVc: UINavigationController!
+    var personalRecordsVc: UINavigationController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupPageControl()
-        
-        setCompletedVc = UIStoryboard.setsCompletedViewController()
-        personalRecordsVc = UIStoryboard.personalRecordsViewController()
+        setCompletedVc = UIStoryboard(name: "Profile", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("SetsCompletedNavViewController") as!UINavigationController
+
+        personalRecordsVc = UIStoryboard(name: "Profile", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("PersonalRecordsNavViewController") as!UINavigationController
         
         pages = [setCompletedVc, personalRecordsVc]
         dataSource = self

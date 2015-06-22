@@ -32,10 +32,10 @@
             </objects>
             <point key="canvasLocation" x="986" y="-313"/>
         </scene>
-        <!--Sets Completed View Controller-->
+        <!--Workouts Completed-->
         <scene sceneID="G3u-HA-FIK">
             <objects>
-                <viewController storyboardIdentifier="SetsCompletedViewController" id="pEh-db-Tmc" customClass="SetsCompletedViewController" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SetsCompletedViewController" title="Workouts Completed" automaticallyAdjustsScrollViewInsets="NO" id="pEh-db-Tmc" customClass="SetsCompletedViewController" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9Fa-Lo-zXB"/>
                         <viewControllerLayoutGuide type="bottom" id="1GU-j6-N4v"/>
@@ -45,7 +45,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="NRo-VW-Uym">
-                                <rect key="frame" x="0.0" y="120" width="600" height="480"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="WorkoutSetRecordCell" rowHeight="85" id="8FF-mk-IX8" customClass="WorkoutSetRecordCell" customModule="LoonyDash" customModuleProvider="target">
@@ -126,35 +126,28 @@
                                     <outlet property="delegate" destination="pEh-db-Tmc" id="em1-5u-Poi"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sets Completed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cD2-bs-1aN">
-                                <rect key="frame" x="234.5" y="79.5" width="131" height="20.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="NRo-VW-Uym" secondAttribute="trailing" id="1dF-ct-ddg"/>
-                            <constraint firstItem="cD2-bs-1aN" firstAttribute="centerX" secondItem="w9b-Fe-ujs" secondAttribute="centerX" id="G3p-JI-XvS"/>
-                            <constraint firstItem="NRo-VW-Uym" firstAttribute="top" secondItem="9Fa-Lo-zXB" secondAttribute="bottom" constant="100" id="GLf-iC-Ifz"/>
-                            <constraint firstItem="NRo-VW-Uym" firstAttribute="top" secondItem="cD2-bs-1aN" secondAttribute="bottom" constant="20" id="gk7-bH-HIt"/>
+                            <constraint firstItem="NRo-VW-Uym" firstAttribute="top" secondItem="9Fa-Lo-zXB" secondAttribute="bottom" id="GLf-iC-Ifz"/>
                             <constraint firstItem="NRo-VW-Uym" firstAttribute="leading" secondItem="w9b-Fe-ujs" secondAttribute="leading" id="j9B-bK-VEG"/>
                             <constraint firstItem="1GU-j6-N4v" firstAttribute="top" secondItem="NRo-VW-Uym" secondAttribute="bottom" id="qjD-yY-7Wj"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Workouts Completed" id="ZJr-e6-iNe"/>
                     <connections>
                         <outlet property="tableView" destination="NRo-VW-Uym" id="5U1-pZ-CZa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0oH-Ij-RVd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="341" y="371"/>
+            <point key="canvasLocation" x="986" y="474"/>
         </scene>
-        <!--Personal Records View Controller-->
+        <!--Personal Records-->
         <scene sceneID="zDZ-Ve-mLw">
             <objects>
-                <viewController storyboardIdentifier="PersonalRecordsViewController" id="zaL-SH-8y5" customClass="PersonalRecordsViewController" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PersonalRecordsViewController" automaticallyAdjustsScrollViewInsets="NO" id="zaL-SH-8y5" customClass="PersonalRecordsViewController" customModule="LoonyDash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3N6-zQ-ysB"/>
                         <viewControllerLayoutGuide type="bottom" id="C2j-eG-qbv"/>
@@ -163,26 +156,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cYG-EI-GeU">
-                                <rect key="frame" x="0.0" y="120" width="600" height="480"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cYG-EI-GeU">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Records" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIM-p5-sdv">
-                                <rect key="frame" x="228" y="79" width="143" height="20.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cYG-EI-GeU" firstAttribute="leading" secondItem="7te-Hg-eWr" secondAttribute="leadingMargin" constant="-20" id="1BW-Mk-soS"/>
                             <constraint firstItem="cYG-EI-GeU" firstAttribute="leading" secondItem="7te-Hg-eWr" secondAttribute="leading" id="FHg-UH-OM9"/>
                             <constraint firstAttribute="trailing" secondItem="cYG-EI-GeU" secondAttribute="trailing" id="KFk-dZ-Y2Z"/>
-                            <constraint firstItem="mIM-p5-sdv" firstAttribute="centerX" secondItem="7te-Hg-eWr" secondAttribute="centerX" id="Kdn-HX-Ych"/>
-                            <constraint firstItem="cYG-EI-GeU" firstAttribute="top" secondItem="3N6-zQ-ysB" secondAttribute="bottom" constant="100" id="Lch-JV-Np8"/>
+                            <constraint firstItem="cYG-EI-GeU" firstAttribute="top" secondItem="3N6-zQ-ysB" secondAttribute="bottom" id="Lch-JV-Np8"/>
                             <constraint firstItem="C2j-eG-qbv" firstAttribute="top" secondItem="cYG-EI-GeU" secondAttribute="bottom" id="O1f-Al-c6r"/>
-                            <constraint firstItem="cYG-EI-GeU" firstAttribute="top" secondItem="mIM-p5-sdv" secondAttribute="bottom" constant="20" id="QP8-4m-hmT"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -190,10 +175,47 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Personal Records" id="yi1-fh-gI2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvw-OH-Ih3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="986" y="371"/>
+            <point key="canvasLocation" x="986" y="1212"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sHB-MV-mQg">
+            <objects>
+                <navigationController storyboardIdentifier="SetsCompletedNavViewController" automaticallyAdjustsScrollViewInsets="NO" id="4N5-ga-gYu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1eI-S9-V3H">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pEh-db-Tmc" kind="relationship" relationship="rootViewController" id="xUH-jC-zmI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nd8-R6-UID" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="341" y="474"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="E2X-dY-vaQ">
+            <objects>
+                <navigationController storyboardIdentifier="PersonalRecordsNavViewController" automaticallyAdjustsScrollViewInsets="NO" id="n5T-tl-nvR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GgQ-pA-L1F">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zaL-SH-8y5" kind="relationship" relationship="rootViewController" id="fQC-XY-0jY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MsE-7h-MXl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="341" y="1212"/>
         </scene>
     </scenes>
 </document>
