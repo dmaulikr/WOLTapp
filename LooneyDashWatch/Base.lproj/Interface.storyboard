@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8121.17" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8121.17" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Z99-r8-NW3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8066.14"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--content-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="LooneyDashWatch" customModuleProvider="target">
+                <controller identifier="content" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="LooneyDashWatch" customModuleProvider="target">
                     <items>
-                        <label width="136" alignment="left" text="Start workout on phone" textAlignment="center" minimumScaleFactor="0.69999999999999996" id="2iR-4k-yUG"/>
+                        <label width="136" alignment="left" text="First workout set" textAlignment="center" minimumScaleFactor="0.69999999999999996" id="2iR-4k-yUG"/>
                         <group width="1" alignment="center" id="tsD-MV-uTG">
                             <items>
                                 <label width="0.5" alignment="left" text="Reps" textAlignment="center" id="WKg-xV-uRD"/>
@@ -45,6 +45,17 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="155" y="344"/>
+        </scene>
+        <!--splash-->
+        <scene sceneID="iuE-i2-klj">
+            <objects>
+                <controller identifier="splash" hidesWhenLoading="NO" id="Z99-r8-NW3">
+                    <items>
+                        <label width="1" height="1" alignment="left" text="Choose a workout on your phone to begin" textAlignment="center" numberOfLines="0" id="goa-6s-epR"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="465" y="430"/>
         </scene>
     </scenes>
 </document>

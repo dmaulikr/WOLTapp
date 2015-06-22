@@ -21,6 +21,11 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     var repsChoice = 0 // index of WKPickerItems list
     var weightsChoice = 0 // index of WKPickerItems list
 
+    let contentString = "content"
+    let splashString = "splash"
+
+    var showingSplash = true
+
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         session = WCSession.defaultSession()
@@ -55,12 +60,22 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
 
     func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
         dispatch_async(dispatch_get_main_queue()) { () -> Void in
-            self.updateUIWithWatchDict(message)
-            replyHandler([:])
+            if message["finished"] != nil {
+                WKInterfaceController.reloadRootControllersWithNames([self.splashString], contexts: nil)
+                self.showingSplash = false
+            } else {
+                self.updateUIWithWatchDict(message)
+                replyHandler([:])
+            }
+
         }
     }
 
     func updateUIWithWatchDict(dict: [String:AnyObject]) {
+        if showingSplash {
+            WKInterfaceController.reloadRootControllersWithNames(   [self.contentString], contexts: nil)
+            showingSplash = false
+        }
         let titleStr = dict["exerciseTitle"] as! String
         self.exerciseName.setAttributedText(NSAttributedString(string: titleStr))
         self.changeRepsPicker(dict["numReps"] as! Int)
