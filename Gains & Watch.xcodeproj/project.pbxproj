@@ -1,0 +1,1016 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D009DAC1B23F4D6002D5DBA /* WorkoutSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D009DAB1B23F4D6002D5DBA /* WorkoutSet.swift */; };
+		1D009DAE1B23F51D002D5DBA /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D009DAD1B23F51D002D5DBA /* Exercise.swift */; };
+		1D0D8B5A1B2DE10700D89F6C /* PageViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0D8B591B2DE10700D89F6C /* PageViewViewController.swift */; };
+		1D0D8B5C1B2DF92900D89F6C /* SwipableViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0D8B5B1B2DF92900D89F6C /* SwipableViewControllers.swift */; };
+		1D5D997D1B2E2B9C005B1558 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D5D997B1B2E2B9C005B1558 /* Main.storyboard */; };
+		1D5D99811B2E426D005B1558 /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D99801B2E426D005B1558 /* YTPlayerView.m */; };
+		1D5D99831B2E4279005B1558 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 1D5D99821B2E4279005B1558 /* Assets */; };
+		1DA003EB1B23F2D4000B88BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA003EA1B23F2D4000B88BD /* AppDelegate.swift */; };
+		1DA003EE1B23F2D4000B88BD /* LoonyDash.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DA003EC1B23F2D4000B88BD /* LoonyDash.xcdatamodeld */; };
+		1DA003F31B23F2D4000B88BD /* Sets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA003F11B23F2D4000B88BD /* Sets.storyboard */; };
+		1DA003F51B23F2D4000B88BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DA003F41B23F2D4000B88BD /* Images.xcassets */; };
+		1DA003F81B23F2D4000B88BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA003F61B23F2D4000B88BD /* LaunchScreen.xib */; };
+		1DA004041B23F2D4000B88BD /* LoonyDashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA004031B23F2D4000B88BD /* LoonyDashTests.swift */; };
+		1DA0040E1B23F308000B88BD /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA0040D1B23F308000B88BD /* SetViewController.swift */; };
+		1DCB62F21B2F222A00F901B9 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DCB62F01B2F222A00F901B9 /* Interface.storyboard */; };
+		1DCB62F41B2F222A00F901B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DCB62F31B2F222A00F901B9 /* Assets.xcassets */; };
+		1DCB62FB1B2F222A00F901B9 /* LooneyDashWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1DCB62FA1B2F222A00F901B9 /* LooneyDashWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1DCB63001B2F222A00F901B9 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB62FF1B2F222A00F901B9 /* InterfaceController.swift */; };
+		1DCB63021B2F222A00F901B9 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB63011B2F222A00F901B9 /* ExtensionDelegate.swift */; };
+		1DCB63041B2F222A00F901B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DCB63031B2F222A00F901B9 /* Assets.xcassets */; };
+		1DCB63081B2F222A00F901B9 /* LooneyDashWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1DCB62EE1B2F222A00F901B9 /* LooneyDashWatch.app */; };
+		4C495A931EFA943286F2567A /* libPods-LoonyDash.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8B1FED16384997ECB7B349 /* libPods-LoonyDash.a */; };
+		4D365DBF1B37767400F30DAB /* WorkoutSetRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D365DBE1B37767400F30DAB /* WorkoutSetRecordCell.swift */; };
+		4D7B4FA31B36C9FC00824B90 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7B4FA21B36C9FC00824B90 /* UIStoryboard.swift */; };
+		4D7B4FA51B36D38C00824B90 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D7B4FA41B36D38C00824B90 /* Profile.storyboard */; };
+		4D7B4FA71B36D65000824B90 /* PersonalRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7B4FA61B36D65000824B90 /* PersonalRecordsViewController.swift */; };
+		4D7B4FA91B36D66500824B90 /* SetsCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7B4FA81B36D66500824B90 /* SetsCompletedViewController.swift */; };
+		4D7B4FAC1B375F0E00824B90 /* ProfileContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7B4FAB1B375F0E00824B90 /* ProfileContainerViewController.swift */; };
+		4DA2D4711B37E66B00A16004 /* PersonalRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA2D4701B37E66B00A16004 /* PersonalRecordCell.swift */; };
+		4DDEEFBA1B378A5C00E00DCC /* PersonalRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDEEFB91B378A5C00E00DCC /* PersonalRecord.swift */; };
+		4DF2859C1B307E1300BC742C /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2859B1B307E1300BC742C /* UserProfileViewController.swift */; };
+		4DF285A01B307F5500BC742C /* LDTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2859F1B307F5500BC742C /* LDTabBarController.swift */; };
+		4DF285A21B30820C00BC742C /* RoutinesNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF285A11B30820C00BC742C /* RoutinesNavigationController.swift */; };
+		6D71978B1B25F2B5007E7F4D /* RoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71978A1B25F2B5007E7F4D /* RoutineViewController.swift */; };
+		6D71978D1B25FDE1007E7F4D /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71978C1B25FDE1007E7F4D /* WorkoutCell.swift */; };
+		6D71978F1B25FE0A007E7F4D /* RoutineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71978E1B25FE0A007E7F4D /* RoutineCell.swift */; };
+		6D7197911B25FE22007E7F4D /* RoutineDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7197901B25FE22007E7F4D /* RoutineDescriptionCell.swift */; };
+		6D7197931B260400007E7F4D /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7197921B260400007E7F4D /* Workout.swift */; };
+		6D7197971B260B44007E7F4D /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7197961B260B44007E7F4D /* Routine.swift */; };
+		6D7197991B260FDD007E7F4D /* RoutinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7197981B260FDD007E7F4D /* RoutinesViewController.swift */; };
+		6D71979B1B260FF6007E7F4D /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71979A1B260FF6007E7F4D /* WorkoutViewController.swift */; };
+		6D7197A31B2824A0007E7F4D /* WorkoutSetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7197A21B2824A0007E7F4D /* WorkoutSetCell.swift */; };
+		6D71980A1B2E0C4D007E7F4D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7198071B2E0C19007E7F4D /* Social.framework */; };
+		6D71980B1B2E0C5A007E7F4D /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7198051B2E0C16007E7F4D /* Accounts.framework */; };
+		6D71980C1B2E0C66007E7F4D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7197EF1B2E0BE1007E7F4D /* AudioToolbox.framework */; };
+		6D71980D1B2E0C6B007E7F4D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7197F11B2E0BE8007E7F4D /* CFNetwork.framework */; };
+		6D71980E1B2E0C6F007E7F4D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7197F31B2E0BEC007E7F4D /* CoreGraphics.framework */; };
+		6D71980F1B2E0C73007E7F4D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7197F51B2E0BEF007E7F4D /* CoreLocation.framework */; };
+		6D7198101B2E0C82007E7F4D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7197F71B2E0BF3007E7F4D /* MobileCoreServices.framework */; };
+		6D7198111B2E0C86007E7F4D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7197F91B2E0BF8007E7F4D /* QuartzCore.framework */; };
+		6D7198121B2E0C8A007E7F4D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7197FB1B2E0BFD007E7F4D /* Security.framework */; };
+		6D7198131B2E0C8D007E7F4D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7197FD1B2E0C01007E7F4D /* StoreKit.framework */; };
+		6D7198141B2E0C91007E7F4D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7197FF1B2E0C05007E7F4D /* SystemConfiguration.framework */; };
+		6D7198151B2E0C95007E7F4D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7198011B2E0C0B007E7F4D /* libz.dylib */; };
+		6D7198161B2E0C9A007E7F4D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7198031B2E0C10007E7F4D /* libsqlite3.dylib */; };
+		6D7198191B2E0CBB007E7F4D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7198171B2E0CBB007E7F4D /* Bolts.framework */; };
+		6D71981A1B2E0CBB007E7F4D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7198181B2E0CBB007E7F4D /* Parse.framework */; };
+		6D71981F1B2E398E007E7F4D /* DashClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71981E1B2E398E007E7F4D /* DashClient.swift */; };
+		6D71982E1B301DF2007E7F4D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71982D1B301DF2007E7F4D /* LoginViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1DA003FE1B23F2D4000B88BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DA003DD1B23F2D4000B88BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DA003E41B23F2D4000B88BD;
+			remoteInfo = LoonyDash;
+		};
+		1DCB62FC1B2F222A00F901B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DA003DD1B23F2D4000B88BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DCB62F91B2F222A00F901B9;
+			remoteInfo = "LooneyDashWatch Extension";
+		};
+		1DCB63061B2F222A00F901B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DA003DD1B23F2D4000B88BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DCB62ED1B2F222A00F901B9;
+			remoteInfo = LooneyDashWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1DCB630C1B2F222A00F901B9 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1DCB62FB1B2F222A00F901B9 /* LooneyDashWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DCB63101B2F222A00F901B9 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				1DCB63081B2F222A00F901B9 /* LooneyDashWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		149283982C8C28F18F5EACBB /* Pods-LoonyDash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoonyDash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoonyDash/Pods-LoonyDash.debug.xcconfig"; sourceTree = "<group>"; };
+		1D009DAB1B23F4D6002D5DBA /* WorkoutSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkoutSet.swift; path = Models/WorkoutSet.swift; sourceTree = "<group>"; };
+		1D009DAD1B23F51D002D5DBA /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Exercise.swift; path = Models/Exercise.swift; sourceTree = "<group>"; };
+		1D0D8B591B2DE10700D89F6C /* PageViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageViewViewController.swift; path = Controllers/PageViewViewController.swift; sourceTree = "<group>"; };
+		1D0D8B5B1B2DF92900D89F6C /* SwipableViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipableViewControllers.swift; sourceTree = "<group>"; };
+		1D5D997C1B2E2B9C005B1558 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1D5D997F1B2E426D005B1558 /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
+		1D5D99801B2E426D005B1558 /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
+		1D5D99821B2E4279005B1558 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+		1DA003E51B23F2D4000B88BD /* LoonyDash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoonyDash.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DA003E91B23F2D4000B88BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DA003EA1B23F2D4000B88BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1DA003ED1B23F2D4000B88BD /* LoonyDash.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LoonyDash.xcdatamodel; sourceTree = "<group>"; };
+		1DA003F21B23F2D4000B88BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Sets.storyboard; sourceTree = "<group>"; };
+		1DA003F41B23F2D4000B88BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1DA003F71B23F2D4000B88BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		1DA003FD1B23F2D4000B88BD /* LoonyDashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoonyDashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DA004021B23F2D4000B88BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DA004031B23F2D4000B88BD /* LoonyDashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoonyDashTests.swift; sourceTree = "<group>"; };
+		1DA0040D1B23F308000B88BD /* SetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetViewController.swift; path = Controllers/SetViewController.swift; sourceTree = "<group>"; };
+		1DCB62EE1B2F222A00F901B9 /* LooneyDashWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LooneyDashWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DCB62F11B2F222A00F901B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		1DCB62F31B2F222A00F901B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DCB62F51B2F222A00F901B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DCB62FA1B2F222A00F901B9 /* LooneyDashWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LooneyDashWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DCB62FF1B2F222A00F901B9 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		1DCB63011B2F222A00F901B9 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		1DCB63031B2F222A00F901B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DCB63051B2F222A00F901B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D365DBE1B37767400F30DAB /* WorkoutSetRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkoutSetRecordCell.swift; path = Controllers/WorkoutSetRecordCell.swift; sourceTree = "<group>"; };
+		4D7B4FA21B36C9FC00824B90 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
+		4D7B4FA41B36D38C00824B90 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = ../Profile.storyboard; sourceTree = "<group>"; };
+		4D7B4FA61B36D65000824B90 /* PersonalRecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonalRecordsViewController.swift; path = Controllers/PersonalRecordsViewController.swift; sourceTree = "<group>"; };
+		4D7B4FA81B36D66500824B90 /* SetsCompletedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetsCompletedViewController.swift; path = Controllers/SetsCompletedViewController.swift; sourceTree = "<group>"; };
+		4D7B4FAB1B375F0E00824B90 /* ProfileContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileContainerViewController.swift; path = Controllers/ProfileContainerViewController.swift; sourceTree = "<group>"; };
+		4DA2D4701B37E66B00A16004 /* PersonalRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalRecordCell.swift; sourceTree = "<group>"; };
+		4DDEEFB91B378A5C00E00DCC /* PersonalRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonalRecord.swift; path = Models/PersonalRecord.swift; sourceTree = "<group>"; };
+		4DF2859B1B307E1300BC742C /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfileViewController.swift; path = ../UserProfileViewController.swift; sourceTree = "<group>"; };
+		4DF2859F1B307F5500BC742C /* LDTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LDTabBarController.swift; sourceTree = "<group>"; };
+		4DF285A11B30820C00BC742C /* RoutinesNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutinesNavigationController.swift; sourceTree = "<group>"; };
+		6D71978A1B25F2B5007E7F4D /* RoutineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoutineViewController.swift; path = Controllers/RoutineViewController.swift; sourceTree = "<group>"; };
+		6D71978C1B25FDE1007E7F4D /* WorkoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
+		6D71978E1B25FE0A007E7F4D /* RoutineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineCell.swift; sourceTree = "<group>"; };
+		6D7197901B25FE22007E7F4D /* RoutineDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineDescriptionCell.swift; sourceTree = "<group>"; };
+		6D7197921B260400007E7F4D /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Workout.swift; path = Models/Workout.swift; sourceTree = "<group>"; };
+		6D7197961B260B44007E7F4D /* Routine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Routine.swift; path = Models/Routine.swift; sourceTree = "<group>"; };
+		6D7197981B260FDD007E7F4D /* RoutinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoutinesViewController.swift; path = Controllers/RoutinesViewController.swift; sourceTree = "<group>"; };
+		6D71979A1B260FF6007E7F4D /* WorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkoutViewController.swift; path = Controllers/WorkoutViewController.swift; sourceTree = "<group>"; };
+		6D7197A21B2824A0007E7F4D /* WorkoutSetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutSetCell.swift; sourceTree = "<group>"; };
+		6D7197EF1B2E0BE1007E7F4D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6D7197F11B2E0BE8007E7F4D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		6D7197F31B2E0BEC007E7F4D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6D7197F51B2E0BEF007E7F4D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6D7197F71B2E0BF3007E7F4D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		6D7197F91B2E0BF8007E7F4D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6D7197FB1B2E0BFD007E7F4D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6D7197FD1B2E0C01007E7F4D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		6D7197FF1B2E0C05007E7F4D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6D7198011B2E0C0B007E7F4D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		6D7198031B2E0C10007E7F4D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		6D7198051B2E0C16007E7F4D /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		6D7198071B2E0C19007E7F4D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		6D7198171B2E0CBB007E7F4D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		6D7198181B2E0CBB007E7F4D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		6D71981B1B2E0DC2007E7F4D /* LoonyDash-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoonyDash-Bridging-Header.h"; sourceTree = "<group>"; };
+		6D71981E1B2E398E007E7F4D /* DashClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashClient.swift; sourceTree = "<group>"; };
+		6D71982D1B301DF2007E7F4D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		7B97476627902F7757C5907E /* Pods-LoonyDash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoonyDash.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoonyDash/Pods-LoonyDash.release.xcconfig"; sourceTree = "<group>"; };
+		9A8B1FED16384997ECB7B349 /* libPods-LoonyDash.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LoonyDash.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1DA003E21B23F2D4000B88BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D71980A1B2E0C4D007E7F4D /* Social.framework in Frameworks */,
+				6D71980B1B2E0C5A007E7F4D /* Accounts.framework in Frameworks */,
+				6D7198161B2E0C9A007E7F4D /* libsqlite3.dylib in Frameworks */,
+				6D7198151B2E0C95007E7F4D /* libz.dylib in Frameworks */,
+				6D71981A1B2E0CBB007E7F4D /* Parse.framework in Frameworks */,
+				6D7198141B2E0C91007E7F4D /* SystemConfiguration.framework in Frameworks */,
+				6D7198131B2E0C8D007E7F4D /* StoreKit.framework in Frameworks */,
+				6D7198121B2E0C8A007E7F4D /* Security.framework in Frameworks */,
+				6D7198111B2E0C86007E7F4D /* QuartzCore.framework in Frameworks */,
+				6D7198101B2E0C82007E7F4D /* MobileCoreServices.framework in Frameworks */,
+				6D71980F1B2E0C73007E7F4D /* CoreLocation.framework in Frameworks */,
+				6D71980E1B2E0C6F007E7F4D /* CoreGraphics.framework in Frameworks */,
+				6D71980D1B2E0C6B007E7F4D /* CFNetwork.framework in Frameworks */,
+				6D71980C1B2E0C66007E7F4D /* AudioToolbox.framework in Frameworks */,
+				6D7198191B2E0CBB007E7F4D /* Bolts.framework in Frameworks */,
+				4C495A931EFA943286F2567A /* libPods-LoonyDash.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DA003FA1B23F2D4000B88BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DCB62F71B2F222A00F901B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D5D997E1B2E4244005B1558 /* YoutubeHelper */ = {
+			isa = PBXGroup;
+			children = (
+				1D5D99821B2E4279005B1558 /* Assets */,
+				1D5D997F1B2E426D005B1558 /* YTPlayerView.h */,
+				1D5D99801B2E426D005B1558 /* YTPlayerView.m */,
+			);
+			name = YoutubeHelper;
+			sourceTree = "<group>";
+		};
+		1DA003DC1B23F2D4000B88BD = {
+			isa = PBXGroup;
+			children = (
+				1DCB62EF1B2F222A00F901B9 /* LooneyDashWatch */,
+				1DCB62FE1B2F222A00F901B9 /* LooneyDashWatch Extension */,
+				6D7198091B2E0C20007E7F4D /* Frameworks */,
+				1DA003E71B23F2D4000B88BD /* LoonyDash */,
+				1DA004001B23F2D4000B88BD /* LoonyDashTests */,
+				1DA003E61B23F2D4000B88BD /* Products */,
+				2613E56100A0CA7A264EEDA0 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		1DA003E61B23F2D4000B88BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DA003E51B23F2D4000B88BD /* LoonyDash.app */,
+				1DA003FD1B23F2D4000B88BD /* LoonyDashTests.xctest */,
+				1DCB62EE1B2F222A00F901B9 /* LooneyDashWatch.app */,
+				1DCB62FA1B2F222A00F901B9 /* LooneyDashWatch Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DA003E71B23F2D4000B88BD /* LoonyDash */ = {
+			isa = PBXGroup;
+			children = (
+				4DDEEFB81B3789B700E00DCC /* Cells */,
+				6D71979C1B26100D007E7F4D /* Controllers */,
+				6D71979D1B261042007E7F4D /* Models */,
+				1DA003EA1B23F2D4000B88BD /* AppDelegate.swift */,
+				4D7B4FA21B36C9FC00824B90 /* UIStoryboard.swift */,
+				6D71981E1B2E398E007E7F4D /* DashClient.swift */,
+				6D7197901B25FE22007E7F4D /* RoutineDescriptionCell.swift */,
+				6D71981B1B2E0DC2007E7F4D /* LoonyDash-Bridging-Header.h */,
+				4D7B4FAA1B36D68C00824B90 /* Storyboards */,
+				1DA003F41B23F2D4000B88BD /* Images.xcassets */,
+				1DA003F61B23F2D4000B88BD /* LaunchScreen.xib */,
+				1DA003EC1B23F2D4000B88BD /* LoonyDash.xcdatamodeld */,
+				1DA003E81B23F2D4000B88BD /* Supporting Files */,
+			);
+			path = LoonyDash;
+			sourceTree = "<group>";
+		};
+		1DA003E81B23F2D4000B88BD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D5D997E1B2E4244005B1558 /* YoutubeHelper */,
+				1DA003E91B23F2D4000B88BD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1DA004001B23F2D4000B88BD /* LoonyDashTests */ = {
+			isa = PBXGroup;
+			children = (
+				1DA004031B23F2D4000B88BD /* LoonyDashTests.swift */,
+				1DA004011B23F2D4000B88BD /* Supporting Files */,
+			);
+			path = LoonyDashTests;
+			sourceTree = "<group>";
+		};
+		1DA004011B23F2D4000B88BD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1DA004021B23F2D4000B88BD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1DCB62EF1B2F222A00F901B9 /* LooneyDashWatch */ = {
+			isa = PBXGroup;
+			children = (
+				1DCB62F01B2F222A00F901B9 /* Interface.storyboard */,
+				1DCB62F31B2F222A00F901B9 /* Assets.xcassets */,
+				1DCB62F51B2F222A00F901B9 /* Info.plist */,
+			);
+			path = LooneyDashWatch;
+			sourceTree = "<group>";
+		};
+		1DCB62FE1B2F222A00F901B9 /* LooneyDashWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1DCB62FF1B2F222A00F901B9 /* InterfaceController.swift */,
+				1DCB63011B2F222A00F901B9 /* ExtensionDelegate.swift */,
+				1DCB63031B2F222A00F901B9 /* Assets.xcassets */,
+				1DCB63051B2F222A00F901B9 /* Info.plist */,
+			);
+			path = "LooneyDashWatch Extension";
+			sourceTree = "<group>";
+		};
+		2613E56100A0CA7A264EEDA0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				149283982C8C28F18F5EACBB /* Pods-LoonyDash.debug.xcconfig */,
+				7B97476627902F7757C5907E /* Pods-LoonyDash.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4D7B4FAA1B36D68C00824B90 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4D7B4FA41B36D38C00824B90 /* Profile.storyboard */,
+				1D5D997B1B2E2B9C005B1558 /* Main.storyboard */,
+				1DA003F11B23F2D4000B88BD /* Sets.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		4DDEEFB81B3789B700E00DCC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4DA2D4701B37E66B00A16004 /* PersonalRecordCell.swift */,
+				4D365DBE1B37767400F30DAB /* WorkoutSetRecordCell.swift */,
+				6D71978C1B25FDE1007E7F4D /* WorkoutCell.swift */,
+				6D71978E1B25FE0A007E7F4D /* RoutineCell.swift */,
+				6D7197A21B2824A0007E7F4D /* WorkoutSetCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		6D71979C1B26100D007E7F4D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4DF285A11B30820C00BC742C /* RoutinesNavigationController.swift */,
+				4D7B4FA61B36D65000824B90 /* PersonalRecordsViewController.swift */,
+				4D7B4FA81B36D66500824B90 /* SetsCompletedViewController.swift */,
+				4DF2859F1B307F5500BC742C /* LDTabBarController.swift */,
+				4DF2859B1B307E1300BC742C /* UserProfileViewController.swift */,
+				6D71978A1B25F2B5007E7F4D /* RoutineViewController.swift */,
+				6D7197981B260FDD007E7F4D /* RoutinesViewController.swift */,
+				1DA0040D1B23F308000B88BD /* SetViewController.swift */,
+				6D71979A1B260FF6007E7F4D /* WorkoutViewController.swift */,
+				1D0D8B5B1B2DF92900D89F6C /* SwipableViewControllers.swift */,
+				1D0D8B591B2DE10700D89F6C /* PageViewViewController.swift */,
+				4D7B4FAB1B375F0E00824B90 /* ProfileContainerViewController.swift */,
+				6D71982D1B301DF2007E7F4D /* LoginViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		6D71979D1B261042007E7F4D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6D7197961B260B44007E7F4D /* Routine.swift */,
+				6D7197921B260400007E7F4D /* Workout.swift */,
+				1D009DAB1B23F4D6002D5DBA /* WorkoutSet.swift */,
+				1D009DAD1B23F51D002D5DBA /* Exercise.swift */,
+				4DDEEFB91B378A5C00E00DCC /* PersonalRecord.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		6D7198091B2E0C20007E7F4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D7198171B2E0CBB007E7F4D /* Bolts.framework */,
+				6D7198181B2E0CBB007E7F4D /* Parse.framework */,
+				6D7198071B2E0C19007E7F4D /* Social.framework */,
+				6D7198051B2E0C16007E7F4D /* Accounts.framework */,
+				6D7198031B2E0C10007E7F4D /* libsqlite3.dylib */,
+				6D7198011B2E0C0B007E7F4D /* libz.dylib */,
+				6D7197FF1B2E0C05007E7F4D /* SystemConfiguration.framework */,
+				6D7197FD1B2E0C01007E7F4D /* StoreKit.framework */,
+				6D7197FB1B2E0BFD007E7F4D /* Security.framework */,
+				6D7197F91B2E0BF8007E7F4D /* QuartzCore.framework */,
+				6D7197F71B2E0BF3007E7F4D /* MobileCoreServices.framework */,
+				6D7197F51B2E0BEF007E7F4D /* CoreLocation.framework */,
+				6D7197F31B2E0BEC007E7F4D /* CoreGraphics.framework */,
+				6D7197F11B2E0BE8007E7F4D /* CFNetwork.framework */,
+				6D7197EF1B2E0BE1007E7F4D /* AudioToolbox.framework */,
+				9A8B1FED16384997ECB7B349 /* libPods-LoonyDash.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1DA003E41B23F2D4000B88BD /* LoonyDash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DA004071B23F2D4000B88BD /* Build configuration list for PBXNativeTarget "LoonyDash" */;
+			buildPhases = (
+				889F13E86E71CFAF03AB4421 /* Check Pods Manifest.lock */,
+				1DA003E11B23F2D4000B88BD /* Sources */,
+				1DA003E21B23F2D4000B88BD /* Frameworks */,
+				1DA003E31B23F2D4000B88BD /* Resources */,
+				1DCB63101B2F222A00F901B9 /* Embed Watch Content */,
+				4C4EB6062F2AD4F6DB14839B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DCB63071B2F222A00F901B9 /* PBXTargetDependency */,
+			);
+			name = LoonyDash;
+			productName = LoonyDash;
+			productReference = 1DA003E51B23F2D4000B88BD /* LoonyDash.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1DA003FC1B23F2D4000B88BD /* LoonyDashTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DA0040A1B23F2D4000B88BD /* Build configuration list for PBXNativeTarget "LoonyDashTests" */;
+			buildPhases = (
+				1DA003F91B23F2D4000B88BD /* Sources */,
+				1DA003FA1B23F2D4000B88BD /* Frameworks */,
+				1DA003FB1B23F2D4000B88BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DA003FF1B23F2D4000B88BD /* PBXTargetDependency */,
+			);
+			name = LoonyDashTests;
+			productName = LoonyDashTests;
+			productReference = 1DA003FD1B23F2D4000B88BD /* LoonyDashTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1DCB62ED1B2F222A00F901B9 /* LooneyDashWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DCB630D1B2F222A00F901B9 /* Build configuration list for PBXNativeTarget "LooneyDashWatch" */;
+			buildPhases = (
+				1DCB62EC1B2F222A00F901B9 /* Resources */,
+				1DCB630C1B2F222A00F901B9 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DCB62FD1B2F222A00F901B9 /* PBXTargetDependency */,
+			);
+			name = LooneyDashWatch;
+			productName = LooneyDashWatch;
+			productReference = 1DCB62EE1B2F222A00F901B9 /* LooneyDashWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		1DCB62F91B2F222A00F901B9 /* LooneyDashWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DCB63091B2F222A00F901B9 /* Build configuration list for PBXNativeTarget "LooneyDashWatch Extension" */;
+			buildPhases = (
+				1DCB62F61B2F222A00F901B9 /* Sources */,
+				1DCB62F71B2F222A00F901B9 /* Frameworks */,
+				1DCB62F81B2F222A00F901B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LooneyDashWatch Extension";
+			productName = "LooneyDashWatch Extension";
+			productReference = 1DCB62FA1B2F222A00F901B9 /* LooneyDashWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1DA003DD1B23F2D4000B88BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = LooneyDash;
+				TargetAttributes = {
+					1DA003E41B23F2D4000B88BD = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					1DA003FC1B23F2D4000B88BD = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 1DA003E41B23F2D4000B88BD;
+					};
+					1DCB62ED1B2F222A00F901B9 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					1DCB62F91B2F222A00F901B9 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 1DA003E01B23F2D4000B88BD /* Build configuration list for PBXProject "Gains & Watch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1DA003DC1B23F2D4000B88BD;
+			productRefGroup = 1DA003E61B23F2D4000B88BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1DA003E41B23F2D4000B88BD /* LoonyDash */,
+				1DA003FC1B23F2D4000B88BD /* LoonyDashTests */,
+				1DCB62ED1B2F222A00F901B9 /* LooneyDashWatch */,
+				1DCB62F91B2F222A00F901B9 /* LooneyDashWatch Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1DA003E31B23F2D4000B88BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D7B4FA51B36D38C00824B90 /* Profile.storyboard in Resources */,
+				1D5D99831B2E4279005B1558 /* Assets in Resources */,
+				1DA003F31B23F2D4000B88BD /* Sets.storyboard in Resources */,
+				1DA003F81B23F2D4000B88BD /* LaunchScreen.xib in Resources */,
+				1DA003F51B23F2D4000B88BD /* Images.xcassets in Resources */,
+				1D5D997D1B2E2B9C005B1558 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DA003FB1B23F2D4000B88BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DCB62EC1B2F222A00F901B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DCB62F41B2F222A00F901B9 /* Assets.xcassets in Resources */,
+				1DCB62F21B2F222A00F901B9 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DCB62F81B2F222A00F901B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DCB63041B2F222A00F901B9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C4EB6062F2AD4F6DB14839B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoonyDash/Pods-LoonyDash-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		889F13E86E71CFAF03AB4421 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DA003E11B23F2D4000B88BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D71978D1B25FDE1007E7F4D /* WorkoutCell.swift in Sources */,
+				4D7B4FA91B36D66500824B90 /* SetsCompletedViewController.swift in Sources */,
+				4DF2859C1B307E1300BC742C /* UserProfileViewController.swift in Sources */,
+				1D009DAC1B23F4D6002D5DBA /* WorkoutSet.swift in Sources */,
+				4D7B4FA31B36C9FC00824B90 /* UIStoryboard.swift in Sources */,
+				1D5D99811B2E426D005B1558 /* YTPlayerView.m in Sources */,
+				4DDEEFBA1B378A5C00E00DCC /* PersonalRecord.swift in Sources */,
+				6D71979B1B260FF6007E7F4D /* WorkoutViewController.swift in Sources */,
+				6D7197971B260B44007E7F4D /* Routine.swift in Sources */,
+				6D7197911B25FE22007E7F4D /* RoutineDescriptionCell.swift in Sources */,
+				1DA0040E1B23F308000B88BD /* SetViewController.swift in Sources */,
+				4D365DBF1B37767400F30DAB /* WorkoutSetRecordCell.swift in Sources */,
+				6D71978F1B25FE0A007E7F4D /* RoutineCell.swift in Sources */,
+				4DA2D4711B37E66B00A16004 /* PersonalRecordCell.swift in Sources */,
+				6D71982E1B301DF2007E7F4D /* LoginViewController.swift in Sources */,
+				4D7B4FA71B36D65000824B90 /* PersonalRecordsViewController.swift in Sources */,
+				4DF285A01B307F5500BC742C /* LDTabBarController.swift in Sources */,
+				6D71978B1B25F2B5007E7F4D /* RoutineViewController.swift in Sources */,
+				4DF285A21B30820C00BC742C /* RoutinesNavigationController.swift in Sources */,
+				6D7197991B260FDD007E7F4D /* RoutinesViewController.swift in Sources */,
+				6D7197931B260400007E7F4D /* Workout.swift in Sources */,
+				1DA003EB1B23F2D4000B88BD /* AppDelegate.swift in Sources */,
+				1DA003EE1B23F2D4000B88BD /* LoonyDash.xcdatamodeld in Sources */,
+				1D009DAE1B23F51D002D5DBA /* Exercise.swift in Sources */,
+				6D7197A31B2824A0007E7F4D /* WorkoutSetCell.swift in Sources */,
+				1D0D8B5A1B2DE10700D89F6C /* PageViewViewController.swift in Sources */,
+				6D71981F1B2E398E007E7F4D /* DashClient.swift in Sources */,
+				1D0D8B5C1B2DF92900D89F6C /* SwipableViewControllers.swift in Sources */,
+				4D7B4FAC1B375F0E00824B90 /* ProfileContainerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DA003F91B23F2D4000B88BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DA004041B23F2D4000B88BD /* LoonyDashTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DCB62F61B2F222A00F901B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DCB63021B2F222A00F901B9 /* ExtensionDelegate.swift in Sources */,
+				1DCB63001B2F222A00F901B9 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1DA003FF1B23F2D4000B88BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DA003E41B23F2D4000B88BD /* LoonyDash */;
+			targetProxy = 1DA003FE1B23F2D4000B88BD /* PBXContainerItemProxy */;
+		};
+		1DCB62FD1B2F222A00F901B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DCB62F91B2F222A00F901B9 /* LooneyDashWatch Extension */;
+			targetProxy = 1DCB62FC1B2F222A00F901B9 /* PBXContainerItemProxy */;
+		};
+		1DCB63071B2F222A00F901B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DCB62ED1B2F222A00F901B9 /* LooneyDashWatch */;
+			targetProxy = 1DCB63061B2F222A00F901B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1D5D997B1B2E2B9C005B1558 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D5D997C1B2E2B9C005B1558 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1DA003F11B23F2D4000B88BD /* Sets.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DA003F21B23F2D4000B88BD /* Base */,
+			);
+			name = Sets.storyboard;
+			sourceTree = "<group>";
+		};
+		1DA003F61B23F2D4000B88BD /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DA003F71B23F2D4000B88BD /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		1DCB62F01B2F222A00F901B9 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DCB62F11B2F222A00F901B9 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DA004051B23F2D4000B88BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1DA004061B23F2D4000B88BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1DA004081B23F2D4000B88BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 149283982C8C28F18F5EACBB /* Pods-LoonyDash.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LoonyDash",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = LoonyDash/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "raspberry.peach.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LoonyDash/LoonyDash-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1DA004091B23F2D4000B88BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B97476627902F7757C5907E /* Pods-LoonyDash.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LoonyDash",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = LoonyDash/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "raspberry.peach.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LoonyDash/LoonyDash-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		1DA0040B1B23F2D4000B88BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LoonyDashTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "raspberry.peach.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoonyDash.app/LoonyDash";
+			};
+			name = Debug;
+		};
+		1DA0040C1B23F2D4000B88BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LoonyDashTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "raspberry.peach.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoonyDash.app/LoonyDash";
+			};
+			name = Release;
+		};
+		1DCB630A1B2F222A00F901B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = "LooneyDashWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = raspberry.peach.LoonyDash.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		1DCB630B1B2F222A00F901B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "LooneyDashWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = raspberry.peach.LoonyDash.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		1DCB630E1B2F222A00F901B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_TESTABILITY = YES;
+				IBSC_MODULE = LooneyDashWatch_Extension;
+				INFOPLIST_FILE = LooneyDashWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = raspberry.peach.LoonyDash.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		1DCB630F1B2F222A00F901B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = LooneyDashWatch_Extension;
+				INFOPLIST_FILE = LooneyDashWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = raspberry.peach.LoonyDash.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DA003E01B23F2D4000B88BD /* Build configuration list for PBXProject "Gains & Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DA004051B23F2D4000B88BD /* Debug */,
+				1DA004061B23F2D4000B88BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DA004071B23F2D4000B88BD /* Build configuration list for PBXNativeTarget "LoonyDash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DA004081B23F2D4000B88BD /* Debug */,
+				1DA004091B23F2D4000B88BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DA0040A1B23F2D4000B88BD /* Build configuration list for PBXNativeTarget "LoonyDashTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DA0040B1B23F2D4000B88BD /* Debug */,
+				1DA0040C1B23F2D4000B88BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DCB63091B2F222A00F901B9 /* Build configuration list for PBXNativeTarget "LooneyDashWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DCB630A1B2F222A00F901B9 /* Debug */,
+				1DCB630B1B2F222A00F901B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DCB630D1B2F222A00F901B9 /* Build configuration list for PBXNativeTarget "LooneyDashWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DCB630E1B2F222A00F901B9 /* Debug */,
+				1DCB630F1B2F222A00F901B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1DA003EC1B23F2D4000B88BD /* LoonyDash.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1DA003ED1B23F2D4000B88BD /* LoonyDash.xcdatamodel */,
+			);
+			currentVersion = 1DA003ED1B23F2D4000B88BD /* LoonyDash.xcdatamodel */;
+			path = LoonyDash.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1DA003DD1B23F2D4000B88BD /* Project object */;
+}
