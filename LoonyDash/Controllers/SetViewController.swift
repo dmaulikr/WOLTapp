@@ -37,10 +37,12 @@ class SetViewController: UIViewController, WCSessionDelegate, WatchMessages, Rep
     // reps and weight, pr, tips, video
 
     override func viewDidLoad() {
+        
         updateTitle()
         repsSelection = set.numReps
         weightSelection = set.weight
         super.viewDidLoad()
+        
         let oldFrame = containerView.frame
         containerView.frame = CGRectMake(oldFrame.origin.x, oldFrame.origin.y, oldFrame.size.width, oldFrame.size.height - 30)
 
@@ -133,7 +135,6 @@ class SetViewController: UIViewController, WCSessionDelegate, WatchMessages, Rep
 
         }
     }
-
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.identifier! {

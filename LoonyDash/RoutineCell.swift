@@ -10,6 +10,7 @@ import UIKit
 
 class RoutineCell: UITableViewCell {
     
+    @IBOutlet weak var bannerImageView: UIImageView!
     @IBOutlet weak var routineTitleLabel: UILabel!
     @IBOutlet weak var shortDescriptionLabel: UILabel!
     
@@ -17,10 +18,12 @@ class RoutineCell: UITableViewCell {
         didSet {
             routineTitleLabel.text = routine.title
             shortDescriptionLabel.text = routine.shortDescription
+            bannerImageView.setImageWithURL(NSURL(string: routine.bannerImageUrl))
         }
     }
     
     override func awakeFromNib() {
+        self.selectionStyle = UITableViewCellSelectionStyle.None
         super.awakeFromNib()
     }
     

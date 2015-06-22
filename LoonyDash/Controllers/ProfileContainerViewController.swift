@@ -20,13 +20,18 @@ class ProfileContainerViewController: UIPageViewController, UIPageViewController
 
         setupPageControl()
         setCompletedVc = UIStoryboard(name: "Profile", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("SetsCompletedNavViewController") as!UINavigationController
+        setCompletedVc.navigationBar.barTintColor = UIColor.blackColor()
+        setCompletedVc.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        setCompletedVc.navigationBar.tintColor = UIColor.whiteColor()
 
         personalRecordsVc = UIStoryboard(name: "Profile", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("PersonalRecordsNavViewController") as!UINavigationController
+        personalRecordsVc.navigationBar.barTintColor = UIColor.blackColor()
+        personalRecordsVc.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        personalRecordsVc.navigationBar.tintColor = UIColor.whiteColor()
         
         pages = [setCompletedVc, personalRecordsVc]
         dataSource = self
         setViewControllers([setCompletedVc], direction: .Forward, animated: false, completion: nil)
-        
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
@@ -37,7 +42,6 @@ class ProfileContainerViewController: UIPageViewController, UIPageViewController
             return nil
         }
     }
-    
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         if viewController == pages[1] {

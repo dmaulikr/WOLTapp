@@ -15,6 +15,7 @@ class SetsCompletedViewController: UIViewController, UITableViewDelegate, UITabl
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         DashClient.sharedInstance.fetchWorkoutSetsForUser { (workoutSets: [WorkoutSet]!, error: NSError?) -> Void in
             self.workoutSets = workoutSets
             self.tableView.reloadData()

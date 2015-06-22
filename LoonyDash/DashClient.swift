@@ -11,8 +11,6 @@ import Parse
 
 class DashClient {
     
-//    var tmpSet: WorkoutSet?
-    
     class var sharedInstance: DashClient {
         struct Static {
             static var token: dispatch_once_t = 0

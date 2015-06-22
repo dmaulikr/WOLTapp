@@ -28,6 +28,7 @@
 		1DCB63021B2F222A00F901B9 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB63011B2F222A00F901B9 /* ExtensionDelegate.swift */; };
 		1DCB63041B2F222A00F901B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DCB63031B2F222A00F901B9 /* Assets.xcassets */; };
 		1DCB63081B2F222A00F901B9 /* LooneyDashWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1DCB62EE1B2F222A00F901B9 /* LooneyDashWatch.app */; };
+		4C495A931EFA943286F2567A /* libPods-LoonyDash.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8B1FED16384997ECB7B349 /* libPods-LoonyDash.a */; };
 		4D365DBF1B37767400F30DAB /* WorkoutSetRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D365DBE1B37767400F30DAB /* WorkoutSetRecordCell.swift */; };
 		4D7B4FA31B36C9FC00824B90 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7B4FA21B36C9FC00824B90 /* UIStoryboard.swift */; };
 		4D7B4FA51B36D38C00824B90 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D7B4FA41B36D38C00824B90 /* Profile.storyboard */; };
@@ -117,6 +118,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		149283982C8C28F18F5EACBB /* Pods-LoonyDash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoonyDash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoonyDash/Pods-LoonyDash.debug.xcconfig"; sourceTree = "<group>"; };
 		1D009DAB1B23F4D6002D5DBA /* WorkoutSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkoutSet.swift; path = Models/WorkoutSet.swift; sourceTree = "<group>"; };
 		1D009DAD1B23F51D002D5DBA /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Exercise.swift; path = Models/Exercise.swift; sourceTree = "<group>"; };
 		1D0D8B591B2DE10700D89F6C /* PageViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageViewViewController.swift; path = Controllers/PageViewViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +185,8 @@
 		6D71981B1B2E0DC2007E7F4D /* LoonyDash-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoonyDash-Bridging-Header.h"; sourceTree = "<group>"; };
 		6D71981E1B2E398E007E7F4D /* DashClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashClient.swift; sourceTree = "<group>"; };
 		6D71982D1B301DF2007E7F4D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		7B97476627902F7757C5907E /* Pods-LoonyDash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoonyDash.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoonyDash/Pods-LoonyDash.release.xcconfig"; sourceTree = "<group>"; };
+		9A8B1FED16384997ECB7B349 /* libPods-LoonyDash.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LoonyDash.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +209,7 @@
 				6D71980D1B2E0C6B007E7F4D /* CFNetwork.framework in Frameworks */,
 				6D71980C1B2E0C66007E7F4D /* AudioToolbox.framework in Frameworks */,
 				6D7198191B2E0CBB007E7F4D /* Bolts.framework in Frameworks */,
+				4C495A931EFA943286F2567A /* libPods-LoonyDash.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +249,7 @@
 				1DA003E71B23F2D4000B88BD /* LoonyDash */,
 				1DA004001B23F2D4000B88BD /* LoonyDashTests */,
 				1DA003E61B23F2D4000B88BD /* Products */,
+				2613E56100A0CA7A264EEDA0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -325,6 +331,15 @@
 			path = "LooneyDashWatch Extension";
 			sourceTree = "<group>";
 		};
+		2613E56100A0CA7A264EEDA0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				149283982C8C28F18F5EACBB /* Pods-LoonyDash.debug.xcconfig */,
+				7B97476627902F7757C5907E /* Pods-LoonyDash.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4D7B4FAA1B36D68C00824B90 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,6 +412,7 @@
 				6D7197F31B2E0BEC007E7F4D /* CoreGraphics.framework */,
 				6D7197F11B2E0BE8007E7F4D /* CFNetwork.framework */,
 				6D7197EF1B2E0BE1007E7F4D /* AudioToolbox.framework */,
+				9A8B1FED16384997ECB7B349 /* libPods-LoonyDash.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -408,10 +424,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DA004071B23F2D4000B88BD /* Build configuration list for PBXNativeTarget "LoonyDash" */;
 			buildPhases = (
+				889F13E86E71CFAF03AB4421 /* Check Pods Manifest.lock */,
 				1DA003E11B23F2D4000B88BD /* Sources */,
 				1DA003E21B23F2D4000B88BD /* Frameworks */,
 				1DA003E31B23F2D4000B88BD /* Resources */,
 				1DCB63101B2F222A00F901B9 /* Embed Watch Content */,
+				4C4EB6062F2AD4F6DB14839B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -560,6 +578,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C4EB6062F2AD4F6DB14839B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoonyDash/Pods-LoonyDash-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		889F13E86E71CFAF03AB4421 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1DA003E11B23F2D4000B88BD /* Sources */ = {
@@ -757,6 +808,7 @@
 		};
 		1DA004081B23F2D4000B88BD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 149283982C8C28F18F5EACBB /* Pods-LoonyDash.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -776,6 +828,7 @@
 		};
 		1DA004091B23F2D4000B88BD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B97476627902F7757C5907E /* Pods-LoonyDash.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

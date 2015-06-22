@@ -23,6 +23,7 @@ class WorkoutSetCell: UITableViewCell {
     }
     
     override func awakeFromNib() {
+        self.selectionStyle = UITableViewCellSelectionStyle.None
         super.awakeFromNib()
     }
     

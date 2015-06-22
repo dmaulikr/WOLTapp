@@ -12,6 +12,10 @@ class LDTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tabBar.barTintColor = UIColor.blackColor()
+        self.tabBar.tintColor = UIColor.whiteColor()
+        
         // Do any additional setup after loading the view.
         self.addChildViewController(UIStoryboard.userProfileViewController()!)
     }

@@ -19,6 +19,7 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
         
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.backgroundColor = UIColor(white: 0.97, alpha: 1.0)
         
         refreshData()
     }

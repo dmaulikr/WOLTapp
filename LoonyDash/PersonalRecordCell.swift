@@ -25,6 +25,7 @@ class PersonalRecordCell: UITableViewCell {
     }
     
     override func awakeFromNib() {
+        self.selectionStyle = UITableViewCellSelectionStyle.None
         super.awakeFromNib()
         // Initialization code
     }
