@@ -16,6 +16,7 @@ class WorkoutSet: PFObject, PFSubclassing {
     @NSManaged var numReps: Int
     @NSManaged var numSuggestedReps: Int
     @NSManaged var weight: Float // in pounds
+    @NSManaged var sequence: Int
     @NSManaged var user: PFUser?
     
     override class func initialize() {
@@ -31,13 +32,14 @@ class WorkoutSet: PFObject, PFSubclassing {
         super.init()
     }
     
-    init(workout: Workout, exercise: Exercise, reps: Int, suggestedReps: Int, weight: Float, user: PFUser?) {
+    init(workout: Workout, exercise: Exercise, reps: Int, suggestedReps: Int, weight: Float, sequence: Int, user: PFUser?) {
         super.init()
         self.workout = workout
         self.exercise = exercise
         self.numReps = reps
         self.numSuggestedReps = suggestedReps
         self.weight = weight
+        self.sequence = sequence
         if user != nil {
             self.user = user!
         }
@@ -50,6 +52,7 @@ class WorkoutSet: PFObject, PFSubclassing {
         self.numReps = set.numReps
         self.numSuggestedReps = set.numSuggestedReps
         self.weight = set.weight
+        self.sequence = set.sequence
         if user != nil {
             self.user = user!
         }
