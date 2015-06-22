@@ -126,8 +126,8 @@
                                     <outlet property="delegate" destination="pEh-db-Tmc" id="em1-5u-Poi"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sets Completed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cD2-bs-1aN">
-                                <rect key="frame" x="239" y="79.5" width="122.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sets Completed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cD2-bs-1aN">
+                                <rect key="frame" x="234.5" y="79.5" width="131" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -163,18 +163,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Records" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aS-nd-XSL">
-                                <rect key="frame" x="233.5" y="290" width="133.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cYG-EI-GeU">
+                                <rect key="frame" x="0.0" y="120" width="600" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Records" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIM-p5-sdv">
+                                <rect key="frame" x="228" y="79" width="143" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2aS-nd-XSL" firstAttribute="centerY" secondItem="7te-Hg-eWr" secondAttribute="centerY" id="J8h-kC-Wmp"/>
-                            <constraint firstItem="2aS-nd-XSL" firstAttribute="centerX" secondItem="7te-Hg-eWr" secondAttribute="centerX" id="x9d-sI-1p3"/>
+                            <constraint firstItem="cYG-EI-GeU" firstAttribute="leading" secondItem="7te-Hg-eWr" secondAttribute="leadingMargin" constant="-20" id="1BW-Mk-soS"/>
+                            <constraint firstItem="cYG-EI-GeU" firstAttribute="leading" secondItem="7te-Hg-eWr" secondAttribute="leading" id="FHg-UH-OM9"/>
+                            <constraint firstAttribute="trailing" secondItem="cYG-EI-GeU" secondAttribute="trailing" id="KFk-dZ-Y2Z"/>
+                            <constraint firstItem="mIM-p5-sdv" firstAttribute="centerX" secondItem="7te-Hg-eWr" secondAttribute="centerX" id="Kdn-HX-Ych"/>
+                            <constraint firstItem="cYG-EI-GeU" firstAttribute="top" secondItem="3N6-zQ-ysB" secondAttribute="bottom" constant="100" id="Lch-JV-Np8"/>
+                            <constraint firstItem="C2j-eG-qbv" firstAttribute="top" secondItem="cYG-EI-GeU" secondAttribute="bottom" id="O1f-Al-c6r"/>
+                            <constraint firstItem="cYG-EI-GeU" firstAttribute="top" secondItem="mIM-p5-sdv" secondAttribute="bottom" constant="20" id="QP8-4m-hmT"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1BW-Mk-soS"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvw-OH-Ih3" userLabel="First Responder" sceneMemberID="firstResponder"/>

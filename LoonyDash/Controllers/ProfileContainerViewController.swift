@@ -60,10 +60,10 @@ class ProfileContainerViewController: UIPageViewController, UIPageViewController
     
     
     private func setupPageControl() {
-        let appearance = UIPageControl.appearance()
-        appearance.pageIndicatorTintColor = UIColor.lightGrayColor()
-        appearance.currentPageIndicatorTintColor = UIColor.grayColor()
-        //        appearance.backgroundColor = UIColor.darkGrayColor()
+//        let appearance = UIPageControl.appearance()
+//        appearance.pageIndicatorTintColor = UIColor.lightGrayColor()
+//        appearance.currentPageIndicatorTintColor = UIColor.grayColor()
+//                appearance.backgroundColor = UIColor.darkGrayColor()
     }
     
     /*

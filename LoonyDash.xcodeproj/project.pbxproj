@@ -143,7 +143,7 @@
 		1DCB63011B2F222A00F901B9 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		1DCB63031B2F222A00F901B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DCB63051B2F222A00F901B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D365DBE1B37767400F30DAB /* WorkoutSetRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkoutSetRecordCell.swift; path = LoonyDash/Controllers/WorkoutSetRecordCell.swift; sourceTree = "<group>"; };
+		4D365DBE1B37767400F30DAB /* WorkoutSetRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkoutSetRecordCell.swift; path = Controllers/WorkoutSetRecordCell.swift; sourceTree = "<group>"; };
 		4D7B4FA21B36C9FC00824B90 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		4D7B4FA41B36D38C00824B90 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = ../Profile.storyboard; sourceTree = "<group>"; };
 		4D7B4FA61B36D65000824B90 /* PersonalRecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonalRecordsViewController.swift; path = Controllers/PersonalRecordsViewController.swift; sourceTree = "<group>"; };
@@ -234,7 +234,6 @@
 		1DA003DC1B23F2D4000B88BD = {
 			isa = PBXGroup;
 			children = (
-				4D365DBE1B37767400F30DAB /* WorkoutSetRecordCell.swift */,
 				1DCB62EF1B2F222A00F901B9 /* LooneyDashWatch */,
 				1DCB62FE1B2F222A00F901B9 /* LooneyDashWatch Extension */,
 				6D7198091B2E0C20007E7F4D /* Frameworks */,
@@ -258,14 +257,12 @@
 		1DA003E71B23F2D4000B88BD /* LoonyDash */ = {
 			isa = PBXGroup;
 			children = (
+				4DDEEFB81B3789B700E00DCC /* Cells */,
 				6D71979C1B26100D007E7F4D /* Controllers */,
 				6D71979D1B261042007E7F4D /* Models */,
 				1DA003EA1B23F2D4000B88BD /* AppDelegate.swift */,
 				4D7B4FA21B36C9FC00824B90 /* UIStoryboard.swift */,
 				6D71981E1B2E398E007E7F4D /* DashClient.swift */,
-				6D71978C1B25FDE1007E7F4D /* WorkoutCell.swift */,
-				6D71978E1B25FE0A007E7F4D /* RoutineCell.swift */,
-				6D7197A21B2824A0007E7F4D /* WorkoutSetCell.swift */,
 				6D7197901B25FE22007E7F4D /* RoutineDescriptionCell.swift */,
 				6D71981B1B2E0DC2007E7F4D /* LoonyDash-Bridging-Header.h */,
 				4D7B4FAA1B36D68C00824B90 /* Storyboards */,
@@ -332,6 +329,17 @@
 				1DA003F11B23F2D4000B88BD /* Sets.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		4DDEEFB81B3789B700E00DCC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4D365DBE1B37767400F30DAB /* WorkoutSetRecordCell.swift */,
+				6D71978C1B25FDE1007E7F4D /* WorkoutCell.swift */,
+				6D71978E1B25FE0A007E7F4D /* RoutineCell.swift */,
+				6D7197A21B2824A0007E7F4D /* WorkoutSetCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		6D71979C1B26100D007E7F4D /* Controllers */ = {
