@@ -32,6 +32,7 @@ class UserProfileViewController: UIViewController {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.title = "Profile"
+        self.tabBarItem.image = UIImage(named: "profile")
     }
     
     /*

@@ -15,7 +15,6 @@ class WorkoutRecordCell: UITableViewCell {
     @IBOutlet weak var routineLabel: UILabel!
     @IBOutlet weak var dateCompletedLabel: UILabel!
     
-    
     var workout: Workout! {
         didSet {
             routineLabel.text = workout.routine.title
