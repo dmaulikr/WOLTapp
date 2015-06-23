@@ -140,13 +140,13 @@ Follows the principles of progressive overload.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dyv-Gy-F8q">
-                                                    <rect key="frame" x="0.0" y="115" width="600" height="54.5"/>
+                                                    <rect key="frame" x="0.0" y="124" width="600" height="45.5"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="D5V-Dv-zvU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="54.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="45.5"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StrongLifts 5x5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2F0-LK-pPX">
-                                                                <rect key="frame" x="8" y="11" width="131" height="21.5"/>
+                                                                <rect key="frame" x="8" y="12" width="131" height="21.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -154,16 +154,18 @@ Follows the principles of progressive overload.</string>
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstItem="2F0-LK-pPX" firstAttribute="leading" secondItem="D5V-Dv-zvU" secondAttribute="leading" constant="8" id="ELH-xv-n6V"/>
-                                                            <constraint firstItem="2F0-LK-pPX" firstAttribute="top" secondItem="D5V-Dv-zvU" secondAttribute="top" constant="11" id="Gwu-bb-xyU"/>
+                                                            <constraint firstItem="2F0-LK-pPX" firstAttribute="centerY" secondItem="D5V-Dv-zvU" secondAttribute="centerY" id="Rdi-Ss-jSm"/>
                                                         </constraints>
                                                     </view>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45.5" id="HRE-M1-3vN"/>
+                                                    </constraints>
                                                     <blurEffect style="extraLight"/>
                                                 </visualEffectView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Dyv-Gy-F8q" firstAttribute="leading" secondItem="rZH-Vx-7JT" secondAttribute="leading" id="0Tp-Mh-aJ2"/>
                                                 <constraint firstAttribute="trailing" secondItem="Dyv-Gy-F8q" secondAttribute="trailing" id="DJc-Di-lWG"/>
-                                                <constraint firstItem="Dyv-Gy-F8q" firstAttribute="top" secondItem="rZH-Vx-7JT" secondAttribute="top" constant="115" id="Dyf-YX-dEA"/>
                                                 <constraint firstItem="J4T-9e-rzQ" firstAttribute="top" secondItem="JqB-qt-DXT" secondAttribute="bottom" constant="7.5" id="J7d-8r-jsJ"/>
                                                 <constraint firstItem="JqB-qt-DXT" firstAttribute="top" secondItem="rZH-Vx-7JT" secondAttribute="top" id="Kzy-PC-h9z"/>
                                                 <constraint firstItem="JqB-qt-DXT" firstAttribute="leading" secondItem="rZH-Vx-7JT" secondAttribute="leading" id="V5d-3J-bwE"/>
@@ -312,13 +314,13 @@ Follows the principles of progressive overload.</string>
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EM9-iR-Jc8">
-                                <rect key="frame" x="250" y="436" width="100" height="100"/>
+                                <rect key="frame" x="255" y="446" width="90" height="90"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" image="YES"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="8fu-E1-fCh"/>
-                                    <constraint firstAttribute="width" constant="100" id="Mpb-AW-EMz"/>
+                                    <constraint firstAttribute="height" constant="90" id="8fu-E1-fCh"/>
+                                    <constraint firstAttribute="width" constant="90" id="Mpb-AW-EMz"/>
                                 </constraints>
                                 <state key="normal" image="play">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
