@@ -15,13 +15,19 @@ class SetsCompletedViewController: UIViewController, UITableViewDelegate, UITabl
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         DashClient.sharedInstance.fetchWorkoutsCompletedForUser { (workouts: [Workout]!, error: NSError?) -> Void in
             self.workouts = workouts
             self.tableView.reloadData()
         }
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        let parent = self.parentViewController!.parentViewController as! ProfileContainerViewController
+        parent.pageControl.currentPage = 0
+    }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

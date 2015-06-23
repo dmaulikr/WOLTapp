@@ -67,7 +67,7 @@ class ProfileContainerViewController: UIPageViewController, UIPageViewController
     
     func setupPageControl() {
         pageControl = UIPageControl()
-        pageControl.frame = CGRectMake(0, 0, 100, 10)
+        pageControl.frame = CGRectMake(self.view.frame.width/2-50, 75, 100, 10)
         pageControl.numberOfPages = 2;
         pageControl.currentPage = 0;
         pageControl.backgroundColor = UIColor.clearColor()

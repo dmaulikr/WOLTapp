@@ -24,7 +24,6 @@ class WorkoutRecordCell: UITableViewCell {
             dateFormatter.dateFormat = "MM-dd hh:mm"
             dateFormatter.timeZone = NSTimeZone.localTimeZone()
             dateCompletedLabel.text = dateFormatter.stringFromDate(workout.createdAt!)
-//            dateCompletedLabel.text = "ddd"
         }
     }
     

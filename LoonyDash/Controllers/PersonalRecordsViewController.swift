@@ -23,6 +23,13 @@ class PersonalRecordsViewController: UIViewController, UITableViewDelegate, UITa
 
     }
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        let parent = self.parentViewController!.parentViewController as! ProfileContainerViewController
+        parent.pageControl.currentPage = 1
+    }
+
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return personalRecords.count
     }
