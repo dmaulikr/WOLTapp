@@ -23,6 +23,7 @@ class SetsCompletedViewController: UIViewController, UITableViewDelegate, UITabl
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        // TODO: Use delegate pattern here instead!
         let parent = self.parentViewController!.parentViewController as! ProfileContainerViewController
         parent.pageControl.currentPage = 0
     }
