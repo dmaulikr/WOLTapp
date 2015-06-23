@@ -167,19 +167,25 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HS9-pp-hP5">
-                                                    <rect key="frame" x="87" y="11" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HS9-pp-hP5">
+                                                    <rect key="frame" x="18" y="11.5" width="64" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OI3-3d-xfl">
-                                                    <rect key="frame" x="229" y="8" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Weight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OI3-3d-xfl">
+                                                    <rect key="frame" x="528" y="0.0" width="54" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="HS9-pp-hP5" firstAttribute="centerY" secondItem="Ke0-Va-OSn" secondAttribute="centerY" id="EQx-1b-a7a"/>
+                                                <constraint firstItem="OI3-3d-xfl" firstAttribute="centerY" secondItem="Ke0-Va-OSn" secondAttribute="centerY" id="Edp-5e-4CK"/>
+                                                <constraint firstItem="HS9-pp-hP5" firstAttribute="leading" secondItem="Ke0-Va-OSn" secondAttribute="leadingMargin" constant="10" id="Gir-tZ-gPr"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="OI3-3d-xfl" secondAttribute="trailing" constant="10" id="aCH-ff-1c6"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="exerciseNameLabel" destination="HS9-pp-hP5" id="2wZ-PC-Q5C"/>
