@@ -22,7 +22,7 @@ class RoutineDescriptionCell: UITableViewCell {
     }
     
     override func awakeFromNib() {
-        //    routineDescriptionLabel.preferredMaxLayoutWidth = self.frame.size.width
+        self.selectionStyle = UITableViewCellSelectionStyle.None
         super.awakeFromNib()
     }
     

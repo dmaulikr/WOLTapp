@@ -37,7 +37,7 @@ class SetsCompletedViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("WorkoutSetRecordCell", forIndexPath: indexPath) as! WorkoutSetRecordCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("WorkoutSetCell", forIndexPath: indexPath) as! WorkoutSetCell
         
         cell.workoutSet = workoutSets[indexPath.row]
         if (cell.respondsToSelector(Selector("setPreservesSuperviewLayoutMargins:"))){
