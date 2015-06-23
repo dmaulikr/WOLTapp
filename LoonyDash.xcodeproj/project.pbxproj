@@ -39,6 +39,7 @@
 		4DF2859C1B307E1300BC742C /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2859B1B307E1300BC742C /* UserProfileViewController.swift */; };
 		4DF285A01B307F5500BC742C /* LDTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2859F1B307F5500BC742C /* LDTabBarController.swift */; };
 		4DF285A21B30820C00BC742C /* RoutinesNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF285A11B30820C00BC742C /* RoutinesNavigationController.swift */; };
+		6D4FEE071B3902D8000DDE49 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D4FEE061B3902D8000DDE49 /* WatchConnectivity.framework */; };
 		6D71978B1B25F2B5007E7F4D /* RoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71978A1B25F2B5007E7F4D /* RoutineViewController.swift */; };
 		6D71978D1B25FDE1007E7F4D /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71978C1B25FDE1007E7F4D /* WorkoutCell.swift */; };
 		6D71978F1B25FE0A007E7F4D /* RoutineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71978E1B25FE0A007E7F4D /* RoutineCell.swift */; };
@@ -156,6 +157,7 @@
 		4DF2859B1B307E1300BC742C /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfileViewController.swift; path = ../UserProfileViewController.swift; sourceTree = "<group>"; };
 		4DF2859F1B307F5500BC742C /* LDTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LDTabBarController.swift; sourceTree = "<group>"; };
 		4DF285A11B30820C00BC742C /* RoutinesNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutinesNavigationController.swift; sourceTree = "<group>"; };
+		6D4FEE061B3902D8000DDE49 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		6D71978A1B25F2B5007E7F4D /* RoutineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoutineViewController.swift; path = Controllers/RoutineViewController.swift; sourceTree = "<group>"; };
 		6D71978C1B25FDE1007E7F4D /* WorkoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
 		6D71978E1B25FE0A007E7F4D /* RoutineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineCell.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D4FEE071B3902D8000DDE49 /* WatchConnectivity.framework in Frameworks */,
 				6D71980A1B2E0C4D007E7F4D /* Social.framework in Frameworks */,
 				6D71980B1B2E0C5A007E7F4D /* Accounts.framework in Frameworks */,
 				6D7198161B2E0C9A007E7F4D /* libsqlite3.dylib in Frameworks */,
@@ -394,6 +397,7 @@
 		6D7198091B2E0C20007E7F4D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6D4FEE061B3902D8000DDE49 /* WatchConnectivity.framework */,
 				6D7198171B2E0CBB007E7F4D /* Bolts.framework */,
 				6D7198181B2E0CBB007E7F4D /* Parse.framework */,
 				6D7198071B2E0C19007E7F4D /* Social.framework */,

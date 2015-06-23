@@ -34,7 +34,7 @@ class RepsAndWeightVC: UIViewController {
 
     func updateUI() {
         numRepsOutlet.text = "\(setVC.repsSelection)"
-        numWeightOutlet.text = "\(setVC.weightSelection)"
+        numWeightOutlet.text = String(format: "%.0f", setVC.weightSelection)
     }
 
 

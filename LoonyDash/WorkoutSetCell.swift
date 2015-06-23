@@ -18,7 +18,7 @@ class WorkoutSetCell: UITableViewCell {
         didSet {
             exerciseNameLabel.text = workoutSet.exercise.name
             numRepsLabel.text = "\(workoutSet.numReps)"
-            weightLabel.text = "\(workoutSet.weight)"
+            weightLabel.text = String(format: "%.0f", workoutSet.weight)
         }
     }
     
