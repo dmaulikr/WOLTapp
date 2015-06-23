@@ -45,7 +45,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="NRo-VW-Uym">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="84" width="600" height="516"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkoutRecordCell" id="Cd9-QQ-hNQ" customClass="WorkoutRecordCell" customModule="LoonyDash" customModuleProvider="target">
@@ -106,7 +106,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="NRo-VW-Uym" secondAttribute="trailing" id="1dF-ct-ddg"/>
-                            <constraint firstItem="NRo-VW-Uym" firstAttribute="top" secondItem="9Fa-Lo-zXB" secondAttribute="bottom" id="GLf-iC-Ifz"/>
+                            <constraint firstItem="NRo-VW-Uym" firstAttribute="top" secondItem="9Fa-Lo-zXB" secondAttribute="bottom" constant="20" id="GLf-iC-Ifz"/>
                             <constraint firstItem="NRo-VW-Uym" firstAttribute="leading" secondItem="w9b-Fe-ujs" secondAttribute="leading" id="j9B-bK-VEG"/>
                             <constraint firstItem="1GU-j6-N4v" firstAttribute="top" secondItem="NRo-VW-Uym" secondAttribute="bottom" id="qjD-yY-7Wj"/>
                         </constraints>
@@ -133,7 +133,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cYG-EI-GeU">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="84" width="600" height="516"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PersonalRecordCell" id="wYf-aZ-AIW" customClass="PersonalRecordCell" customModule="LoonyDash" customModuleProvider="target">
@@ -180,7 +180,7 @@
                             <constraint firstItem="cYG-EI-GeU" firstAttribute="leading" secondItem="7te-Hg-eWr" secondAttribute="leadingMargin" constant="-20" id="1BW-Mk-soS"/>
                             <constraint firstItem="cYG-EI-GeU" firstAttribute="leading" secondItem="7te-Hg-eWr" secondAttribute="leading" id="FHg-UH-OM9"/>
                             <constraint firstAttribute="trailing" secondItem="cYG-EI-GeU" secondAttribute="trailing" id="KFk-dZ-Y2Z"/>
-                            <constraint firstItem="cYG-EI-GeU" firstAttribute="top" secondItem="3N6-zQ-ysB" secondAttribute="bottom" id="Lch-JV-Np8"/>
+                            <constraint firstItem="cYG-EI-GeU" firstAttribute="top" secondItem="3N6-zQ-ysB" secondAttribute="bottom" constant="20" id="Lch-JV-Np8"/>
                             <constraint firstItem="C2j-eG-qbv" firstAttribute="top" secondItem="cYG-EI-GeU" secondAttribute="bottom" id="O1f-Al-c6r"/>
                         </constraints>
                         <variation key="default">
