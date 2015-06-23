@@ -19,9 +19,10 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        self.tableView.backgroundColor = UIColor(white: 0.97, alpha: 1.0)
+        self.tableView.backgroundColor = UIColor(white: 1.0, alpha: 1.0)
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 100
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
         
         self.navigationItem.title = self.workout.title
         
