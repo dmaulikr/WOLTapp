@@ -94,6 +94,23 @@ class DashClient {
         }
     }
 
+    func fetchWorkoutsCompletedForUser(completion: ([Workout]!, NSError?) -> Void) {
+        let query = PFQuery(className: "Workout")
+        query.includeKey("routine")
+        query.whereKey("user", equalTo: PFUser.currentUser()!)
+        
+        var workouts: [Workout]!
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]?, error: NSError?) -> Void in
+            if error != nil {
+                completion(nil, error)
+            } else {
+                workouts = objects as! [Workout]
+                completion(workouts, error)
+            }
+        }
+    }
+
     func fetchPersonalRecordsForUser(completion: ([PersonalRecord]!, NSError?) -> Void) {
         let query = PFQuery(className: "PersonalRecord")
         query.includeKey("exercise")
