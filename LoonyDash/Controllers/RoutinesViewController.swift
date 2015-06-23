@@ -25,6 +25,12 @@ class RoutinesViewController: UIViewController, UITableViewDataSource, UITableVi
         
         refreshData()
     }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.title = "Routines"
+        self.tabBarItem.image = UIImage(named: "weight")
+    }
     
     func refreshData() {
         DashClient.sharedInstance.fetchRoutines { (routines, error) -> Void in
