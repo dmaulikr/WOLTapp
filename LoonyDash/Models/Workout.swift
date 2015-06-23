@@ -16,7 +16,6 @@ class Workout: PFObject, PFSubclassing {
     @NSManaged var daysText: String
     @NSManaged var user: PFUser?
     @NSManaged var workoutId: Int
-    @NSManaged var created_at: NSDate
     
     
     override class func initialize() {

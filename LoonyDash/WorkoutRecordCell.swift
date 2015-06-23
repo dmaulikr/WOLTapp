@@ -16,7 +16,17 @@ class WorkoutRecordCell: UITableViewCell {
     @IBOutlet weak var dateCompletedLabel: UILabel!
     
     
-    
+    var workout: Workout! {
+        didSet {
+            routineLabel.text = workout.routine.title
+            workoutLabel.text = "\(workout.title)"
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "MM-dd hh:mm"
+            dateFormatter.timeZone = NSTimeZone.localTimeZone()
+            dateCompletedLabel.text = dateFormatter.stringFromDate(workout.createdAt!)
+//            dateCompletedLabel.text = "ddd"
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

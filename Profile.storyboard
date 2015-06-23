@@ -55,25 +55,40 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Routine " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZI-vE-BEK">
-                                                    <rect key="frame" x="8" y="7" width="63" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Routine " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZI-vE-BEK">
+                                                    <rect key="frame" x="18" y="18" width="150" height="23.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="GTl-8J-yDe"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBI-Zq-XK8">
-                                                    <rect key="frame" x="541" y="32" width="36" height="31"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBI-Zq-XK8">
+                                                    <rect key="frame" x="546" y="32" width="36" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Workout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SzF-Yy-n1K">
-                                                    <rect key="frame" x="8" y="42" width="65" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SzF-Yy-n1K">
+                                                    <rect key="frame" x="18" y="46" width="150" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="SDL-mm-gao"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QBI-Zq-XK8" firstAttribute="centerY" secondItem="B14-F8-SUK" secondAttribute="centerY" id="Iq3-Ms-7cr"/>
+                                                <constraint firstItem="mZI-vE-BEK" firstAttribute="top" secondItem="B14-F8-SUK" secondAttribute="topMargin" constant="10" id="NxP-la-guN"/>
+                                                <constraint firstItem="SzF-Yy-n1K" firstAttribute="leading" secondItem="B14-F8-SUK" secondAttribute="leadingMargin" constant="10" id="QRn-0S-h16"/>
+                                                <constraint firstItem="SzF-Yy-n1K" firstAttribute="top" secondItem="mZI-vE-BEK" secondAttribute="bottom" constant="5" id="Y07-NN-BJq"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="QBI-Zq-XK8" secondAttribute="trailing" constant="10" id="ZL6-z4-4LB"/>
+                                                <constraint firstItem="mZI-vE-BEK" firstAttribute="leading" secondItem="B14-F8-SUK" secondAttribute="leadingMargin" constant="10" id="aIm-tj-3FN"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="SzF-Yy-n1K" secondAttribute="bottom" constant="10" id="e9k-9p-2df"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="dateCompletedLabel" destination="QBI-Zq-XK8" id="oRo-GH-P7f"/>

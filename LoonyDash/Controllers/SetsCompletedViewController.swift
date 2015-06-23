@@ -11,13 +11,13 @@ import UIKit
 class SetsCompletedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
     @IBOutlet weak var tableView: UITableView!
-    var workoutSets: [WorkoutSet]! = []
+    var workouts: [Workout]! = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DashClient.sharedInstance.fetchWorkoutSetsForUser { (workoutSets: [WorkoutSet]!, error: NSError?) -> Void in
-            self.workoutSets = workoutSets
+        DashClient.sharedInstance.fetchWorkoutsCompletedForUser { (workouts: [Workout]!, error: NSError?) -> Void in
+            self.workouts = workouts
             self.tableView.reloadData()
         }
     }
@@ -29,7 +29,7 @@ class SetsCompletedViewController: UIViewController, UITableViewDelegate, UITabl
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return workoutSets.count
+        return workouts.count
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -37,9 +37,8 @@ class SetsCompletedViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("WorkoutSetCell", forIndexPath: indexPath) as! WorkoutSetCell
-        
-        cell.workoutSet = workoutSets[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("WorkoutRecordCell", forIndexPath: indexPath) as! WorkoutRecordCell
+        cell.workout = workouts[indexPath.row]
         if (cell.respondsToSelector(Selector("setPreservesSuperviewLayoutMargins:"))){
             cell.preservesSuperviewLayoutMargins = false
         }
