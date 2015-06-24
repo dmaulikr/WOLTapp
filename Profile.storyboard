@@ -56,38 +56,32 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Routine " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZI-vE-BEK">
-                                                    <rect key="frame" x="18" y="18" width="150" height="23.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="150" id="GTl-8J-yDe"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="8" y="5" width="43" height="56"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBI-Zq-XK8">
-                                                    <rect key="frame" x="546" y="32" width="36" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="546" y="31.5" width="38" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SzF-Yy-n1K">
-                                                    <rect key="frame" x="18" y="46" width="150" height="20.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="150" id="SDL-mm-gao"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="8" y="61" width="71.5" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="QBI-Zq-XK8" firstAttribute="centerY" secondItem="B14-F8-SUK" secondAttribute="centerY" id="Iq3-Ms-7cr"/>
-                                                <constraint firstItem="mZI-vE-BEK" firstAttribute="top" secondItem="B14-F8-SUK" secondAttribute="topMargin" constant="10" id="NxP-la-guN"/>
-                                                <constraint firstItem="SzF-Yy-n1K" firstAttribute="leading" secondItem="B14-F8-SUK" secondAttribute="leadingMargin" constant="10" id="QRn-0S-h16"/>
-                                                <constraint firstItem="SzF-Yy-n1K" firstAttribute="top" secondItem="mZI-vE-BEK" secondAttribute="bottom" constant="5" id="Y07-NN-BJq"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="QBI-Zq-XK8" secondAttribute="trailing" constant="10" id="ZL6-z4-4LB"/>
-                                                <constraint firstItem="mZI-vE-BEK" firstAttribute="leading" secondItem="B14-F8-SUK" secondAttribute="leadingMargin" constant="10" id="aIm-tj-3FN"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="SzF-Yy-n1K" secondAttribute="bottom" constant="10" id="e9k-9p-2df"/>
+                                                <constraint firstItem="mZI-vE-BEK" firstAttribute="top" secondItem="B14-F8-SUK" secondAttribute="top" constant="5" id="9eF-yN-eOD"/>
+                                                <constraint firstItem="QBI-Zq-XK8" firstAttribute="centerY" secondItem="B14-F8-SUK" secondAttribute="centerY" id="G48-hA-3tz"/>
+                                                <constraint firstItem="SzF-Yy-n1K" firstAttribute="leading" secondItem="mZI-vE-BEK" secondAttribute="leading" id="hLk-96-TCL"/>
+                                                <constraint firstAttribute="bottom" secondItem="SzF-Yy-n1K" secondAttribute="bottom" constant="2" id="jvI-0e-35z"/>
+                                                <constraint firstItem="mZI-vE-BEK" firstAttribute="leading" secondItem="B14-F8-SUK" secondAttribute="leading" constant="8" id="w21-4a-bUC"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="QBI-Zq-XK8" secondAttribute="trailing" constant="8" id="wuY-2H-jdk"/>
+                                                <constraint firstItem="SzF-Yy-n1K" firstAttribute="top" secondItem="mZI-vE-BEK" secondAttribute="bottom" id="ytB-kf-zgH"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -111,7 +105,7 @@
                             <constraint firstItem="1GU-j6-N4v" firstAttribute="top" secondItem="NRo-VW-Uym" secondAttribute="bottom" id="qjD-yY-7Wj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Workouts Completed" id="ZJr-e6-iNe"/>
+                    <navigationItem key="navigationItem" title="Workout History" id="ZJr-e6-iNe"/>
                     <connections>
                         <outlet property="tableView" destination="NRo-VW-Uym" id="5U1-pZ-CZa"/>
                     </connections>

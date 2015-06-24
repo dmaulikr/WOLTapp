@@ -100,6 +100,7 @@ class DashClient {
         let query = PFQuery(className: "Workout")
         query.includeKey("routine")
         query.whereKey("user", equalTo: PFUser.currentUser()!)
+        query.orderByDescending("createdAt")
         
         var workouts: [Workout]!
         query.findObjectsInBackgroundWithBlock {

@@ -16,12 +16,12 @@ class RoutinesViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.backgroundColor = UIColor(white: 0.97, alpha: 1.0)
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 158
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLineEtched
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.backgroundColor = UIColor(white: 0.97, alpha: 1.0)
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 158
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLineEtched
         
         refreshData()
     }

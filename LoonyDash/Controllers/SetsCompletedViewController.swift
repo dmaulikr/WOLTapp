@@ -15,8 +15,14 @@ class SetsCompletedViewController: UIViewController, UITableViewDelegate, UITabl
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 25
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+        
         DashClient.sharedInstance.fetchWorkoutsCompletedForUser { (workouts: [Workout]!, error: NSError?) -> Void in
             self.workouts = workouts
+            
             self.tableView.reloadData()
         }
     }

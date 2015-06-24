@@ -10,7 +10,6 @@ import UIKit
 
 
 class WorkoutRecordCell: UITableViewCell {
-
     
     @IBOutlet weak var workoutLabel: UILabel!
     @IBOutlet weak var routineLabel: UILabel!
@@ -25,25 +24,8 @@ class WorkoutRecordCell: UITableViewCell {
     }
     
     private func decideDisplayTime() -> String {
-        let date = workout.createdAt!
-        let timeNow = NSDate()
-
-        
-        if (date.minutesAgo() < 1 ) {
-            return "\(Int(timeNow.secondsFrom(date))) seconds ago"
-        }
-        if (date.hoursAgo() < 1 ) {
-            return "\(Int(timeNow.minutesFrom(date))) minutes ago"
-        }
-        if (date.daysAgo() < 1 ) {
-            return "\(Int(timeNow.hoursFrom(date))) hours ago"
-        }
-        if (date.daysAgo() < 1 ) {
-            return "\(Int(timeNow.daysFrom(date))) minutes ago"
-        }
-
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "MM-dd hh:mm"
+        dateFormatter.dateFormat = "MMMM dd"
         dateFormatter.timeZone = NSTimeZone.localTimeZone()
         return dateFormatter.stringFromDate(workout.createdAt!)
     }
