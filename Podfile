@@ -5,6 +5,8 @@ xcodeproj 'LoonyDash.xcodeproj'
 
 target 'LoonyDash' do
 pod 'AFNetworking'
+pod 'DateTools'
+
 end
 
 target 'LoonyDashTests' do
@@ -18,4 +20,5 @@ end
 target 'LooneyDashWatch Extension' do
 
 end
+
 
