@@ -18,9 +18,7 @@ class PersonalRecordCell: UITableViewCell {
     var personalRecord: PersonalRecord! {
         didSet {
             exerciseNameLabel.text = personalRecord.exercise.name
-            weightLabel.text = "\(personalRecord.max_weight)"
-            
-            description
+            weightLabel.text = String(format: "%.0f", personalRecord.max_weight)
         }
     }
     
