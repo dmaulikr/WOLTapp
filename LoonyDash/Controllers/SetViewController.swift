@@ -89,9 +89,9 @@ class SetViewController: UIViewController, WCSessionDelegate, WatchMessages, Rep
     func updateLabels() {
         totalSetCountLabel.text = "\(self.workoutSets!.count)"
         exerciseTitle.text = exercise.name
+        currentSetIndexLabel.text = "\(setIndex + 1)"
         if setIndex + 1 < self.workoutSets!.count {
             nextExerciseTitle.text = "Up next: \(self.workoutSets![setIndex + 1].exercise.name)"
-            currentSetIndexLabel.text = "\(setIndex + 1)"
         } else {
             nextExerciseTitle.text = "Last set!"
         }
