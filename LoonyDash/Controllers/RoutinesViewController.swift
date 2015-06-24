@@ -28,7 +28,7 @@ class RoutinesViewController: UIViewController, UITableViewDataSource, UITableVi
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.title = "Routines"
+        self.title = "Workout"
         self.tabBarItem.image = UIImage(named: "weight")
     }
     

@@ -19,12 +19,23 @@ class RoutineCell: UITableViewCell {
             routineTitleLabel.text = routine.title
             shortDescriptionLabel.text = routine.shortDescription
             bannerImageView.setImageWithURL(NSURL(string: routine.bannerImageUrl))
+            bannerImageView.setImageWithURLRequest(NSURLRequest(URL: NSURL(string: routine.bannerImageUrl)!), placeholderImage: nil, success: { (request: NSURLRequest!, response: NSHTTPURLResponse!, image: UIImage!) -> Void in
+                self.bannerImageView.alpha = 0.0
+                self.bannerImageView.image = image
+                UIView.animateWithDuration(0.2, animations: { () -> Void in
+                    self.bannerImageView.alpha = 1.0
+                })
+            }, failure: nil)
         }
     }
     
     override func awakeFromNib() {
         self.selectionStyle = UITableViewCellSelectionStyle.None
         super.awakeFromNib()
+    }
+    
+    override func prepareForReuse() {
+        bannerImageView.image = nil
     }
     
     override func setSelected(selected: Bool, animated: Bool) {

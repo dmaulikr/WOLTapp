@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="HelveticaNeue.ttc">
@@ -48,8 +49,8 @@
                                                     </constraints>
                                                     <blurEffect style="extraLight"/>
                                                 </visualEffectView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xim-U0-tDF">
-                                                    <rect key="frame" x="8" y="115" width="332" height="33"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xim-U0-tDF">
+                                                    <rect key="frame" x="8" y="118" width="297" height="31"/>
                                                     <string key="text">A simple and effective workout to get stronger fast.
 Follows the principles of progressive overload.</string>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
@@ -57,7 +58,7 @@ Follows the principles of progressive overload.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="StrongLifts 5x5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G19-c7-XfH">
-                                                    <rect key="frame" x="8" y="91" width="131" height="21.5"/>
+                                                    <rect key="frame" x="8" y="95" width="131" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -65,7 +66,7 @@ Follows the principles of progressive overload.</string>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="Crn-gr-xz7" secondAttribute="bottom" id="2Sg-DW-uGW"/>
-                                                <constraint firstItem="G19-c7-XfH" firstAttribute="top" secondItem="Kbw-Ln-FSJ" secondAttribute="top" constant="91" id="9W8-Ni-MT7"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="G19-c7-XfH" secondAttribute="bottom" constant="30.5" id="JP4-u4-30N"/>
                                                 <constraint firstItem="Arq-EX-gJ9" firstAttribute="leading" secondItem="Kbw-Ln-FSJ" secondAttribute="leading" id="Nr3-LY-nvY"/>
                                                 <constraint firstItem="Xim-U0-tDF" firstAttribute="leading" secondItem="G19-c7-XfH" secondAttribute="leading" id="RQ6-7H-wUa"/>
                                                 <constraint firstItem="Xim-U0-tDF" firstAttribute="leading" secondItem="Kbw-Ln-FSJ" secondAttribute="leading" constant="8" id="Umq-5c-yGh"/>
@@ -76,7 +77,8 @@ Follows the principles of progressive overload.</string>
                                                 <constraint firstItem="Arq-EX-gJ9" firstAttribute="top" secondItem="Kbw-Ln-FSJ" secondAttribute="top" id="gDh-GM-c3Z"/>
                                                 <constraint firstAttribute="trailing" secondItem="Crn-gr-xz7" secondAttribute="trailing" id="gsZ-Xm-5ey"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Xim-U0-tDF" secondAttribute="trailing" constant="5" id="hP2-hi-FJo"/>
-                                                <constraint firstItem="Xim-U0-tDF" firstAttribute="top" secondItem="G19-c7-XfH" secondAttribute="bottom" constant="2.5" id="nLa-Mi-bnZ"/>
+                                                <constraint firstItem="Xim-U0-tDF" firstAttribute="top" secondItem="G19-c7-XfH" secondAttribute="bottom" constant="1" id="nLa-Mi-bnZ"/>
+                                                <constraint firstItem="G19-c7-XfH" firstAttribute="top" secondItem="Kbw-Ln-FSJ" secondAttribute="topMargin" constant="87" id="qcC-Re-HCi"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Xim-U0-tDF" secondAttribute="bottom" constant="5" id="ugB-2v-bbY"/>
                                             </constraints>
                                         </tableViewCellContentView>
