@@ -70,30 +70,19 @@ class PersonalBestVC: UIViewController {
 }
 
 
-class TipsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TipsVC: UIViewController {
 
-    @IBOutlet weak var tipsTableView: UITableView!
+    @IBOutlet weak var tipLabel: UILabel!
 
-    var tips: [String] {
-        return ["Do the thing like this", "then do the thing like that", "then do it again like that other way"]
+    var tipText: String {
+        return "Don’t squat by just bending through your knees, letting them travel all the way forward. Engage your stronger posterior chain muscle by sitting back on the way down.\n\nNever allow your knees to buckle on the way up. Push your knees outward at all times - this is safer for your knees and your back.\n\nArch your upper back. Lock the bar in position so it doesn’t move while you squat. Keeping your back tight will also keep pressure from your wrists. Take a big breath, lift your chest, and squeeze your shoulder-blades together."
         //return (self.parentViewController as! PageViewViewController).set.exercise.tips
     }
-
-
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel!.text = tips[indexPath.row]
-        return cell
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tipLabel.text = tipText
     }
-
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tips.count
-    }
-
 }
 
 
