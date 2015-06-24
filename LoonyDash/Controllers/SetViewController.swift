@@ -19,6 +19,7 @@ class SetViewController: UIViewController, WCSessionDelegate, WatchMessages, Rep
     var workout: Workout!
     var completedSets: [WorkoutSet] = []
     var child: PageViewViewController?
+    var isCurrentlySaving: Bool!
 
     var set: WorkoutSet {
         return self.workoutSets[setIndex]
@@ -40,7 +41,7 @@ class SetViewController: UIViewController, WCSessionDelegate, WatchMessages, Rep
     // reps and weight, pr, tips, video
 
     override func viewDidLoad() {
-        
+        isCurrentlySaving = false
         updateLabels()
         repsSelection = set.numReps
         weightSelection = set.weight
@@ -55,8 +56,6 @@ class SetViewController: UIViewController, WCSessionDelegate, WatchMessages, Rep
             sendSetToWatch(0)
         }
         embeddedPVVC.updateRepsWeightUI()
-
-
     }
 
 
@@ -98,10 +97,8 @@ class SetViewController: UIViewController, WCSessionDelegate, WatchMessages, Rep
     }
 
     @IBAction func onCompleted() {
-
         recordCompletionOfSet(repsSelection, numSuggestedReps: set.numSuggestedReps, weight: weightSelection, sequence: setIndex + 1)
         showNextSetOnPhoneOrFinish(alsoSendSetToWatch: true)
-
     }
 
     func showNextSetOnPhoneOrFinish(alsoSendSetToWatch send: Bool) {
@@ -115,18 +112,21 @@ class SetViewController: UIViewController, WCSessionDelegate, WatchMessages, Rep
                 sendSetToWatch(setIndex)
             }
         } else {
-            DashClient.sharedInstance.completeWorkout(workout, completedSets: completedSets, completion: { (success: Bool, err: NSError?) -> Void in
-                if let _ = err {
-                    NSLog("error")
-                } else {
-                    self.completedSets = []
-                    self.navigationController?.popViewControllerAnimated(true)
-                    self.session.sendMessage(["finished":true], replyHandler: nil, errorHandler: nil)
-                }
-                // stop spinner (happens second)
-            })
-            // show spinner (happens first b/c workout.complete returns immediately
-            // send watch to home / waiting screen
+            if isCurrentlySaving != true {
+                isCurrentlySaving = true
+                DashClient.sharedInstance.completeWorkout(workout, completedSets: completedSets, completion: { (success: Bool, err: NSError?) -> Void in
+                    if let _ = err {
+                        NSLog("error")
+                    } else {
+                        self.completedSets = []
+                        self.navigationController?.popViewControllerAnimated(true)
+                        self.session.sendMessage(["finished":true], replyHandler: nil, errorHandler: nil)
+                    }
+                    // stop spinner (happens second)
+                })
+                // show spinner (happens first b/c workout.complete returns immediately
+                // send watch to home / waiting screen
+            }
         }
     }
 
