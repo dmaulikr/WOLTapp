@@ -32,13 +32,16 @@ class SetViewController: UIViewController, WCSessionDelegate, WatchMessages, Rep
 
 
     @IBOutlet weak var exerciseTitle: UILabel!
+    @IBOutlet weak var nextExerciseTitle: UILabel!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var currentSetIndexLabel: UILabel!
+    @IBOutlet weak var totalSetCountLabel: UILabel!
 
     // reps and weight, pr, tips, video
 
     override func viewDidLoad() {
         
-        updateTitle()
+        updateLabels()
         repsSelection = set.numReps
         weightSelection = set.weight
         super.viewDidLoad()
@@ -83,8 +86,15 @@ class SetViewController: UIViewController, WCSessionDelegate, WatchMessages, Rep
         }
     }
 
-    func updateTitle() {
+    func updateLabels() {
+        totalSetCountLabel.text = "\(self.workoutSets!.count)"
         exerciseTitle.text = exercise.name
+        if setIndex + 1 < self.workoutSets!.count {
+            nextExerciseTitle.text = "Up next: \(self.workoutSets![setIndex + 1].exercise.name)"
+            currentSetIndexLabel.text = "\(setIndex + 1)"
+        } else {
+            nextExerciseTitle.text = "Last set!"
+        }
     }
 
     @IBAction func onCompleted() {
@@ -97,7 +107,7 @@ class SetViewController: UIViewController, WCSessionDelegate, WatchMessages, Rep
     func showNextSetOnPhoneOrFinish(alsoSendSetToWatch send: Bool) {
         if setIndex + 1 < self.workoutSets!.count {
             setIndex += 1
-            updateTitle()
+            updateLabels()
             repsSelection = set.numReps
             weightSelection = set.weight
             embeddedPVVC.showNewSet(set)

@@ -91,7 +91,10 @@
                     </view>
                     <connections>
                         <outlet property="containerView" destination="W2b-mn-apG" id="Tg7-Ow-hen"/>
+                        <outlet property="currentSetIndexLabel" destination="dxI-eZ-xeE" id="502-xb-VJh"/>
                         <outlet property="exerciseTitle" destination="FCz-1o-qYF" id="bQh-Nr-Osb"/>
+                        <outlet property="nextExerciseTitle" destination="4Uf-E4-CuC" id="0AC-wy-ZLb"/>
+                        <outlet property="totalSetCountLabel" destination="8TQ-TJ-X9k" id="A4h-tQ-V9Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
