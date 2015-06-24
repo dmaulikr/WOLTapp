@@ -21,7 +21,8 @@ class RoutinesViewController: UIViewController, UITableViewDataSource, UITableVi
         self.tableView.backgroundColor = UIColor(white: 0.97, alpha: 1.0)
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 158
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLineEtched
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+        self.tableView.separatorColor = UIColor.whiteColor()
         
         refreshData()
     }

@@ -16,14 +16,23 @@ class SetsCompletedViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "refreshData", name: "workoutCompleted", object: nil)
+        
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 25
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
         
+        refreshData()
+    }
+    
+    func refreshData() {
         DashClient.sharedInstance.fetchWorkoutsCompletedForUser { (workouts: [Workout]!, error: NSError?) -> Void in
-            self.workouts = workouts
-            
-            self.tableView.reloadData()
+            if (error != nil) {
+                print(error)
+            } else {
+                self.workouts = workouts
+                self.tableView.reloadData()
+            }
         }
     }
     
@@ -62,6 +71,10 @@ class SetsCompletedViewController: UIViewController, UITableViewDelegate, UITabl
             cell.layoutMargins = UIEdgeInsetsZero
         }
         return cell
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     /*

@@ -17,12 +17,14 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "refreshData", name: "workoutCompleted", object: nil)
+        
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.backgroundColor = UIColor(white: 1.0, alpha: 1.0)
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 100
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
         
         self.navigationItem.title = self.workout.title
         
@@ -30,7 +32,13 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func refreshData() {
-        DashClient.sharedInstance.fetchWorkoutSetsForWorkout (workout) { (workoutSets, error) -> Void in
+        DashClient.sharedInstance.fetchLastWorkoutOfWorkoutIDForUser(workout) { (lastWorkout) -> Void in
+            if lastWorkout != nil {
+                self.workout = lastWorkout
+            }
+        }
+        
+        DashClient.sharedInstance.fetchWorkoutSetsForWorkout(workout) { (workoutSets, error) -> Void in
             if (error != nil) {
                 print(error)
             } else {
@@ -65,6 +73,10 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
         setsVC.workout = self.workout
         setsVC.workoutSets = self.workoutSets
         self.navigationController!.pushViewController(setsVC, animated: true)
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     // MARK: - Navigation

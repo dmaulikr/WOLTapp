@@ -70,14 +70,7 @@ class RoutineViewController: UIViewController, UITableViewDataSource, UITableVie
         if segue.identifier == "workoutSegue" {
             let cell = sender as! WorkoutCell
             let vc = segue.destinationViewController as! WorkoutViewController
-//            vc.workout = cell.workout
-            DashClient.sharedInstance.fetchLastWorkoutOfWorkoutIDForUser(cell.workout) { (lastWorkout) -> Void in
-                if lastWorkout != nil {
-                    vc.workout = lastWorkout
-                } else {
-                    vc.workout = cell.workout
-                }
-            }
+            vc.workout = cell.workout
         }
     }
     

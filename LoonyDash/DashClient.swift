@@ -136,6 +136,7 @@ class DashClient {
         query.includeKey("workout")
         query.whereKey("workoutId", equalTo: workout.workoutId)
         query.whereKey("user", equalTo: PFUser.currentUser()!)
+        query.orderByDescending("createdAt")
         
         var lastWorkout: Workout!
         let object = query.getFirstObject()

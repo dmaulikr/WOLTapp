@@ -122,6 +122,7 @@ class SetViewController: UIViewController, WCSessionDelegate, WatchMessages, Rep
                         self.navigationController?.popViewControllerAnimated(true)
                         self.session.sendMessage(["finished":true], replyHandler: nil, errorHandler: nil)
                     }
+                    NSNotificationCenter.defaultCenter().postNotificationName("workoutCompleted", object: nil)
                     // stop spinner (happens second)
                 })
                 // show spinner (happens first b/c workout.complete returns immediately
