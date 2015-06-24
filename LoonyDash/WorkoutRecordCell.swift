@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class WorkoutRecordCell: UITableViewCell {
 
     
@@ -19,11 +20,32 @@ class WorkoutRecordCell: UITableViewCell {
         didSet {
             routineLabel.text = workout.routine.title
             workoutLabel.text = "\(workout.title)"
-            let dateFormatter = NSDateFormatter()
-            dateFormatter.dateFormat = "MM-dd hh:mm"
-            dateFormatter.timeZone = NSTimeZone.localTimeZone()
-            dateCompletedLabel.text = dateFormatter.stringFromDate(workout.createdAt!)
+            dateCompletedLabel.text = decideDisplayTime()
         }
+    }
+    
+    private func decideDisplayTime() -> String {
+        let date = workout.createdAt!
+        let timeNow = NSDate()
+
+        
+        if (date.minutesAgo() < 1 ) {
+            return "\(Int(timeNow.secondsFrom(date))) seconds ago"
+        }
+        if (date.hoursAgo() < 1 ) {
+            return "\(Int(timeNow.minutesFrom(date))) minutes ago"
+        }
+        if (date.daysAgo() < 1 ) {
+            return "\(Int(timeNow.hoursFrom(date))) hours ago"
+        }
+        if (date.daysAgo() < 1 ) {
+            return "\(Int(timeNow.daysFrom(date))) minutes ago"
+        }
+
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MM-dd hh:mm"
+        dateFormatter.timeZone = NSTimeZone.localTimeZone()
+        return dateFormatter.stringFromDate(workout.createdAt!)
     }
     
     override func awakeFromNib() {
