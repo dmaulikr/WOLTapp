@@ -25,7 +25,7 @@ class DashClient {
     
     func fetchRoutines(completion: ([Routine]?, NSError?) -> Void) {
         let query = PFQuery(className: "Routine")
-        query.orderByAscending("updatedAt")
+        query.orderByDescending("updatedAt")
         
         var routines: [Routine]!
         query.findObjectsInBackgroundWithBlock {
