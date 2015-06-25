@@ -20,7 +20,6 @@ class UserProfileViewController: UIViewController {
         self.profileContainerController.view.frame = self.view.frame
         self.addChildViewController(self.profileContainerController)
         self.view.addSubview(self.profileContainerController.view)
-
         self.profileContainerController.didMoveToParentViewController(self)
     }
     
