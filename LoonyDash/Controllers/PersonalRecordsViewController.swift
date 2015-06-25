@@ -16,6 +16,10 @@ class PersonalRecordsViewController: UIViewController, UITableViewDelegate, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "refreshData", name: "workoutCompleted", object: nil)
         
         refreshData()

@@ -18,6 +18,8 @@ class SetsCompletedViewController: UIViewController, UITableViewDelegate, UITabl
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "refreshData", name: "workoutCompleted", object: nil)
         
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 25
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
@@ -77,14 +79,16 @@ class SetsCompletedViewController: UIViewController, UITableViewDelegate, UITabl
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
-    /*
+    
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "workoutRecordSegue" {
+            let cell = sender as! WorkoutRecordCell
+            let vc = segue.destinationViewController as! WorkoutRecordViewController
+            vc.workout = cell.workout
+        }
     }
-    */
 
 }

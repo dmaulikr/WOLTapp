@@ -67,6 +67,7 @@
 		6D71981A1B2E0CBB007E7F4D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7198181B2E0CBB007E7F4D /* Parse.framework */; };
 		6D71981F1B2E398E007E7F4D /* DashClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71981E1B2E398E007E7F4D /* DashClient.swift */; };
 		6D71982E1B301DF2007E7F4D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71982D1B301DF2007E7F4D /* LoginViewController.swift */; };
+		6DA4945A1B3B739D00808318 /* WorkoutRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA494591B3B739D00808318 /* WorkoutRecordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +188,7 @@
 		6D71981B1B2E0DC2007E7F4D /* LoonyDash-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoonyDash-Bridging-Header.h"; sourceTree = "<group>"; };
 		6D71981E1B2E398E007E7F4D /* DashClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashClient.swift; sourceTree = "<group>"; };
 		6D71982D1B301DF2007E7F4D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		6DA494591B3B739D00808318 /* WorkoutRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkoutRecordViewController.swift; path = Controllers/WorkoutRecordViewController.swift; sourceTree = "<group>"; };
 		7B97476627902F7757C5907E /* Pods-LoonyDash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoonyDash.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoonyDash/Pods-LoonyDash.release.xcconfig"; sourceTree = "<group>"; };
 		9A8B1FED16384997ECB7B349 /* libPods-LoonyDash.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LoonyDash.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -371,6 +373,7 @@
 				4DF285A11B30820C00BC742C /* RoutinesNavigationController.swift */,
 				4D7B4FA61B36D65000824B90 /* PersonalRecordsViewController.swift */,
 				4D7B4FA81B36D66500824B90 /* SetsCompletedViewController.swift */,
+				6DA494591B3B739D00808318 /* WorkoutRecordViewController.swift */,
 				4DF2859F1B307F5500BC742C /* LDTabBarController.swift */,
 				4DF2859B1B307E1300BC742C /* UserProfileViewController.swift */,
 				6D71978A1B25F2B5007E7F4D /* RoutineViewController.swift */,
@@ -640,6 +643,7 @@
 				4DF285A01B307F5500BC742C /* LDTabBarController.swift in Sources */,
 				6D71978B1B25F2B5007E7F4D /* RoutineViewController.swift in Sources */,
 				4DF285A21B30820C00BC742C /* RoutinesNavigationController.swift in Sources */,
+				6DA4945A1B3B739D00808318 /* WorkoutRecordViewController.swift in Sources */,
 				6D7197991B260FDD007E7F4D /* RoutinesViewController.swift in Sources */,
 				6D7197931B260400007E7F4D /* Workout.swift in Sources */,
 				1DA003EB1B23F2D4000B88BD /* AppDelegate.swift in Sources */,
