@@ -126,6 +126,7 @@ class DashClient {
                 completion(nil, error)
             } else {
                 personalRecords = objects as! [PersonalRecord]
+                personalRecords.sortInPlace {$0.exercise.name < $1.exercise.name}
                 completion(personalRecords, error)
             }
         }
